@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="layout.tiles" template="/WEB-INF/views/layout/baseLayout.jsp">
+		<put-attribute name="title" value=""></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/views/layout/header.jsp"></put-attribute>
+		<put-attribute name="body" value=""></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/views/layout/footer.jsp"></put-attribute>
+	</definition>
+	<!-- ** Album ** -->
+	<definition name="album.adicionar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Adição de álbuns"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/albuns/adicionar.jsp"></put-attribute>
+	</definition>
+	<definition name="album.alterar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Edição de álbum"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/albuns/alterar.jsp"></put-attribute>
+	</definition>
+	<definition name="album.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Exibição de álbuns"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/albuns/listar.jsp"></put-attribute>
+	</definition>
+	<!-- ** Musica ** -->
+	<definition name="musica.adicionar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Adição de músicas"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/musicas/adicionar.jsp"></put-attribute>
+	</definition>
+	<definition name="musica.alterar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Edição de música"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/musicas/alterar.jsp"></put-attribute>
+	</definition>
+	<definition name="musica.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/musicas/listar.jsp"></put-attribute>
+	</definition>
+	<!-- ** Usuário ** -->
+	<definition name="usuario.adicionar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Adição de usuários"></put-attribute>
+		<put-attribute name="body"
+			value="/WEB-INF/views/usuarios/adicionar.jsp"></put-attribute>
+	</definition>
+	<definition name="usuario.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Exibição de usuários"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/usuarios/listar.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Home -->
+	
+	<definition name="home.index.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Administração -->
+	
+	<definition name="administracao.index.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/index.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Cadastro -->
+	
+	<definition name="home.index.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/index.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="home.cadastro.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/cadastro.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Painel -->
+	
+	<definition name="painel.login.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/painel/login.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="painel.index.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/painel/index.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="painel.perfil.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/painel/perfil.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Perfil -->
+	
+	<definition name="perfil.index.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/perfil.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Time -->
+	
+	<definition name="time.index.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/painel/time/index.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="time.cadastro.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/painel/time/cadastro.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="time.ver.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/painel/time/time.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="time.alterar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/painel/time/alterar.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Noticias -->
+	
+	<definition name="noticia.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/noticias/index.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="noticia.ler.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/noticias/noticia.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Administração - Noticias -->
+	
+	<definition name="administracao.noticia.cadastro.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/noticias/cadastro.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="administracao.noticia.alterar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Edição de música"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/noticias/alterar.jsp"></put-attribute>
+	</definition>
+	
+	<!-- Administração - Jogo -->
+	
+	<definition name="administracao.jogo.index.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/index.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="administracao.jogo.cadastro.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/cadastro.jsp"></put-attribute>
+	</definition>
+	
+</tiles-definitions>
