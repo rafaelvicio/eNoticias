@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <h2>Login</h2>
 <br />
-<form action="/ESC/login" method="post">
+<form action="/login" method="post">
 	<div class="row">
 		<div class="col-md-6">
 			<div class="form-group">
