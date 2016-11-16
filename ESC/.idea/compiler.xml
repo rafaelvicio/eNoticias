@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="TreinaWebSpringMVC" />
+        <module name="ESC" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="TreinaWebSpringMVC" target="1.8" />
+      <module name="ESC" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

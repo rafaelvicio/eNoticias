@@ -65,7 +65,6 @@ public class TimeController {
 		
 		repositorioTime_Usuario.save(timeUsuario);
 		
-		
 		return "redirect:/time/";
 	}
 

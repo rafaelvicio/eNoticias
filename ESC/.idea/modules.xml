@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/TreinaWebSpringMVC.iml" filepath="$PROJECT_DIR$/TreinaWebSpringMVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ESC.iml" filepath="$PROJECT_DIR$/ESC.iml" />
     </modules>
   </component>
 </project>

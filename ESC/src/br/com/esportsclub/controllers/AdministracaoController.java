@@ -16,6 +16,8 @@ public class AdministracaoController {
 	
 	@Autowired
 	private RepositorioNoticia repositorioNoticia;
+
+	// Teste
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index() {
@@ -30,7 +32,8 @@ public class AdministracaoController {
 	
 	@RequestMapping(value = "noticias/cadastro", method = RequestMethod.POST)
 	private String adicionar(@ModelAttribute("noticia") Noticia novaNoticia, Model model){
-		
+
+
 		repositorioNoticia.save(novaNoticia);
 		return "redirect:/noticias/";
 	}

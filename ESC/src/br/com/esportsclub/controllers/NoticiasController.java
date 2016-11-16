@@ -2,7 +2,11 @@ package br.com.esportsclub.controllers;
 
 import java.util.List;
 
+import br.com.esportsclub.dominios.Usuario;
+import br.com.esportsclub.repositorios.RepositorioUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -19,6 +23,9 @@ public class NoticiasController {
 	
 	@Autowired
 	private RepositorioNoticia repositorioNoticia;
+
+	@Autowired
+	private RepositorioUsuario repositorioUsuario;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String listar(Model model){
@@ -36,8 +43,13 @@ public class NoticiasController {
 	
 	@RequestMapping(value = "/cadastro", method = RequestMethod.POST)
 	private String adicionar(@ModelAttribute("noticia") Noticia novaNoticia, Model model){
-		
-		//novaNoticia.setData(data);
+
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		String nomeUsuario = auth.getName();
+		Usuario usuario = repositorioUsuario.findByUsername(nomeUsuario);
+
+		novaNoticia.setData();
+		novaNoticia.setUsuario(usuario);
 		
 		repositorioNoticia.save(novaNoticia);
 		return "redirect:/noticias/";

@@ -1,16 +1,8 @@
 package br.com.esportsclub.dominios;
 
 import java.util.Date;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
+import java.util.List;
+import javax.persistence.*;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -34,9 +26,13 @@ public class Noticia {
 	
 	@Column(name = "not_descricao")
 	private String descricao;
-	
+
 	@Column(name = "not_conteudo")
 	private String conteudo;
+
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "usr_id")
+	private Usuario usuario;
 	
 	@Column(name = "not_data")
 	@Temporal(TemporalType.TIMESTAMP)
@@ -99,7 +95,14 @@ public class Noticia {
 	public void setData(Date data) {
 		this.data = data;
 	}
-	
-	
-	
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
+
 }

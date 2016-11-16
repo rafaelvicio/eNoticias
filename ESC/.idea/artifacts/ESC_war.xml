@@ -1,8 +1,8 @@
 <component name="ArtifactManager">
-  <artifact type="war" name="TreinaWebSpringMVC:war">
+  <artifact type="war" name="ESC:war">
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="ESC-0.0.1-SNAPSHOT.war">
-      <element id="artifact" artifact-name="TreinaWebSpringMVC:war exploded" />
+      <element id="artifact" artifact-name="ESC:war exploded" />
     </root>
   </artifact>
 </component>
