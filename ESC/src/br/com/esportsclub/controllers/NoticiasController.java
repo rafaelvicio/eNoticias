@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import java.util.Date;
 
 import br.com.esportsclub.dominios.Noticia;
 import br.com.esportsclub.repositorios.RepositorioNoticia;
@@ -48,7 +49,9 @@ public class NoticiasController {
 		String nomeUsuario = auth.getName();
 		Usuario usuario = repositorioUsuario.findByUsername(nomeUsuario);
 
-		novaNoticia.setData();
+		Date data = new Date();
+
+		novaNoticia.setData(data);
 		novaNoticia.setUsuario(usuario);
 		
 		repositorioNoticia.save(novaNoticia);

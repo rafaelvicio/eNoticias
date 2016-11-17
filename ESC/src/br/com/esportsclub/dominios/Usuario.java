@@ -25,8 +25,8 @@ public class Usuario {
 	private Long id;
 
 	@Column(name = "usr_username", length = 10, nullable = false)
-	@Size(min = 3, max = 10, message = "O nome de usuário deve conter entre 3 e 10 caracteres")
-	@NotEmpty(message = "O nome de usuário é obrigatório")
+	@Size(min = 3, max = 10, message = "O nome de usuï¿½rio deve conter entre 3 e 10 caracteres")
+	@NotEmpty(message = "O nome de usuï¿½rio ï¿½ obrigatï¿½rio")
 	private String username;
 
 	@Column(name = "usr_password", length = 150, nullable = false)
@@ -37,6 +37,9 @@ public class Usuario {
 	
 	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER, cascade = CascadeType.MERGE, orphanRemoval = true)
 	private Set<Time_Usuario> time_usuario;
+
+	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER, cascade = CascadeType.MERGE, orphanRemoval = true)
+	private Set<Conta_Usuario> conta_usuario;
 
 	public Long getId() {
 		return id;
@@ -78,4 +81,11 @@ public class Usuario {
 		this.time_usuario = time_usuario;
 	}
 
+	public Set<Conta_Usuario> getConta_usuario() {
+		return conta_usuario;
+	}
+
+	public void setConta_usuario(Set<Conta_Usuario> conta_usuario) {
+		this.conta_usuario = conta_usuario;
+	}
 }
