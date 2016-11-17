@@ -27,6 +27,10 @@ public class Conta_Usuario {
     @JoinColumn(name = "con_id")
     private Conta conta;
 
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "jog_id")
+    private Jogo jogo;
+
     @Enumerated(EnumType.STRING)
     private Posicao posicao;
 
@@ -60,5 +64,13 @@ public class Conta_Usuario {
 
     public void setPosicao(Posicao posicao) {
         this.posicao = posicao;
+    }
+
+    public Jogo getJogo() {
+        return jogo;
+    }
+
+    public void setJogo(Jogo jogo) {
+        this.jogo = jogo;
     }
 }
