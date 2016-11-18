@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import br.com.esportsclub.dominios.Usuario;
 import br.com.esportsclub.repositorios.RepositorioUsuario;
 
+import java.util.Date;
+
 @Controller
 @RequestMapping("/")
 public class HomeController {
@@ -37,6 +39,11 @@ public class HomeController {
 		if (result.hasErrors()) {
 			return "usuario.adicionar.tiles";
 		}
+
+		Date data = new Date();
+
+		usuario.setData(data);
+
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		usuario.setPassword(encoder.encode(usuario.getPassword()));
 		repositorioUsuario.save(usuario);

@@ -1,19 +1,13 @@
 package br.com.esportsclub.dominios;
 
+import java.util.Date;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 @Table(name = "usr_usuarios")
@@ -34,6 +28,11 @@ public class Usuario {
 
 	@Column(name = "usr_role", length = 20, nullable = false)
 	private String role;
+
+	@Column(name = "usr_data")
+	@Temporal(TemporalType.TIMESTAMP)
+	@DateTimeFormat(pattern = "dd/MM/yyyy kk:mm")
+	private Date data;
 	
 	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER, cascade = CascadeType.MERGE, orphanRemoval = true)
 	private Set<Time_Usuario> time_usuario;
@@ -87,5 +86,13 @@ public class Usuario {
 
 	public void setConta_usuario(Set<Conta_Usuario> conta_usuario) {
 		this.conta_usuario = conta_usuario;
+	}
+
+	public Date getData() {
+		return data;
+	}
+
+	public void setData(Date data) {
+		this.data = data;
 	}
 }

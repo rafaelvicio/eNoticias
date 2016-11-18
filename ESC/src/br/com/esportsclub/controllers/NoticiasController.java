@@ -35,7 +35,7 @@ public class NoticiasController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String listar(Model model){
-		List<Noticia> noticias = repositorioNoticia.findAll();
+		List<Noticia> noticias = repositorioNoticia.findAllByOrderByIdDesc();
 		model.addAttribute("noticias", noticias);
 		
 		return "noticia.listar.tiles";
