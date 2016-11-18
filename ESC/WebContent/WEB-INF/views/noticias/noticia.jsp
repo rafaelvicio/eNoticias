@@ -7,5 +7,8 @@
 <a href="#"><img src="${noticia.banner}" alt=""></a>
 <div class="post-caption">Example of post thumbnail caption</div>
 </div>
+<p>Titulo</p>
 <p>${noticia.titulo}</p>
 <p>${noticia.conteudo}</p>
+<p>Titulo</p>
+<p>${noticia.data}</p>

@@ -39,7 +39,6 @@ public class Noticia {
 	@DateTimeFormat(pattern = "dd/MM/yyyy kk:mm")
 	private Date data;
 
-
 	public Long getId() {
 		return id;
 	}
