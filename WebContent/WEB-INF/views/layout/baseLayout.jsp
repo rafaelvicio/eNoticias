@@ -22,8 +22,6 @@
 <spring:url value="/resources/animate/animate.delay.css" var="animateDelayCSS"></spring:url>
 <spring:url value="/resources/owl-carousel/owl.carousel.css" var="carouselCSS"></spring:url>
 
-	<spring:url value="/resources/plugins/bootstrap/css/bootstrap.min." var="testeCSS"></spring:url>
-
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- PLUGINS -->
