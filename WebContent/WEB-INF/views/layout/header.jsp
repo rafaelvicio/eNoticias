@@ -1,6 +1,9 @@
 <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 
+<body class="fixed-header">
+<header>
+
 <div class="container">
 	<span class="bar hide"></span>
 	<a href="index-2.html" class="logo"><img src="img/logo.png" alt=""></a>
@@ -139,3 +142,13 @@
 </sec:authorize>
 
 </div>
+
+</header>
+<!-- /header -->
+
+<div class="modal-search">
+    <div class="container">
+        <input type="text" class="form-control" placeholder="Type to search...">
+        <i class="fa fa-times close"></i>
+    </div>
+</div><!-- /.modal-search -->

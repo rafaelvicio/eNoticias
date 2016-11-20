@@ -22,21 +22,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="header.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/layout/header.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+            <state relative-caret-position="265">
+              <caret line="137" column="14" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="baseLayout.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/layout/baseLayout.jsp">
+      <file leaf-file-name="footer.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/layout/footer.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="85">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -91,8 +91,8 @@
         <option value="$PROJECT_DIR$/src/br/com/esportsclub/security/ESCUserDetailsService.java" />
         <option value="$PROJECT_DIR$/src/br/com/esportsclub/dominios/Noticia.java" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/layout/footer.jsp" />
-        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/layout/header.jsp" />
         <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/layout/baseLayout.jsp" />
+        <option value="$PROJECT_DIR$/WebContent/WEB-INF/views/layout/header.jsp" />
       </list>
     </option>
   </component>
@@ -805,12 +805,12 @@
       <workItem from="1479605046310" duration="4815000" />
       <workItem from="1479646735271" duration="3973000" />
       <workItem from="1479661814452" duration="4577000" />
-      <workItem from="1479676516283" duration="137000" />
+      <workItem from="1479676516283" duration="521000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49807000" />
+    <option name="totallyTimeSpent" value="50191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1365" height="735" extended-state="0" />
@@ -1227,28 +1227,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/layout/baseLayout.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="26" column="4" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/layout/footer.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="e#2442#2448#0#HTML" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/layout/header.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebContent/WEB-INF/views/layout/baseLayout.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="265">
+          <caret line="137" column="14" selection-start-line="137" selection-start-column="14" selection-end-line="137" selection-end-column="14" />
           <folding />
         </state>
       </provider>
