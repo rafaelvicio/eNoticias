@@ -46,6 +46,7 @@
     <orderEntry type="library" name="Maven: org.apache.tiles:tiles-template:3.0.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tiles:tiles-autotag-core-runtime:1.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tiles:tiles-request-jsp:1.0.6" level="project" />
+    <orderEntry type="library" name="Maven: org.postgresql:postgresql:9.4-1201-jdbc41" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jpa:1.10.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:1.12.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-orm:4.2.6.RELEASE" level="project" />
