@@ -23,7 +23,7 @@ public class ESCUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		Usuario usuario = repositorio.findByUsername(username);
 		if (usuario == null) {
-			throw new UsernameNotFoundException("Usuário não encontrado");
+			throw new UsernameNotFoundException("Usuï¿½rio nï¿½o encontrado");
 		}
 		Set<GrantedAuthority> perfis = new HashSet<GrantedAuthority>();
 		perfis.add(new SimpleGrantedAuthority(usuario.getRole()));

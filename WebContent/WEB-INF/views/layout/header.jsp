@@ -1,101 +1,141 @@
 <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 
-<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed"
-				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-				aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">TreinaWeb Spring MVC</a>
+<div class="container">
+	<span class="bar hide"></span>
+	<a href="index-2.html" class="logo"><img src="img/logo.png" alt=""></a>
+	<nav>
+		<div class="nav-control">
+			<ul>
+				<li><a href="home-campeonatos.html">Home</a></li>
+				<li class="dropdown mega-dropdown">
+					<a href="games.html">Jogos</a>
+					<ul class="dropdown-menu mega-dropdown-menu category">
+						<li class="col-md-3">
+							<a href="games-single.html">
+								<img src="img/game/menu-1.jpg" alt="">
+								<div class="caption">
+									<span class="label label-warning">PC</span>
+									<h3>Assassin's Creed Syndicate</h3>
+									<p>Lorem ipsum dolor sit amet, adipise elit.</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-md-3">
+							<a href="games-single.html">
+								<img src="img/game/menu-2.jpg" alt="">
+								<div class="caption">
+									<span class="label label-primary">PS4</span>
+									<h3>Last of Us Remastered</h3>
+									<p>Lorem ipsum dolor sit amet, adipise elit.</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-md-3">
+							<a href="games-single.html">
+								<img src="img/game/menu-3.jpg" alt="">
+								<div class="caption">
+									<span class="label label-success">Xbox</span>
+									<h3>Max Payne 3</h3>
+									<p>Lorem ipsum dolor sit amet, adipise elit.</p>
+								</div>
+							</a>
+						</li>
+						<li class="col-md-3">
+							<a href="games-single.html">
+								<img src="img/game/menu-4.jpg" alt="">
+								<div class="caption">
+									<span class="label label-danger">Steam</span>
+									<h3>Hitman Absolution</h3>
+									<p>Lorem ipsum dolor sit amet, adipise elit.</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">Campeonatos</a>
+					<ul class="dropdown-menu default">
+						<li class="dropdown-submenu">
+							<a href="blog-large.html"><i class="fa fa-align-justify"></i> Eliminação Direta</a>
+						</li>
+						<li class="dropdown-submenu">
+							<a href="blog-medium.html"><i class="fa fa-list-ul"></i> Torneio Suiço</a>
+						</li>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle">Ranking</a>
+					<ul class="dropdown-menu default">
+						<li class="dropdown-submenu">
+							<a href="blog-large.html"><i class="fa fa-align-justify"></i> League of Legends</a>
+						</li>
+						<li class="dropdown-submenu">
+							<a href="blog-medium.html"><i class="fa fa-list-ul"></i> Counter-Strike: Global Offensive</a>
+						</li>
+						<li class="dropdown-submenu">
+							<a href="blog-large.html"><i class="fa fa-align-justify"></i> Dota 2</a>
+						</li>
+						<li class="dropdown-submenu">
+							<a href="blog-large.html"><i class="fa fa-align-justify"></i> Hearthstone: Heroes of Warcraft</a>
+						</li>
+						<li class="dropdown-submenu">
+							<a href="blog-large.html"><i class="fa fa-align-justify"></i> Overwatch</a>
+						</li>
+					</ul>
+				</li>
+				<li><a href="videos.html">Ajuda</a></li>
+				<li><a href="videos.html">Fórum</a></li>
+				<li><a href="gallery.html">Loja</a></li>
+				<li><a href="contact.html">Contato</a></li>
+			</ul>
+		</div>
+	</nav>
+
+<sec:authorize access="isAuthenticated()">
+<sec:authentication property="principal" var="principal" />
+
+	<div class="nav-right">
+		<div class="nav-profile dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/user/avatar.jpg" alt=""> <span>Rafaelvicio</span></a>
+			<ul class="dropdown-menu">
+				<li><a href="#"><i class="fa fa-user"></i> Perfil</a></li>
+				<li><a href="#"><i class="fa fa-heart"></i> Likes <span class="label label-info">32</span></a></li>
+				<li><a href="#"><i class="fa fa-gamepad"></i> Games</a></li>
+				<li><a href="#"><i class="fa fa-gear"></i> Configurações</a></li>
+				<li class="divider"></li>
+				<li><a href="login.html"><i class="fa fa-power-off"></i> Sair</a></li>
+			</ul>
 		</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<sec:authorize access="isAuthenticated()">
-			<sec:authentication property="principal" var="principal" />
-			<div class="collapse navbar-collapse"
-				id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Noticias<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="/noticias/">Todas</a></li>
-						</ul></li>
-				</ul>
-				<ul class="nav navbar-nav">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Times<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-						<li><a href="/time/cadastro">Cadastro de time</a></li>
-						<li><a href="/time">Meus times</a></li>
-						</ul></li>
-				</ul>
-				<ul class="nav navbar-nav">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">�lbuns<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="/albuns/listar">Listar</a></li>
-							<sec:authorize access="hasRole('ROLE_ADMIN')">
-								<li><a href="/albuns/adicionar">Cadastrar</a></li>
-							</sec:authorize>
-						</ul></li>
-				</ul>
-				<ul class="nav navbar-nav">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">M�sicas<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="/musicas/listar">Listar</a></li>
-							<sec:authorize access="hasRole('ROLE_ADMIN')">
-								<li><a href="/musicas/adicionar">Cadastrar</a></li>
-							</sec:authorize>
-						</ul></li>
-				</ul>
-				<ul class="nav navbar-nav">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Usu�rios<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="/usuarios/listar">Listar</a></li>
-							<sec:authorize access="hasRole('ROLE_ADMIN')">
-								<li><a href="/usuarios/adicionar">Cadastrar</a></li>
-							</sec:authorize>
-						</ul></li>
-				</ul>
-				<ul class="nav navbar-nav">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Suporte<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="/usuarios">Meus chamados</a></li>
-							<li><a href="/suporte/abrir">Abrir chamado</a></li>
-						</ul></li>
-				</ul>
-				<ul class="nav navbar-nav">
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Bem-vindo, ${principal.username }<span
-							class="caret"></span></a>
-						<ul class="dropdown-menu">
-						<sec:authorize access="hasRole('ROLE_ADMIN')">
-						<li><a href="/administracao/">Painel de Administrador</a></li>
-						</sec:authorize>
-						<li><a href="/painel/">Painel</a></li>
-						<li><a href="/configuracoes/">Configura��es</a></li>
-							<li><a href="/logout">Sair</a></li>
-						</ul></li>
-				</ul>
-			</div>
-		</sec:authorize>
-		<!-- /.navbar-collapse -->
+	<sec:authorize access="hasRole('ROLE_ADMIN')">
+
+		<div class="nav-dropdown dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-group"></i> <span class="label label-danger">3</span></a>
+			<ul class="dropdown-menu">
+				<li class="dropdown-header"><i class="fa fa-group"></i> Painel de Administração</li>
+				<li><a href="#">Equipe1 <span class="label label-success">League of Legends</span></a></li>
+				<li><a href="#">Equipe2 <span class="label label-primary">PS4</span></a></li>
+				<li><a href="#">Equipe1 <span class="label label-warning">PC</span></a></li>
+				<li class="dropdown-footer"><a href="#">Crie sua equipe</a></li>
+			</ul>
+		</div>
+
+	</sec:authorize>
+
+		<div class="nav-dropdown dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-group"></i> <span class="label label-danger">3</span></a>
+			<ul class="dropdown-menu">
+				<li class="dropdown-header"><i class="fa fa-group"></i> Minhas Equipes</li>
+				<li><a href="#">Equipe1 <span class="label label-success">League of Legends</span></a></li>
+				<li><a href="#">Equipe2 <span class="label label-primary">PS4</span></a></li>
+				<li><a href="#">Equipe1 <span class="label label-warning">PC</span></a></li>
+				<li class="dropdown-footer"><a href="#">Crie sua equipe</a></li>
+			</ul>
+		</div>
+		<a href="#" data-toggle="modal-search"><i class="fa fa-search"></i></a>
 	</div>
-	<!-- /.container-fluid -->
-</nav>
+
+</sec:authorize>
+
+</div>

@@ -31,6 +31,10 @@ public class Noticia {
 	private String conteudo;
 
 	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "jog_id")
+	private Jogo jogo;
+
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "usr_id")
 	private Usuario usuario;
 	
