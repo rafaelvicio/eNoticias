@@ -12,25 +12,27 @@
 
 	<!-- CORE CSS -->
 
-<spring:url value="/resources/plugins/bootstrap/css/bootstrap.min.css" var="bootstrapCSS"></spring:url>
+<spring:url value="/resources/bootstrap/css/bootstrap.min.css" var="bootstrapCSS"></spring:url>
 <spring:url value="/resources/css/theme.min.css" var="themeCSS"></spring:url>
 <spring:url value="/resources/css/custom.css" var="customCSS"></spring:url>
 <spring:url value="/resources/css/helpers.min.css" var="helpersCSS"></spring:url>
-<spring:url value="/resources/plugins/font-awesome/css/font-awesome.min.css" var="fontCSS"></spring:url>
-<spring:url value="/resources/plugins/ionicons/css/ionicons.min.css" var="ioniconsCSS"></spring:url>
-<spring:url value="/resources/plugins/animate/animate.min.css" var="animateMinCSS"></spring:url>
-<spring:url value="/resources/plugins/animate/animate.delay.css" var="animateDelayCSS"></spring:url>
-<spring:url value="/resources/plugins/owl-carousel/owl.carousel.css" var="carouselCSS"></spring:url>
+<spring:url value="/resources/font-awesome/css/font-awesome.min.css" var="fontCSS"></spring:url>
+<spring:url value="/resources/ionicons/css/ionicons.min.css" var="ioniconsCSS"></spring:url>
+<spring:url value="/resources/animate/animate.min.css" var="animateMinCSS"></spring:url>
+<spring:url value="/resources/animate/animate.delay.css" var="animateDelayCSS"></spring:url>
+<spring:url value="/resources/owl-carousel/owl.carousel.css" var="carouselCSS"></spring:url>
+
+	<spring:url value="/resources/plugins/bootstrap/css/bootstrap.min." var="testeCSS"></spring:url>
 
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
 
 	<!-- PLUGINS -->
 
-<spring:url value="/resources/plugins/jquery/jquery-1.11.1.min.js" var="jqueryJS"></spring:url>
-<spring:url value="/resources/plugins/bootstrap/js/bootstrap.min.js" var="bootstrapJS"></spring:url>
+<spring:url value="/resources/jquery/jquery-1.11.1.min.js" var="jqueryJS"></spring:url>
+<spring:url value="/resources/bootstrap/js/bootstrap.min.js" var="bootstrapJS"></spring:url>
 <spring:url value="/resources/owl-carousel/owl.carousel.min.js" var="carouselJS"></spring:url>
 <spring:url value="/resources/core.min.js" var="coreJS"></spring:url>
-<spring:url value="/resources/plugins/twitter/twitter.js" var="twitterJS"></spring:url>
+<spring:url value="/resources/twitter/twitter.js" var="twitterJS"></spring:url>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
