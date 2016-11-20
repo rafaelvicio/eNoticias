@@ -25,7 +25,7 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Noticias<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="/ESC/noticias/">Todas</a></li>							
+							<li><a href="/noticias/">Todas</a></li>
 						</ul></li>
 				</ul>
 				<ul class="nav navbar-nav">
@@ -33,40 +33,40 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Times<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-						<li><a href="/ESC/time/cadastro">Cadastro de time</a></li>
-						<li><a href="/ESC/time">Meus times</a></li>
+						<li><a href="/time/cadastro">Cadastro de time</a></li>
+						<li><a href="/time">Meus times</a></li>
 						</ul></li>
 				</ul>
 				<ul class="nav navbar-nav">
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Álbuns<span class="caret"></span></a>
+						aria-expanded="false">ï¿½lbuns<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="/ESC/albuns/listar">Listar</a></li>
+							<li><a href="/albuns/listar">Listar</a></li>
 							<sec:authorize access="hasRole('ROLE_ADMIN')">
-								<li><a href="/ESC/albuns/adicionar">Cadastrar</a></li>
+								<li><a href="/albuns/adicionar">Cadastrar</a></li>
 							</sec:authorize>
 						</ul></li>
 				</ul>
 				<ul class="nav navbar-nav">
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Músicas<span class="caret"></span></a>
+						aria-expanded="false">Mï¿½sicas<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="/ESC/musicas/listar">Listar</a></li>
+							<li><a href="/musicas/listar">Listar</a></li>
 							<sec:authorize access="hasRole('ROLE_ADMIN')">
-								<li><a href="/ESC/musicas/adicionar">Cadastrar</a></li>
+								<li><a href="/musicas/adicionar">Cadastrar</a></li>
 							</sec:authorize>
 						</ul></li>
 				</ul>
 				<ul class="nav navbar-nav">
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
 						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Usuários<span class="caret"></span></a>
+						aria-expanded="false">Usuï¿½rios<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="/ESC/usuarios/listar">Listar</a></li>
+							<li><a href="/usuarios/listar">Listar</a></li>
 							<sec:authorize access="hasRole('ROLE_ADMIN')">
-								<li><a href="/ESC/usuarios/adicionar">Cadastrar</a></li>
+								<li><a href="/usuarios/adicionar">Cadastrar</a></li>
 							</sec:authorize>
 						</ul></li>
 				</ul>
@@ -75,8 +75,8 @@
 						data-toggle="dropdown" role="button" aria-haspopup="true"
 						aria-expanded="false">Suporte<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><a href="/ESC/usuarios">Meus chamados</a></li>
-							<li><a href="/ESC/suporte/abrir">Abrir chamado</a></li>
+							<li><a href="/usuarios">Meus chamados</a></li>
+							<li><a href="/suporte/abrir">Abrir chamado</a></li>
 						</ul></li>
 				</ul>
 				<ul class="nav navbar-nav">
@@ -86,12 +86,11 @@
 							class="caret"></span></a>
 						<ul class="dropdown-menu">
 						<sec:authorize access="hasRole('ROLE_ADMIN')">
-						<li><a href="/ESC/administracao/">Painel de Administrador</a></li>
+						<li><a href="/administracao/">Painel de Administrador</a></li>
 						</sec:authorize>
-						<li><a href="/ESC/painel/">Painel</a></li>
-						<li><a href="/ESC/perfil/">Perfil</a></li>
-						<li><a href="/ESC/configuracoes/">Configurações</a></li>
-							<li><a href="/ESC/logout">Sair</a></li>
+						<li><a href="/painel/">Painel</a></li>
+						<li><a href="/configuracoes/">Configuraï¿½ï¿½es</a></li>
+							<li><a href="/logout">Sair</a></li>
 						</ul></li>
 				</ul>
 			</div>
