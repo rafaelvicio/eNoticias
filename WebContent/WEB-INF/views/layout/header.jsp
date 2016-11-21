@@ -1,12 +1,11 @@
 <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 
-<body class="fixed-header">
 <header>
 
 <div class="container">
 	<span class="bar hide"></span>
-	<a href="index-2.html" class="logo"><img src="img/logo.png" alt=""></a>
+	<a href="index-2.html" class="logo"><img src="resources/img/logo.png" alt=""></a>
 	<nav>
 		<div class="nav-control">
 			<ul>
@@ -16,7 +15,7 @@
 					<ul class="dropdown-menu mega-dropdown-menu category">
 						<li class="col-md-3">
 							<a href="games-single.html">
-								<img src="img/game/menu-1.jpg" alt="">
+								<img src="resources/img/game/menu-1.jpg" alt="">
 								<div class="caption">
 									<span class="label label-warning">PC</span>
 									<h3>Assassin's Creed Syndicate</h3>
@@ -26,7 +25,7 @@
 						</li>
 						<li class="col-md-3">
 							<a href="games-single.html">
-								<img src="img/game/menu-2.jpg" alt="">
+								<img src="resources/img/game/menu-2.jpg" alt="">
 								<div class="caption">
 									<span class="label label-primary">PS4</span>
 									<h3>Last of Us Remastered</h3>
@@ -36,7 +35,7 @@
 						</li>
 						<li class="col-md-3">
 							<a href="games-single.html">
-								<img src="img/game/menu-3.jpg" alt="">
+								<img src="resources/img/game/menu-3.jpg" alt="">
 								<div class="caption">
 									<span class="label label-success">Xbox</span>
 									<h3>Max Payne 3</h3>
@@ -46,7 +45,7 @@
 						</li>
 						<li class="col-md-3">
 							<a href="games-single.html">
-								<img src="img/game/menu-4.jpg" alt="">
+								<img src="resources/img/game/menu-4.jpg" alt="">
 								<div class="caption">
 									<span class="label label-danger">Steam</span>
 									<h3>Hitman Absolution</h3>
@@ -100,7 +99,7 @@
 
 	<div class="nav-right">
 		<div class="nav-profile dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/user/avatar.jpg" alt=""> <span>Rafaelvicio</span></a>
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="resources/img/user/avatar.jpg" alt=""> <span>Rafaelvicio</span></a>
 			<ul class="dropdown-menu">
 				<li><a href="#"><i class="fa fa-user"></i> Perfil</a></li>
 				<li><a href="#"><i class="fa fa-heart"></i> Likes <span class="label label-info">32</span></a></li>
@@ -114,13 +113,14 @@
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
 
 		<div class="nav-dropdown dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-group"></i> <span class="label label-danger">3</span></a>
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gear"></i></a>
 			<ul class="dropdown-menu">
-				<li class="dropdown-header"><i class="fa fa-group"></i> Painel de Administração</li>
-				<li><a href="#">Equipe1 <span class="label label-success">League of Legends</span></a></li>
-				<li><a href="#">Equipe2 <span class="label label-primary">PS4</span></a></li>
-				<li><a href="#">Equipe1 <span class="label label-warning">PC</span></a></li>
-				<li class="dropdown-footer"><a href="#">Crie sua equipe</a></li>
+				<li class="dropdown-header"><i class="fa fa-cog"></i> Administração</li>
+				<li><a href="#"><i class="fa fa-cog"></i>Geral </a></li>
+				<li><a href="#"><i class="fa fa-comments"></i>Suporte </a></li>
+				<li><a href="#"><i class="fa fa-gamepad"></i>Jogos </a></li>
+				<li><a href="#"><i class="fa fa-group"></i>Campeonatos </a></li>
+				<li><a href="#"><i class="fa fa-trophy"></i>Times </a></li>
 			</ul>
 		</div>
 

@@ -57,11 +57,11 @@
 <script type="text/javascript" src="${twitterJS}"></script>
 
 </head>
-<body>
+<body class="fixed-header">
 	<div style="width: 100%">
 		<tiles:insertAttribute name="header" ignore="false"></tiles:insertAttribute>
 	</div>
-	<div style="width: 100%; margin: 2%;">
+	<div style="width: 100%">
 		<tiles:insertAttribute name="body" ignore="false"></tiles:insertAttribute>
 	</div>
 	<div style="width: 100%">
