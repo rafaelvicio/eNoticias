@@ -38,7 +38,7 @@
                                         <ul class="post-meta">
                                             <li><a href="#"><i class="fa fa-user"></i> ${noticia.usuario.username}</a></li>
                                             <li><i class="fa fa-calendar-o"></i> ${noticia.data}</li>
-                                            <li><a href="#"><i class="fa fa-comments"></i> 0 <span class="hidden-xs">Comments</span></a></li>
+                                            <li><a href="#"><i class="fa fa-comments"></i> 0 <span class="hidden-xs">Comentarios</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
