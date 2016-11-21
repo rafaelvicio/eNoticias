@@ -43,10 +43,12 @@ public class HomeController {
 		Date data = new Date();
 
 		usuario.setData(data);
+		usuario.setRole("ROLE_MEMBER");
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		usuario.setPassword(encoder.encode(usuario.getPassword()));
 		repositorioUsuario.save(usuario);
+
 		return "redirect:/painel/login";
 	}
 	
