@@ -16,7 +16,7 @@
 							<h3 class="panel-title"><i class="fa fa-users"></i> Cadastro de jogador</h3>
 						</div>
 						<div class="panel-body">
-							<a class="btn btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i> Cadastrar com o Facebook</a>
+							<a class="btn btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i> Conectar com Facebook</a>
 							<div class="separator"><span>ou</span></div>
 							<form:form action="${actionAdicionar}" method="post" modelAttribute="usuario">
 								<div class="form-group input-icon-left">
