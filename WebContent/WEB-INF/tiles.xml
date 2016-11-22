@@ -143,6 +143,12 @@
 	</definition>
 	
 	<!-- Administração - Noticias -->
+
+	<definition name="administracao.noticia.index.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+					   value="TreinaWeb Spring MVC: Edição de música"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/noticias/index.jsp"></put-attribute>
+	</definition>
 	
 	<definition name="administracao.noticia.cadastro.tiles" extends="layout.tiles">
 		<put-attribute name="title"

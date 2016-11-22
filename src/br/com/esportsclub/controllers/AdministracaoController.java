@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.List;
+
 import br.com.esportsclub.dominios.Noticia;
 import br.com.esportsclub.repositorios.RepositorioNoticia;
 
@@ -36,6 +38,14 @@ public class AdministracaoController {
 
 		repositorioNoticia.save(novaNoticia);
 		return "redirect:/noticias/";
+	}
+
+	@RequestMapping(value = "/noticias/", method = RequestMethod.GET)
+	public String listar(Model model){
+		List<Noticia> noticias = repositorioNoticia.findAllByOrderByIdDesc();
+		model.addAttribute("noticias", noticias);
+
+		return "administracao.noticia.index.tiles";
 	}
 	
 	
