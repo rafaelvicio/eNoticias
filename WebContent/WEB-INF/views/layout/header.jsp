@@ -94,6 +94,17 @@
 		</div>
 	</nav>
 
+	<sec:authorize access="isAuthenticated()" var="isAuthenticated" />
+	<c:if test="${not isAuthenticated}">
+
+	<div class="nav-right">
+		<div class="nav-profile dropdown">
+			<a href="/painel/login">Entrar</a> <a href="/cadastro">Cadastre-se</a>
+		</div>
+		</div>
+
+	</c:if>
+
 <sec:authorize access="isAuthenticated()">
 <sec:authentication property="principal" var="principal" />
 
