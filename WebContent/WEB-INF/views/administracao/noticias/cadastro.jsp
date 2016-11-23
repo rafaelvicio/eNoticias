@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <c:url var="actionAdicionar" value="/administracao/noticias/cadastro"></c:url>
@@ -10,7 +10,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<ol class="breadcrumb">
-						<li><a href="index.html">Administração</a></li>
+						<li><a href="index.html">AdministraÃ§Ã£o</a></li>
 						<li><a href="#">Noticias</a></li>
 						<li class="active">Cadastro</li>
 					</ol>
@@ -63,9 +63,9 @@
 	</div>
 
 	<div class="form-group row">
-		<label for="descricao" class="col-md-2">Descrição da Noticia</label>
+		<label for="descricao" class="col-md-2">DescriÃ§Ã£o da Noticia</label>
 		<div class="col-md-10">
-			<form:input id="descricao" path="descricao" cssClass="form-control" placeholder="Descrição da Noticia"/>
+			<form:input id="descricao" path="descricao" cssClass="form-control" placeholder="DescriÃ§Ã£o da Noticia"/>
 		</div>
 	</div>
 

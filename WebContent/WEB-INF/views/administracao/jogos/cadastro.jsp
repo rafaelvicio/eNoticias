@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <c:url var="actionAdicionar" value="/administracao/jogos/cadastro"></c:url>
@@ -28,7 +28,7 @@
 	<div class="row">
 		<div class="col-md-6">
 			<div class="form-group">
-				<label>Descrição do Jogo:</label>
+				<label>DescriÃ§Ã£o do Jogo:</label>
 				<form:input path="descricao" cssClass="form-control" />
 				<form:errors path="descricao" cssStyle="color: red;"></form:errors>
 			</div>

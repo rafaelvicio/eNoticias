@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
@@ -34,7 +34,7 @@
 
 						<div class="post-thumbnail">
 							<a href="#"><img src="${noticia.banner}" alt=""></a>
-							<div class="post-caption">Descrição do banner</div>
+							<div class="post-caption">DescriÃ§Ã£o do banner</div>
 						</div>
 
 						<p>${noticia.conteudo}</p>

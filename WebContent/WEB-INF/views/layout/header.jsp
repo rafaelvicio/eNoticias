@@ -14,7 +14,7 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="/noticias/">Notícias</a></li>
 				<li class="dropdown mega-dropdown">
-					<a href="games.html">Jogos</a>
+					<a href="/jogo/">Jogos</a>
 					<ul class="dropdown-menu mega-dropdown-menu category">
 						<li class="col-md-3">
 							<a href="games-single.html">
