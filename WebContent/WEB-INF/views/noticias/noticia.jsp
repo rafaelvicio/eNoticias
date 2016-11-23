@@ -21,7 +21,7 @@
 				<div class="col-md-9 leftside">
 					<div class="post post-single">
 						<div class="post-header post-author">
-							<a href="#" class="author" data-toggle="tooltip" title="YAKUZI"><img src="img/user/avatar.jpg" alt="" /></a>
+							<a href="#" class="author" data-toggle="tooltip" title="YAKUZI"><img src="resources/img/user/avatar.jpg" alt="" /></a>
 							<div class="post-title">
 								<h2><a href="#">${noticia.titulo}</a></h2>
 								<ul class="post-meta">
@@ -33,11 +33,24 @@
 						</div>
 
 						<div class="post-thumbnail">
-							<a href="#"><img src="img/blog/lg/post.jpg" alt=""></a>
-							<div class="post-caption">Example of post thumbnail caption</div>
+							<a href="#"><img src="${noticia.banner}" alt=""></a>
+							<div class="post-caption">Descrição do banner</div>
 						</div>
 
 						<p>${noticia.conteudo}</p>
+
+						<div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 margin-bottom-sm-30">
+							<div class="testimonial">
+								<p><em>" ${noticia.comentario}"</em></p>
+								<div class="thumbnail">
+									<img src="resources/img/user/avatar.jpg" alt="" />
+								</div>
+								<div class="testimonial-name">
+									<a href="#">${noticia.usuario.username}</a>
+									<span>Sobre o autor</span>
+								</div>
+							</div>
+						</div>
 
 						<div class="row margin-top-40">
 							<div class="col-md-8">

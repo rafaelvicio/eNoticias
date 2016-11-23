@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 
 <!-- wrapper -->
 <div id="wrapper">
-	<section class="hero hero-panel" style="background-image: url(resources/img/cover/cover-login.jpg);">
+	<section class="hero hero-panel" style="background-image: url(../resources/img/cover/cover-register.jpg);">
 		<div class="hero-bg"></div>
 		<div class="container relative">
 			<div class="row">
 				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 pull-none margin-auto">
 					<div class="panel panel-default panel-login">
 						<div class="panel-heading">
-							<h3 class="panel-title"><i class="fa fa-user"></i> FaÁa seu login</h3>
+							<h3 class="panel-title"><i class="fa fa-user"></i> Fa√ßa seu login</h3>
 						</div>
 						<div class="panel-body">
 							<a class="btn btn-block btn-social btn-facebook"><i class="fa fa-facebook"></i> Conectar com Facebook</a>
@@ -18,7 +18,7 @@
 							<form action="/login" method="post">
 								<div class="form-group input-icon-left">
 									<i class="fa fa-user"></i>
-									<input type="text" name="username" class="form-control" placeholder="Usu·rio">
+									<input type="text" name="username" class="form-control" placeholder="Usu√°rio">
 								</div>
 								<div class="form-group input-icon-left">
 									<i class="fa fa-lock"></i>
@@ -36,7 +36,7 @@
 							</form>
 						</div>
 						<div class="panel-footer">
-							Ainda n„o tem conta? <a href="/cadastro">FaÁa seu cadastro</a>
+							Ainda n√£o tem conta? <a href="/cadastro">Fa√ßa seu cadastro</a>
 						</div>
 					</div>
 				</div>

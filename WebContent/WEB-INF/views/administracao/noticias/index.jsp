@@ -54,8 +54,8 @@
                                     <td class="hidden-xs">Otto</td>
                                     <td>${noticia.usuario.username}</td>
                                     <td>
-                                        <button class="btn btn-primary btn-circle btn-sm" data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"></i></button>
-                                        <button class="btn btn-inverse btn-circle btn-sm" data-toggle="tooltip" title="Teletar"><i class="fa fa-trash"></i></button>
+                                        <button href="#" class="btn btn-primary btn-circle btn-sm" data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"></i></button>
+                                        <a href="/administracao/noticias/excluir/${noticia.id}" class="btn btn-inverse btn-circle btn-sm" data-toggle="tooltip" title="Deletar"><i class="fa fa-trash"></i></a>
                                     </td>
                                 </tr>
 

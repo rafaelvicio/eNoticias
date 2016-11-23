@@ -29,9 +29,6 @@ public class NoticiasController {
 	
 	@Autowired
 	private RepositorioNoticia repositorioNoticia;
-
-	@Autowired
-	private RepositorioUsuario repositorioUsuario;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String listar(Model model){
@@ -39,30 +36,6 @@ public class NoticiasController {
 		model.addAttribute("noticias", noticias);
 		
 		return "noticia.listar.tiles";
-	}
-	
-	@RequestMapping(value = "/cadastro", method = RequestMethod.GET)
-	private String adicionar(Model model) {
-		model.addAttribute("noticia", new Noticia());
-		return "noticia.cadastro.tiles";
-	}
-	
-	@RequestMapping(value = "/cadastro", method = RequestMethod.POST)
-	private String adicionar(@ModelAttribute("noticia") @Valid Noticia novaNoticia, BindingResult result, Model model){
-		if (result.hasErrors()) {
-			return "noticia.cadastro.tiles";
-		}
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		String nomeUsuario = auth.getName();
-		Usuario usuario = repositorioUsuario.findByUsername(nomeUsuario);
-
-		Date data = new Date();
-
-		novaNoticia.setData(data);
-		novaNoticia.setUsuario(usuario);
-		
-		repositorioNoticia.save(novaNoticia);
-		return "redirect:/noticias/";
 	}
 	
 	@RequestMapping(value = "/{url}", method = RequestMethod.GET)

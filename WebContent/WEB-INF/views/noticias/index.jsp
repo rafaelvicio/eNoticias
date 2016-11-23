@@ -8,8 +8,8 @@
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li class="active">Archive</li>
+                        <li><a href="/noticias/">Noticias</a></li>
+                        <li class="active">${noticia.titulo}</li>
                     </ol>
                 </div>
             </div>
@@ -28,7 +28,7 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="post-thumbnail">
-                                    <a href="#"><img src="resources/img/blog/md/2.jpg" alt=""></a>
+                                    <a href="#"><img src="${noticia.banner}" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-md-8">
@@ -38,11 +38,10 @@
                                         <ul class="post-meta">
                                             <li><a href="#"><i class="fa fa-user"></i> ${noticia.usuario.username}</a></li>
                                             <li><i class="fa fa-calendar-o"></i> ${noticia.data}</li>
-                                            <li><a href="#"><i class="fa fa-comments"></i> 0 <span class="hidden-xs">Comentarios</span></a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <p>${noticia.conteudo}</p>
+                                <p>${noticia.descricao}</p>
                             </div>
                         </div>
                     </div>
@@ -74,7 +73,7 @@
                     </div>
 
                     <div class="widget widget-list">
-                        <div class="title">Recent Comments</div>
+                        <div class="title">Últimas noticias</div>
                         <ul>
                             <li>
                                 <a href="#" class="thumb"><img src="img/blog/xs/1.jpg" alt=""></a>

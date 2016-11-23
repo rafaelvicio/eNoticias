@@ -27,6 +27,9 @@ public class Noticia {
 	@Column(name = "not_descricao")
 	private String descricao;
 
+	@Column(name = "not_comentario")
+	private String comentario;
+
 	@Column(name = "not_conteudo")
 	private String conteudo;
 
@@ -107,5 +110,19 @@ public class Noticia {
 		this.usuario = usuario;
 	}
 
+	public String getComentario() {
+		return comentario;
+	}
 
+	public void setComentario(String comentario) {
+		this.comentario = comentario;
+	}
+
+	public Jogo getJogo() {
+		return jogo;
+	}
+
+	public void setJogo(Jogo jogo) {
+		this.jogo = jogo;
+	}
 }

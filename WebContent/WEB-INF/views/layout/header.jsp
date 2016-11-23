@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8"%>
 <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
 
@@ -5,17 +7,18 @@
 
 <div class="container">
 	<span class="bar hide"></span>
-	<a href="index-2.html" class="logo"><img src="resources/img/logo.png" alt=""></a>
+	<a href="index-2.html" class="logo"><img src="/resources/img/logo.png" alt=""></a>
 	<nav>
 		<div class="nav-control">
 			<ul>
-				<li><a href="home-campeonatos.html">Home</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/noticias/">Notícias</a></li>
 				<li class="dropdown mega-dropdown">
 					<a href="games.html">Jogos</a>
 					<ul class="dropdown-menu mega-dropdown-menu category">
 						<li class="col-md-3">
 							<a href="games-single.html">
-								<img src="resources/img/game/menu-1.jpg" alt="">
+								<img src="/resources/img/game/menu-1.jpg" alt="">
 								<div class="caption">
 									<span class="label label-warning">PC</span>
 									<h3>Assassin's Creed Syndicate</h3>
@@ -25,7 +28,7 @@
 						</li>
 						<li class="col-md-3">
 							<a href="games-single.html">
-								<img src="resources/img/game/menu-2.jpg" alt="">
+								<img src="/resources/img/game/menu-2.jpg" alt="">
 								<div class="caption">
 									<span class="label label-primary">PS4</span>
 									<h3>Last of Us Remastered</h3>
@@ -35,7 +38,7 @@
 						</li>
 						<li class="col-md-3">
 							<a href="games-single.html">
-								<img src="resources/img/game/menu-3.jpg" alt="">
+								<img src="/resources/img/game/menu-3.jpg" alt="">
 								<div class="caption">
 									<span class="label label-success">Xbox</span>
 									<h3>Max Payne 3</h3>
@@ -45,7 +48,7 @@
 						</li>
 						<li class="col-md-3">
 							<a href="games-single.html">
-								<img src="resources/img/game/menu-4.jpg" alt="">
+								<img src="/resources/img/game/menu-4.jpg" alt="">
 								<div class="caption">
 									<span class="label label-danger">Steam</span>
 									<h3>Hitman Absolution</h3>
@@ -94,30 +97,23 @@
 		</div>
 	</nav>
 
-	<sec:authorize access="isAuthenticated()" var="isAuthenticated" />
-	<c:if test="${not isAuthenticated}">
-
-	<div class="nav-right">
-		<div class="nav-profile dropdown">
-			<a href="/painel/login">Entrar</a> <a href="/cadastro">Cadastre-se</a>
-		</div>
-		</div>
-
-	</c:if>
+	<sec:authorize access="isAnonymous()">
+		<a href="/painel/login">Entrar</a> <a href="/cadastro">Cadastro</a>
+	</sec:authorize>
 
 <sec:authorize access="isAuthenticated()">
 <sec:authentication property="principal" var="principal" />
 
 	<div class="nav-right">
 		<div class="nav-profile dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="resources/img/user/avatar.jpg" alt=""> <span>Rafaelvicio</span></a>
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/resources/img/user/avatar.jpg" alt=""> <span>${principal.username }</span></a>
 			<ul class="dropdown-menu">
 				<li><a href="#"><i class="fa fa-user"></i> Perfil</a></li>
 				<li><a href="#"><i class="fa fa-heart"></i> Likes <span class="label label-info">32</span></a></li>
 				<li><a href="#"><i class="fa fa-gamepad"></i> Games</a></li>
 				<li><a href="#"><i class="fa fa-gear"></i> Configurações</a></li>
 				<li class="divider"></li>
-				<li><a href="login.html"><i class="fa fa-power-off"></i> Sair</a></li>
+				<li><a href="/logout"><i class="fa fa-power-off"></i> Sair</a></li>
 			</ul>
 		</div>
 
@@ -159,7 +155,7 @@
 
 <div class="modal-search">
     <div class="container">
-        <input type="text" class="form-control" placeholder="Type to search...">
+        <input type="text" class="form-control" placeholder="Faça sua pesquisa...">
         <i class="fa fa-times close"></i>
     </div>
 </div><!-- /.modal-search -->

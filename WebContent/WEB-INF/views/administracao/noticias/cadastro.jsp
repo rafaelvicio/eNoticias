@@ -2,7 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<c:url var="actionAdicionar" value="/noticias/cadastro"></c:url>
+<c:url var="actionAdicionar" value="/administracao/noticias/cadastro"></c:url>
 
 <div id="wrapper">
 	<section class="border-bottom-1 border-grey-300 padding-10">
@@ -66,6 +66,13 @@
 		<label for="descricao" class="col-md-2">Descrição da Noticia</label>
 		<div class="col-md-10">
 			<form:input id="descricao" path="descricao" cssClass="form-control" placeholder="Descrição da Noticia"/>
+		</div>
+	</div>
+
+	<div class="form-group row">
+		<label for="comentario" class="col-md-2">Comentario</label>
+		<div class="col-md-10">
+			<form:input id="comentario" path="comentario" cssClass="form-control" placeholder="Comentario da Noticia"/>
 		</div>
 	</div>
 

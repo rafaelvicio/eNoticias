@@ -1,10 +1,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<h2>Listagem de álbuns</h2>
+<h2>Listagem de ï¿½lbuns</h2>
 <br />
 <div class="row">
 	<div class="col-md-10">
 		<div class="form-group">
-			<label>Álbum a ser pesquisado:</label> <input type="text"
+			<label>ï¿½lbum a ser pesquisado:</label> <input type="text"
 				id="txt-pesquisa" class="form-control">
 		</div>
 		<button class="btn btn-default" id="btn-pesquisar">Pesquisar</button>
@@ -13,9 +13,9 @@
 <table class="table" id="tbl-albuns">
 	<thead>
 		<th>ID</th>
-		<th>Nome do álbum</th>
-		<th>Ano do lançamento</th>
-		<th>Ações</th>
+		<th>Nome do ï¿½lbum</th>
+		<th>Ano do lanï¿½amento</th>
+		<th>Aï¿½ï¿½es</th>
 	</thead>
 	<tbody>
 		<c:if test="${!empty albuns}">
@@ -34,7 +34,7 @@
 </table>
 <br />
 <a href="/ESC/albuns/adicionar" class="btn btn-default">Adicionar
-	novo álbum</a>
+	novo ï¿½lbum</a>
 
 <script type="text/javascript">
 	$(document).ready(function(){
@@ -60,7 +60,7 @@
 					});					
 				},
 				error: function(){
-					alert("Houve um erro na requisição.");
+					alert("Houve um erro na requisiï¿½ï¿½o.");
 				}
 			});
 		});
