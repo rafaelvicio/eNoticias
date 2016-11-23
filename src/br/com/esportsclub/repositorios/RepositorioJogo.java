@@ -8,4 +8,6 @@ import java.util.List;
 
 public interface RepositorioJogo extends JpaRepository<Jogo, Long> {
 
+    Jogo findByUrl(String url);
+
 }

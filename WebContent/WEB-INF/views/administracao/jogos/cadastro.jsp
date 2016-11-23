@@ -19,6 +19,15 @@
 	<div class="row">
 		<div class="col-md-6">
 			<div class="form-group">
+				<label>URL do Jogo:</label>
+				<form:input path="url" cssClass="form-control" />
+				<form:errors path="url" cssStyle="color: red;"></form:errors>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
 				<label>Descrição do Jogo:</label>
 				<form:input path="descricao" cssClass="form-control" />
 				<form:errors path="descricao" cssStyle="color: red;"></form:errors>

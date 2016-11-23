@@ -141,6 +141,20 @@
 			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/noticias/noticia.jsp"></put-attribute>
 	</definition>
+
+	<!-- Jogos -->
+
+	<definition name="jogo.listar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+					   value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/jogo/index.jsp"></put-attribute>
+	</definition>
+
+	<definition name="jogo.ler.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+					   value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/jogo/jogo.jsp"></put-attribute>
+	</definition>
 	
 	<!-- Administração - Noticias -->
 

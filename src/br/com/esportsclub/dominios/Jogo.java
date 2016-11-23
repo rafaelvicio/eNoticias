@@ -23,6 +23,9 @@ public class Jogo {
 	@Column(name = "jog_nome")
 	private String nome;
 
+	@Column(name = "jog_url")
+	private String url;
+
 	@Column(name = "jog_site")
 	private String site;
 
@@ -70,5 +73,13 @@ public class Jogo {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
 	}
 }
