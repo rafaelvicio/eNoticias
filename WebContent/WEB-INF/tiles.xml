@@ -175,5 +175,11 @@
 			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/cadastro.jsp"></put-attribute>
 	</definition>
+
+	<definition name="administracao.jogo.alterar.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+					   value="TreinaWeb Spring MVC: Edição de música"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/alterar.jsp"></put-attribute>
+	</definition>
 	
 </tiles-definitions>

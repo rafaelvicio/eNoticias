@@ -1,7 +1,9 @@
 package br.com.esportsclub.controllers;
 
+import br.com.esportsclub.dominios.Jogo;
 import br.com.esportsclub.dominios.Musica;
 import br.com.esportsclub.dominios.Usuario;
+import br.com.esportsclub.repositorios.RepositorioJogo;
 import br.com.esportsclub.repositorios.RepositorioUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -31,6 +33,9 @@ public class AdministracaoController {
 
 	@Autowired
 	private RepositorioUsuario repositorioUsuario;
+
+	@Autowired
+	private RepositorioJogo repositorioJogo;
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index() {
@@ -75,6 +80,39 @@ public class AdministracaoController {
         repositorioNoticia.delete(noticia);
         return "redirect:/administracao/noticias";
     }
+
+	@RequestMapping(value = "/jogos", method = RequestMethod.GET)
+	public String listarJogos(Model model){
+		List<Jogo> jogos = repositorioJogo.findAll();
+		model.addAttribute("jogos", jogos);
+
+		return "administracao.jogo.index.tiles";
+	}
+
+	@RequestMapping(value = "/jogos/cadastro", method = RequestMethod.GET)
+	private String adicionarJogo(Model model) {
+		model.addAttribute("jogo", new Jogo());
+		return "administracao.jogo.cadastro.tiles";
+	}
+
+	@RequestMapping(value = "jogos/cadastro", method = RequestMethod.POST)
+	private String adicionar(@ModelAttribute("noticia") @Valid Jogo novaJogo, BindingResult result, Model model){
+		if (result.hasErrors()) {
+			return "administracao.jogo.cadastro.tiles";
+		}
+
+		repositorioJogo.save(novaJogo);
+		return "redirect:/administracao/jogos";
+	}
+
+	@RequestMapping(value = "/jogos/excluir/{id}", method = RequestMethod.GET)
+	public String excluirJogo(@PathVariable("id") Long id) {
+		Jogo jogo = repositorioJogo.findOne(id);
+		repositorioJogo.delete(jogo);
+		return "redirect:/administracao/jogos";
+	}
+
+
 	
 	
 

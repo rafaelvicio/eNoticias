@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="ESC" />
+        <module name="eSportsClub" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ESC" target="1.8" />
+      <module name="eSportsClub" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -22,6 +22,12 @@ public class Jogo {
 	
 	@Column(name = "jog_nome")
 	private String nome;
+
+	@Column(name = "jog_site")
+	private String site;
+
+	@Column(name = "jog_descricao")
+	private String descricao;
 	
 	@Enumerated(EnumType.STRING)
 	private Plataforma plataforma;
@@ -49,5 +55,20 @@ public class Jogo {
 	public void setPlataforma(Plataforma plataforma) {
 		this.plataforma = plataforma;
 	}
-	
+
+	public String getSite() {
+		return site;
+	}
+
+	public void setSite(String site) {
+		this.site = site;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
 }
