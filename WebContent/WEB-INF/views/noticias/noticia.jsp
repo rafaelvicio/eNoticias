@@ -9,8 +9,8 @@
 		<div class="container">
 			<ol class="breadcrumb">
 				<li><a href="index.html">Home</a></li>
-				<li><a href="#">Blogs</a></li>
-				<li class="active">Single Post</li>
+				<li><a href="#">Notícias</a></li>
+				<li class="active">${noticia.titulo}</li>
 			</ol>
 		</div>
 	</section>
@@ -21,7 +21,7 @@
 				<div class="col-md-9 leftside">
 					<div class="post post-single">
 						<div class="post-header post-author">
-							<a href="#" class="author" data-toggle="tooltip" title="YAKUZI"><img src="resources/img/user/avatar.jpg" alt="" /></a>
+							<a href="#" class="author" data-toggle="tooltip" title="YAKUZI"><img src="/resources/img/user/avatar.jpg" alt="" /></a>
 							<div class="post-title">
 								<h2><a href="#">${noticia.titulo}</a></h2>
 								<ul class="post-meta">
@@ -216,14 +216,3 @@
 		</div>
 	</section>
 </div>
-
-<br />
-<div class="post-thumbnail">
-<a href="#"><img src="${noticia.banner}" alt=""></a>
-<div class="post-caption">Example of post thumbnail caption</div>
-</div>
-<p>Titulo</p>
-<p>${noticia.titulo}</p>
-<p>${noticia.conteudo}</p>
-<p>Titulo</p>
-<p>${noticia.data}</p>

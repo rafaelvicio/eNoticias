@@ -20,7 +20,7 @@ import br.com.esportsclub.enumeradores.Plataforma;
 import br.com.esportsclub.repositorios.RepositorioJogo;
 
 @Controller
-@RequestMapping("/jogo")
+@RequestMapping("/jogos")
 public class JogoController {
 	
 	@Autowired

@@ -120,14 +120,11 @@
 	<sec:authorize access="hasRole('ROLE_ADMIN')">
 
 		<div class="nav-dropdown dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gear"></i></a>
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-cog"></i></a>
 			<ul class="dropdown-menu">
-				<li class="dropdown-header"><i class="fa fa-cog"></i> Administração</li>
-				<li><a href="#"><i class="fa fa-cog"></i>Geral </a></li>
-				<li><a href="#"><i class="fa fa-comments"></i>Suporte </a></li>
-				<li><a href="#"><i class="fa fa-gamepad"></i>Jogos </a></li>
-				<li><a href="#"><i class="fa fa-group"></i>Campeonatos </a></li>
-				<li><a href="#"><i class="fa fa-trophy"></i>Times </a></li>
+				<li class="dropdown-header"><i class="glyphicon glyphicon-cog"></i>Painel de Administração</li>
+				<li><a href="/administracao/noticias"><i class="ion-android-list"></i>Notícias </a></li>
+				<li><a href="/administracao/jogos/"><i class="ion-ios-game-controller-b"></i>Jogos </a></li>
 			</ul>
 		</div>
 

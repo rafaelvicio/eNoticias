@@ -41,51 +41,56 @@
 
 <form:form action="${actionAdicionar}" method="post" modelAttribute="noticia" cssClass="form-labe">
 
-						<div class="form-group row">
-							<label for="titulo" class="col-md-2">Titulo da Noticia</label>
-							<div class="col-md-10">
-								<form:input id="titulo" path="titulo" cssClass="form-control" placeholder="Titulo da Noticia"/>
-							</div>
-						</div>
+	<div class="form-group input-icon-left">
+		<i class="glyphicon glyphicon-pencil"></i>
+		<form:input id="titulo" path="titulo" cssClass="form-control" placeholder="Titulo da Noticia"/>
+	</div>
 
-	<div class="form-group row">
-		<label for="url" class="col-md-2">URL da Noticia</label>
-		<div class="col-md-10">
-			<form:input id="url" path="url" cssClass="form-control" placeholder="URL da Noticia"/>
+	<div class="form-group input-icon-left">
+		<i class="glyphicon glyphicon-link"></i>
+		<form:input id="url" path="url" cssClass="form-control" placeholder="URL da Noticia"/>
+	</div>
+
+	</br>
+
+	<div class="form-group input-icon-left">
+		<i class="glyphicon glyphicon-picture"></i>
+		<form:input id="banner" path="banner" cssClass="form-control" placeholder="Link Banner"/>
+	</div>
+
+	</br>
+
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<label>Jogo:</label>
+				<form:select path="jogo.id" cssClass="form-control">
+					<form:options items="${jogos}" itemLabel="nome" itemValue="id" />
+				</form:select>
+			</div>
 		</div>
 	</div>
 
-	<div class="form-group row">
-		<label for="banner" class="col-md-2">Link Banner</label>
-		<div class="col-md-10">
-			<form:input id="banner" path="banner" cssClass="form-control" placeholder="Link Banner"/>
-		</div>
+	</br>
+
+	<div class="form-group input-icon-left">
+		<i class="glyphicon glyphicon-envelope"></i>
+		<form:input id="descricao" path="descricao" cssClass="form-control" placeholder="Descrição da Noticia"/>
 	</div>
 
-	<div class="form-group row">
-		<label for="descricao" class="col-md-2">Descrição da Noticia</label>
-		<div class="col-md-10">
-			<form:input id="descricao" path="descricao" cssClass="form-control" placeholder="Descrição da Noticia"/>
-		</div>
+	<div class="form-group input-icon-left">
+		<i class="glyphicon glyphicon-comment"></i>
+		<form:input id="conteudo" path="conteudo" cssClass="form-control" placeholder="Conteudo da Noticia"/>
 	</div>
 
-	<div class="form-group row">
-		<label for="comentario" class="col-md-2">Comentario</label>
-		<div class="col-md-10">
-			<form:input id="comentario" path="comentario" cssClass="form-control" placeholder="Comentario da Noticia"/>
-		</div>
+	<div class="form-group input-icon-left">
+		<i class="glyphicon glyphicon-comment"></i>
+		<form:input id="comentario" path="comentario" cssClass="form-control" placeholder="Comentario da Noticia"/>
 	</div>
 
-	<div class="form-group row">
-		<label for="conteudo" class="col-md-2">Conteudo da Noticia</label>
-		<div class="col-md-10">
-			<form:input id="conteudo" path="conteudo" cssClass="form-control" placeholder="Conteudo da Noticia"/>
-		</div>
-	</div>
+				</div>
 
-						</div>
-
-	<div class="text-center"> <input type="submit" value="Cadastrar!" class="btn btn-primary btn-lg btn-rounded btn-shadow" /> </div>
+	<div class="text-center"> <input type="submit" value="Cadastrar!" class="btn btn-lg btn-block btn-rounded btn-shadow btn-primary" /> </div>
 				</br>
 </form:form>
 				</div>

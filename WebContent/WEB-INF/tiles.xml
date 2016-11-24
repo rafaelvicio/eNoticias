@@ -132,13 +132,13 @@
 	
 	<definition name="noticia.listar.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+			value="Notícias | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/noticias/index.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="noticia.ler.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+			value=" ${noticia.titulo} | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/noticias/noticia.jsp"></put-attribute>
 	</definition>
 
@@ -146,13 +146,13 @@
 
 	<definition name="jogo.listar.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+					   value="Jogos | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/jogo/index.jsp"></put-attribute>
 	</definition>
 
 	<definition name="jogo.ler.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+					   value=" ${jogo.nome} | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/jogo/jogo.jsp"></put-attribute>
 	</definition>
 	
@@ -160,19 +160,19 @@
 
 	<definition name="administracao.noticia.index.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="TreinaWeb Spring MVC: Edição de música"></put-attribute>
+					   value="Painel de Administração: Lista de Notícias | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/noticias/index.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="administracao.noticia.cadastro.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+			value="Painel de Administração: Cadastro de nova Notícia | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/noticias/cadastro.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="administracao.noticia.alterar.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-			value="TreinaWeb Spring MVC: Edição de música"></put-attribute>
+			value="Painel de Administração: Alterar Notícia | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/noticias/alterar.jsp"></put-attribute>
 	</definition>
 	
@@ -180,19 +180,19 @@
 	
 	<definition name="administracao.jogo.index.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+			value="Painel de Administração: Lista de Jogos | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/index.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="administracao.jogo.cadastro.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-			value="TreinaWeb Spring MVC: Exibição de músicas"></put-attribute>
+			value="Painel de Administração: Cadastro de novo Jogo | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/cadastro.jsp"></put-attribute>
 	</definition>
 
 	<definition name="administracao.jogo.alterar.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="TreinaWeb Spring MVC: Edição de música"></put-attribute>
+					   value="Painel de Administração: Alteração de Jogo | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/alterar.jsp"></put-attribute>
 	</definition>
 	

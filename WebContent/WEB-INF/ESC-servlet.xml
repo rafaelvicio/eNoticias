@@ -73,6 +73,8 @@
 	<sec:http pattern="/painel/login" security="none"></sec:http>
 	<sec:http pattern="/noticias" security="none"></sec:http>
 	<sec:http pattern="/noticias/**" security="none"></sec:http>
+	<sec:http pattern="/jogo" security="none"></sec:http>
+	<sec:http pattern="/jogo/**" security="none"></sec:http>
 	<sec:http use-expressions="true" auto-config="true">		
 		
 		<sec:intercept-url pattern="/administracao/**" access="hasRole('ROLE_ADMIN')" />

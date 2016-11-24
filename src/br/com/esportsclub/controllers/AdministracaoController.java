@@ -44,7 +44,10 @@ public class AdministracaoController {
 	
 	@RequestMapping(value = "noticias/cadastro", method = RequestMethod.GET)
 	private String adicionar(Model model) {
+
+        model.addAttribute("jogos", repositorioJogo.findAll());
 		model.addAttribute("noticia", new Noticia());
+
 		return "administracao.noticia.cadastro.tiles";
 	}
 	
@@ -62,6 +65,8 @@ public class AdministracaoController {
 		novaNoticia.setData(data);
 		novaNoticia.setUsuario(usuario);
 
+
+
 		repositorioNoticia.save(novaNoticia);
 		return "redirect:/noticias/";
 	}
@@ -70,6 +75,7 @@ public class AdministracaoController {
 	public String listar(Model model){
 		List<Noticia> noticias = repositorioNoticia.findAllByOrderByIdDesc();
 		model.addAttribute("noticias", noticias);
+
 
 		return "administracao.noticia.index.tiles";
 	}
