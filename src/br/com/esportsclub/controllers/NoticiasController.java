@@ -3,6 +3,7 @@ package br.com.esportsclub.controllers;
 import java.util.Calendar;
 import java.util.List;
 
+import br.com.esportsclub.dominios.Jogo;
 import br.com.esportsclub.dominios.Time;
 import br.com.esportsclub.dominios.Usuario;
 import br.com.esportsclub.repositorios.RepositorioUsuario;
@@ -41,7 +42,7 @@ public class NoticiasController {
 	@RequestMapping(value = "/{url}", method = RequestMethod.GET)
 	public String ler(@PathVariable("url") String url, Model model) {
 		Noticia noticia = repositorioNoticia.findByUrl(url);
-		 
+
 		model.addAttribute("noticia", noticia);
 		return "noticia.ler.tiles";
 	}	

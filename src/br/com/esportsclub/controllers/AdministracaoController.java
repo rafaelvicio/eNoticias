@@ -26,7 +26,7 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/administracao")
-public class AdministracaoController {
+public class AdministracaoController{
 	
 	@Autowired
 	private RepositorioNoticia repositorioNoticia;

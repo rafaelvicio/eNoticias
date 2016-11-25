@@ -6,6 +6,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import br.com.esportsclub.dominios.Noticia;
+import br.com.esportsclub.repositorios.RepositorioNoticia;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -26,6 +27,9 @@ public class JogoController {
 	@Autowired
 	private RepositorioJogo repositorioJogo;
 
+	@Autowired
+	private RepositorioNoticia repositorioNoticia;
+
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String listar(Model model){
 		List<Jogo> jogos = repositorioJogo.findAll();
@@ -37,6 +41,10 @@ public class JogoController {
 	@RequestMapping(value = "/{url}", method = RequestMethod.GET)
 	public String ler(@PathVariable("url") String url, Model model) {
 		Jogo jogo = repositorioJogo.findByUrl(url);
+
+		List<Noticia> noticias = repositorioNoticia.findByJogo(jogo);
+
+		model.addAttribute("noticias", noticias);
 
 		model.addAttribute("jogo", jogo);
 		return "jogo.ler.tiles";

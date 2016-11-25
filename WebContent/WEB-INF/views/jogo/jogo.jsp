@@ -45,17 +45,20 @@
                             </div>
                         </div>
                     </div>
+
+                    <c:if test="${!empty noticias}">
+                    <c:forEach items="${noticias}" var="noticia">
+
                     <div class="panel panel-default panel-post">
                         <div class="panel-body">
                             <div class="post">
                                 <div class="post-header post-author">
-                                    <a href="#" class="author" data-toggle="tooltip" title="YAKUZI"><img src="img/user/avatar.jpg" alt=""></a>
+                                    <a href="/noticias/${noticia.url} class="author" data-toggle="tooltip" title="YAKUZI"><img src="${noticia.banner}" alt=""></a>
                                     <div class="post-title">
-                                        <h3><a href="#">The Witcher 3: Wild Hunt Gameplay</a></h3>
+                                        <h3><a href="#">${noticia.titulo}</a></h3>
                                         <ul class="post-meta">
-                                            <li><a href="#"><i class="fa fa-user"></i> YAKUZI</a></li>
-                                            <li><i class="fa fa-calendar-o"></i> April 13, 2016</li>
-                                            <li><a href="#"><i class="fa fa-comments"></i> 0 <span class="hidden-xs">Comments</span></a></li>
+                                            <li><a href="#"><i class="fa fa-user"></i> ${noticia.usuario.username}</a></li>
+                                            <li><i class="fa fa-calendar-o"></i> ${noticia.data}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -75,6 +78,9 @@
                             </ul>
                         </div>
                     </div>
+
+                    </c:forEach>
+                    </c:if>
 
 
 

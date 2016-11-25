@@ -79,7 +79,7 @@
 	</div>
 
 	<div class="form-group input-icon-left">
-		<i class="glyphicon glyphicon-comment"></i>
+		<i class="glyphicon glyphicon-envelope"></i>
 		<form:input id="conteudo" path="conteudo" cssClass="form-control" placeholder="Conteudo da Noticia"/>
 	</div>
 

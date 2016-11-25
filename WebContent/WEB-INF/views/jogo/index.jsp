@@ -56,10 +56,10 @@
                         <div class="card-img">
                             <a href="games-single.html"><img src="img/game/2.jpg" alt=""></a>
                             <div class="category"><span class="label label-warning">PC</span></div>
-                            <div class="meta"><a href="/jogo/${jogo.url}"><i class="fa fa-heart-o"></i> <span>6</span></a></div>
+                            <div class="meta"><a href="/jogos/${jogo.url}"><i class="fa fa-heart-o"></i> <span>6</span></a></div>
                         </div>
                         <div class="caption">
-                            <h3 class="card-title"><a href="/jogo/${jogo.url}">${jogo.nome}</a></h3>
+                            <h3 class="card-title"><a href="/jogos/${jogo.url}">${jogo.nome}</a></h3>
                             <ul><li>Coming May 21, 2016</li></ul>
                             <p>${jogo.descricao}</p>
                         </div>
