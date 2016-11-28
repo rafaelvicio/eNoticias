@@ -43,6 +43,9 @@ public class HomeController {
 		Date data = new Date();
 
 		usuario.setData(data);
+		usuario.setNome("Seu nome");
+		usuario.setSobrenome("Seu sobrenome");
+		usuario.setBiografia("Sua biografia");
 		usuario.setRole("ROLE_MEMBER");
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();

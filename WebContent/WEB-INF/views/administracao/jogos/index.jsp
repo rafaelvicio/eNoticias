@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <div id="wrapper">
@@ -5,7 +7,7 @@
         <div class="hero-bg"></div>
         <div class="container">
             <div class="page-header">
-                <div class="page-title">Notícias</div>
+                <div class="page-title">Notï¿½cias</div>
             </div>
         </div>
     </section>
@@ -16,7 +18,7 @@
                 <div class="col-lg-12">
                     <ol class="breadcrumb">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Administração</a></li>
+                        <li><a href="#">Administraï¿½ï¿½o</a></li>
                         <li><a href="#">Jogos</a></li>
                         <li class="active">Todas</li>
                     </ol>
@@ -38,7 +40,7 @@
                                 <tr>
                                     <th>#</th>
                                     <th class="hidden-xs">Nome</th>
-                                    <th>Ações</th>
+                                    <th>Aï¿½ï¿½es</th>
                                 </tr>
                                 </thead>
                                 <tbody>

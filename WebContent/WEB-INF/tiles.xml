@@ -72,11 +72,6 @@
 	
 	<!-- Cadastro -->
 	
-	<definition name="home.index.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
-		<put-attribute name="body" value="/WEB-INF/views/index.jsp"></put-attribute>
-	</definition>
-	
 	<definition name="home.cadastro.tiles" extends="layout.tiles">
 		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/cadastro.jsp"></put-attribute>
@@ -97,6 +92,11 @@
 	<definition name="painel.perfil.tiles" extends="layout.tiles">
 		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/painel/perfil.jsp"></put-attribute>
+	</definition>
+
+	<definition name="painel.editar.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/painel/editar.jsp"></put-attribute>
 	</definition>
 	
 	<!-- Perfil -->
@@ -131,14 +131,12 @@
 	<!-- Noticias -->
 	
 	<definition name="noticia.listar.tiles" extends="layout.tiles">
-		<put-attribute name="title"
-			value="Notícias | ESC - eSports Club"></put-attribute>
+		<put-attribute name="title" value="Notícias | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/noticias/index.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="noticia.ler.tiles" extends="layout.tiles">
-		<put-attribute name="title"
-			value=" ${noticia.titulo} | ESC - eSports Club"></put-attribute>
+		<put-attribute name="title" value=" ${noticia.titulo} | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/noticias/noticia.jsp"></put-attribute>
 	</definition>
 
@@ -151,8 +149,7 @@
 	</definition>
 
 	<definition name="jogo.ler.tiles" extends="layout.tiles">
-		<put-attribute name="title"
-					   value=" ${jogo.nome} | ESC - eSports Club"></put-attribute>
+		<put-attribute name="title" value=" ${jogo.nome} | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/jogo/jogo.jsp"></put-attribute>
 	</definition>
 	

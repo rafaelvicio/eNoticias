@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 
@@ -31,8 +31,6 @@
 <spring:url value="/resources/owl-carousel/owl.carousel.min.js" var="carouselJS"></spring:url>
 <spring:url value="/resources/core.min.js" var="coreJS"></spring:url>
 <spring:url value="/resources/twitter/twitter.js" var="twitterJS"></spring:url>
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <title><tiles:insertAttribute name="title" ignore="true"></tiles:insertAttribute></title>
 

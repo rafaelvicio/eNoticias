@@ -23,6 +23,18 @@ public class Usuario {
 	@NotEmpty(message = "O nome de usu�rio � obrigat�rio")
 	private String username;
 
+	@Column(name = "usr_nome")
+	private String nome;
+
+	@Column(name = "usr_sobrenome")
+	private String sobrenome;
+
+	@Column(name = "usr_biografia")
+	private String biografia;
+
+	@Column(name = "usr_estado")
+	private String estado;
+
 	@Column(name = "usr_password", length = 150, nullable = false)
 	private String password;
 
@@ -94,5 +106,37 @@ public class Usuario {
 
 	public void setData(Date data) {
 		this.data = data;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getSobrenome() {
+		return sobrenome;
+	}
+
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+
+	public String getBiografia() {
+		return biografia;
+	}
+
+	public void setBiografia(String biografia) {
+		this.biografia = biografia;
+	}
+
+	public String getEstado() {
+		return estado;
+	}
+
+	public void setEstado(String estado) {
+		this.estado = estado;
 	}
 }

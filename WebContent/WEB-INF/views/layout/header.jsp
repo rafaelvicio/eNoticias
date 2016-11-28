@@ -2,6 +2,7 @@
 		 pageEncoding="UTF-8"%>
 <%@ taglib prefix="sec"
 	uri="http://www.springframework.org/security/tags"%>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
 
 <header>
 
@@ -13,86 +14,13 @@
 			<ul>
 				<li><a href="/">Home</a></li>
 				<li><a href="/noticias/">Notícias</a></li>
-				<li class="dropdown mega-dropdown">
-					<a href="/jogo/">Jogos</a>
-					<ul class="dropdown-menu mega-dropdown-menu category">
-						<li class="col-md-3">
-							<a href="games-single.html">
-								<img src="/resources/img/game/menu-1.jpg" alt="">
-								<div class="caption">
-									<span class="label label-warning">PC</span>
-									<h3>Assassin's Creed Syndicate</h3>
-									<p>Lorem ipsum dolor sit amet, adipise elit.</p>
-								</div>
-							</a>
-						</li>
-						<li class="col-md-3">
-							<a href="games-single.html">
-								<img src="/resources/img/game/menu-2.jpg" alt="">
-								<div class="caption">
-									<span class="label label-primary">PS4</span>
-									<h3>Last of Us Remastered</h3>
-									<p>Lorem ipsum dolor sit amet, adipise elit.</p>
-								</div>
-							</a>
-						</li>
-						<li class="col-md-3">
-							<a href="games-single.html">
-								<img src="/resources/img/game/menu-3.jpg" alt="">
-								<div class="caption">
-									<span class="label label-success">Xbox</span>
-									<h3>Max Payne 3</h3>
-									<p>Lorem ipsum dolor sit amet, adipise elit.</p>
-								</div>
-							</a>
-						</li>
-						<li class="col-md-3">
-							<a href="games-single.html">
-								<img src="/resources/img/game/menu-4.jpg" alt="">
-								<div class="caption">
-									<span class="label label-danger">Steam</span>
-									<h3>Hitman Absolution</h3>
-									<p>Lorem ipsum dolor sit amet, adipise elit.</p>
-								</div>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">Campeonatos</a>
-					<ul class="dropdown-menu default">
-						<li class="dropdown-submenu">
-							<a href="blog-large.html"><i class="fa fa-align-justify"></i> Eliminação Direta</a>
-						</li>
-						<li class="dropdown-submenu">
-							<a href="blog-medium.html"><i class="fa fa-list-ul"></i> Torneio Suiço</a>
-						</li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">Ranking</a>
-					<ul class="dropdown-menu default">
-						<li class="dropdown-submenu">
-							<a href="blog-large.html"><i class="fa fa-align-justify"></i> League of Legends</a>
-						</li>
-						<li class="dropdown-submenu">
-							<a href="blog-medium.html"><i class="fa fa-list-ul"></i> Counter-Strike: Global Offensive</a>
-						</li>
-						<li class="dropdown-submenu">
-							<a href="blog-large.html"><i class="fa fa-align-justify"></i> Dota 2</a>
-						</li>
-						<li class="dropdown-submenu">
-							<a href="blog-large.html"><i class="fa fa-align-justify"></i> Hearthstone: Heroes of Warcraft</a>
-						</li>
-						<li class="dropdown-submenu">
-							<a href="blog-large.html"><i class="fa fa-align-justify"></i> Overwatch</a>
-						</li>
-					</ul>
-				</li>
-				<li><a href="videos.html">Ajuda</a></li>
-				<li><a href="videos.html">Fórum</a></li>
-				<li><a href="gallery.html">Loja</a></li>
-				<li><a href="contact.html">Contato</a></li>
+				<li><a href="/jogos/">Jogos</a></li>
+				<li><a href="/campeonatos/">Campeonatos</a></li>
+				<li><a href="/ranking/">Ranking</a></li>
+				<li><a href="/suporte/">Suporte</a></li>
+				<li><a href="/forum/">Fórum</a></li>
+				<li><a href="/loja/">Loja</a></li>
+				<li><a href="/contato/">Contato</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -108,7 +36,7 @@
 		<div class="nav-profile dropdown">
 			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/resources/img/user/avatar.jpg" alt=""> <span>${principal.username }</span></a>
 			<ul class="dropdown-menu">
-				<li><a href="#"><i class="fa fa-user"></i> Perfil</a></li>
+				<li><a href="/perfil/"><i class="fa fa-user"></i> Perfil</a></li>
 				<li><a href="#"><i class="fa fa-heart"></i> Likes <span class="label label-info">32</span></a></li>
 				<li><a href="#"><i class="fa fa-gamepad"></i> Games</a></li>
 				<li><a href="#"><i class="fa fa-gear"></i> Configurações</a></li>
