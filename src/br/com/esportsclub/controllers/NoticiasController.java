@@ -42,8 +42,10 @@ public class NoticiasController {
 	@RequestMapping(value = "/{url}", method = RequestMethod.GET)
 	public String ler(@PathVariable("url") String url, Model model) {
 		Noticia noticia = repositorioNoticia.findByUrl(url);
+		List<Noticia> noticias = repositorioNoticia.findAllByOrderByIdDesc();
 
 		model.addAttribute("noticia", noticia);
+		model.addAttribute("noticias", noticias);
 		return "noticia.ler.tiles";
 	}	
 	

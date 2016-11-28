@@ -69,7 +69,7 @@
                 <div class="col-md-4 rightside">
                     <div class="widget margin-bottom-35">
                         <div class="btn-inline">
-                            <input type="text" class="form-control padding-right-40"  placeholder="Search...">
+                            <input type="text" class="form-control padding-right-40"  placeholder="Procurar...">
                             <button type="submit" class="btn btn-link color-grey-700 padding-top-10"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
@@ -77,41 +77,21 @@
                     <div class="widget widget-list">
                         <div class="title">Últimas noticias</div>
                         <ul>
+
+                        <c:if test="${!empty noticias}">
+                            <c:forEach items="${noticias}" var="noticia">
+
                             <li>
-                                <a href="#" class="thumb"><img src="img/blog/xs/1.jpg" alt=""></a>
+                                <a href="/noticias/${noticia.url}" class="thumb"><img src="${noticia.banner}" alt=""></a>
                                 <div class="widget-list-meta">
-                                    <h4 class="widget-list-title"><a href="#">Overwatch Closed Beta</a></h4>
-                                    <p><i class="fa fa-clock-o"></i> September 15, 2015</p>
+                                    <h4 class="widget-list-title"><a href="#">${noticia.titulo}</a></h4>
+                                    <p><i class="fa fa-clock-o"></i> ${noticia.data}</p>
                                 </div>
                             </li>
-                            <li>
-                                <a href="#" class="thumb"><img src="img/blog/xs/2.jpg" alt=""></a>
-                                <div class="widget-list-meta">
-                                    <h4 class="widget-list-title"><a href="#">Blood and Gore</a></h4>
-                                    <p><i class="fa fa-clock-o"></i> September 13, 2015</p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="thumb"><img src="img/blog/xs/3.jpg" alt=""></a>
-                                <div class="widget-list-meta">
-                                    <h4 class="widget-list-title"><a href="#">Warner Bros. Interactive</a></h4>
-                                    <p><i class="fa fa-clock-o"></i> September 12, 2015</p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="thumb"><img src="img/blog/xs/4.jpg" alt=""></a>
-                                <div class="widget-list-meta">
-                                    <h4 class="widget-list-title"><a href="#">Sharks Don't Sleep</a></h4>
-                                    <p><i class="fa fa-clock-o"></i> September 10, 2015</p>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="#" class="thumb"><img src="img/blog/xs/5.jpg" alt=""></a>
-                                <div class="widget-list-meta">
-                                    <h4 class="widget-list-title"><a href="#">GTA 5 Reaches 5 Million</a></h4>
-                                    <p><i class="fa fa-clock-o"></i> September 10, 2015</p>
-                                </div>
-                            </li>
+
+                            </c:forEach>
+                        </c:if>
+
                         </ul>
                     </div>
 
