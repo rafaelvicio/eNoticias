@@ -27,6 +27,7 @@
 					<div class="dropdown">
 						<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bars"></i></a>
 						<ul class="dropdown-menu pull-right">
+							<li><a href="/administracao/tags/cadastro"><i class="fa fa-edit"></i> Cadastrar Tag</a></li>
 							<li><a href="#"><i class="fa fa-edit"></i> Edit thread</a></li>
 							<li><a href="#"><i class="fa fa-lock"></i> Lock thread</a></li>
 							<li class="divider"></li>

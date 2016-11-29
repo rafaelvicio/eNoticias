@@ -18,6 +18,9 @@ public class Tag {
     @Column(name = "tag_nome")
     private String nome;
 
+    @Column(name = "tag_url")
+    private String url;
+
     @ManyToMany(mappedBy="tags")
     private List<Noticia> noticias;
 
@@ -35,6 +38,14 @@ public class Tag {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public List<Noticia> getNoticias() {

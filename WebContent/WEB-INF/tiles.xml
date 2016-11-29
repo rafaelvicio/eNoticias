@@ -180,6 +180,20 @@
 			value="Painel de Administração: Alterar Notícia | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/noticias/alterar.jsp"></put-attribute>
 	</definition>
+
+	<!-- Administração - Tag -->
+
+	<definition name="administracao.tag.index.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+					   value="Painel de Administração: Lista de Tags | ESC - eSports Club"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/tags/index.jsp"></put-attribute>
+	</definition>
+
+	<definition name="administracao.tag.cadastro.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+					   value="Painel de Administração: cadastro de Tag | ESC - eSports Club"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/tags/cadastro.jsp"></put-attribute>
+	</definition>
 	
 	<!-- Administração - Jogo -->
 	
