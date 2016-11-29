@@ -7,6 +7,7 @@
           <element id="module-output" name="eSportsClub" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.0.1" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.1.RELEASE" />
@@ -62,6 +63,8 @@
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.1.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:4.1.1.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:4.1.1.RELEASE" />
+          <element id="library" level="project" name="Maven: commons-fileupload:commons-fileupload:1.2.1" />
+          <element id="library" level="project" name="Maven: commons-io:commons-io:1.4" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -24,6 +24,15 @@
 									<form:input path="username" cssClass="form-control" placeholder="Usuário" />
 								</div>
 
+							<div class="form-group input-icon-left">
+								<i class="fa fa-user"></i>
+								<form:input path="nome" cssClass="form-control" placeholder="Nome" />
+							</div>
+
+							<div class="form-group input-icon-left">
+								<i class="fa fa-user"></i>
+								<form:input path="sobrenome" cssClass="form-control" placeholder="Sobrenome" />
+							</div>
 
 							<div class="form-group input-icon-left">
 								<i class="fa fa-lock"></i>

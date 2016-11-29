@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <c:url var="actionEditar" value="/painel/editar"></c:url>
@@ -29,9 +28,9 @@
             <div class="container">
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="active"><a href="#">Pessoal</a></li>
-                    <li><a href="#">SeguranÁa</a></li>
+                    <li><a href="#">Seguran√ßa</a></li>
                     <li><a href="#">Social</span></a></li>
-                    <li><a href="#">LocalizaÁ„o </a></li>
+                    <li><a href="#">Localiza√ß√£o </a></li>
                     <li><a href="#">Contas</a></li>
                     <li><a href="#">Jogos</a></li>
                     <li><a href="#">Equipes</a></li>
@@ -48,9 +47,9 @@
                         <div class="panel panel-default">
                             <div class="panel-heading">Sobre</div>
                             <div class="panel-body">
-                                Jogador da Selva na INTZ desde 2015! Bicampe„o do Campeonato Brasileiro de League of Legends
+                                Jogador da Selva na INTZ desde 2015! Bicampe√£o do Campeonato Brasileiro de League of Legends
                                 <ul class="panel-list margin-top-25">
-                                    <li><i class="fa fa-clock-o"></i> Data de inscriÁ„o: 26/08/2016</li>
+                                    <li><i class="fa fa-clock-o"></i> Data de inscri√ß√£o: 26/08/2016</li>
                                     <li><i class="fa fa-map-marker"></i> Brasilia</li>
                                     <li><i class="fa fa-chain-broken"></i> www.esportsclub.com.br</li>
                                     <br>
@@ -138,7 +137,7 @@
                                         </div>
                                     </div>
 
-                                    <input type="submit" value="Confirmar ediÁıes" class="btn btn-lg btn-block btn-rounded btn-shadow btn-primary" />
+                                    <input type="submit" value="Confirmar edi√ß√µes" class="btn btn-lg btn-block btn-rounded btn-shadow btn-primary" />
 
                                 </form:form>
 

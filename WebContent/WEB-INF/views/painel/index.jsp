@@ -1,5 +1,6 @@
-<%@ taglib prefix="sec"
-	uri="http://www.springframework.org/security/tags"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 	
 <sec:authorize access="isAuthenticated()">
 <sec:authentication property="principal" var="principal" />
@@ -45,8 +46,10 @@
 							<div class="panel-heading">Sobre</div>
 							<div class="panel-body">
 
+
+
 								<ul class="panel-list margin-top-25">
-									<li><i class="fa fa-clock-o"></i> Data de inscrição: 26/08/2016</li>
+									<li><i class="fa fa-clock-o"></i> Data de inscrição:</li>
 									<li><i class="fa fa-map-marker"></i> Brasilia</li>
 									<li><i class="fa fa-chain-broken"></i> www.esportsclub.com.br</li>
 									<br>
@@ -104,7 +107,7 @@
 							<div class="tab-pane fade in active" id="tab1">
 								</br>
 								<div>
-									<h2 class="font-size-22 font-weight-300"> <span class="font-weight-500">"${principal.username}"</span> </h2>
+									<h2 class="font-size-22 font-weight-300"> ${principal.nome} <span class="font-weight-500">"${principal.username}"</span> ${principal.sobrenome} </h2>
 								</div>
 								</br>
 								<div>

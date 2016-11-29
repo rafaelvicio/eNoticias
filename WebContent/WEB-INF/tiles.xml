@@ -105,6 +105,14 @@
 		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/perfil.jsp"></put-attribute>
 	</definition>
+
+	<!-- Jogador -->
+
+	<definition name="jogador.ler.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+					   value="Jogador | ESC - eSports Club"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/jogador/jogador.jsp"></put-attribute>
+	</definition>
 	
 	<!-- Time -->
 	
@@ -191,6 +199,14 @@
 		<put-attribute name="title"
 					   value="Painel de Administração: Alteração de Jogo | ESC - eSports Club"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/alterar.jsp"></put-attribute>
+	</definition>
+
+	<!-- TESTE -->
+
+	<definition name="teste.teste.tiles" extends="layout.tiles">
+		<put-attribute name="title"
+					   value="Pagina de Teste | ESC - eSports Club"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/teste.jsp"></put-attribute>
 	</definition>
 	
 </tiles-definitions>
