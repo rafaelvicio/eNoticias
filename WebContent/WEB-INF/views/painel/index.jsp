@@ -49,7 +49,7 @@
 
 
 								<ul class="panel-list margin-top-25">
-									<li><i class="fa fa-clock-o"></i> Data de inscrição:</li>
+									<li><i class="fa fa-clock-o"></i> Data de inscrição: </li>
 									<li><i class="fa fa-map-marker"></i> Brasilia</li>
 									<li><i class="fa fa-chain-broken"></i> www.esportsclub.com.br</li>
 									<br>

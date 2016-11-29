@@ -46,6 +46,10 @@ public class Noticia {
 	@DateTimeFormat(pattern = "dd/MM/yyyy kk:mm")
 	private Date data;
 
+	@ManyToMany
+	@JoinTable(name = "noticia_tag", joinColumns = @JoinColumn(name = "not_id"), inverseJoinColumns = @JoinColumn(name = "tag_id"))
+	private List<Tag> tags;
+
 	public Long getId() {
 		return id;
 	}
@@ -124,5 +128,13 @@ public class Noticia {
 
 	public void setJogo(Jogo jogo) {
 		this.jogo = jogo;
+	}
+
+	public List<Tag> getTags() {
+		return tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;
 	}
 }

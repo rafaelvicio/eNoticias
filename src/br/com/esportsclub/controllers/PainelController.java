@@ -30,6 +30,7 @@ public class PainelController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index() {
+
 		return "painel.index.tiles";
 	}
 	

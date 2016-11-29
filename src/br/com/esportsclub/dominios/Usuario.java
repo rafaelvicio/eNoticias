@@ -43,7 +43,6 @@ public class Usuario {
 
 	@Column(name = "usr_data")
 	@Temporal(TemporalType.TIMESTAMP)
-	@DateTimeFormat(pattern = "dd/MM/yyyy kk:mm")
 	private Date data;
 	
 	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER, cascade = CascadeType.MERGE, orphanRemoval = true)
