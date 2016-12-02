@@ -5,6 +5,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 
 <div id="wrapper">
+
 	<section class="bg-grey-50 border-bottom-1 border-grey-300 padding-10">
 		<div class="container">
 			<ol class="breadcrumb">

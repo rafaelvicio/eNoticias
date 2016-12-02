@@ -31,6 +31,11 @@
         <div class="container">
             <h3>Todas as Noticias</h3>
             <p>Lista de todas as Noticias</p>
+
+            <div>
+
+            </div>
+
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">

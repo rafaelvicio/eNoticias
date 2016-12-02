@@ -107,7 +107,7 @@
 							<div class="tab-pane fade in active" id="tab1">
 								</br>
 								<div>
-									<h2 class="font-size-22 font-weight-300"> ${principal.nome} <span class="font-weight-500">"${principal.username}"</span> ${principal.sobrenome} </h2>
+									<h2 class="font-size-22 font-weight-300">  <span class="font-weight-500">"${principal.username}"</span>  </h2>
 								</div>
 								</br>
 								<div>

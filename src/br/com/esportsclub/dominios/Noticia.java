@@ -46,8 +46,8 @@ public class Noticia {
 	@DateTimeFormat(pattern = "dd/MM/yyyy kk:mm")
 	private Date data;
 
-	@ManyToMany
-	@JoinTable(name = "noticia_tag", joinColumns = @JoinColumn(name = "not_id"), inverseJoinColumns = @JoinColumn(name = "tag_id"))
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+	@JoinTable(name = "noticias_tag", joinColumns = @JoinColumn(name = "not_id"), inverseJoinColumns = @JoinColumn(name = "tag_id"))
 	private List<Tag> tags;
 
 	public Long getId() {

@@ -25,10 +25,6 @@
 		</div>
 	</nav>
 
-	<sec:authorize access="isAnonymous()">
-		<a href="/painel/login">Entrar</a> <a href="/cadastro">Cadastro</a>
-	</sec:authorize>
-
 <sec:authorize access="isAuthenticated()">
 <sec:authentication property="principal" var="principal" />
 

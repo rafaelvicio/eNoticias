@@ -74,6 +74,12 @@
 
 	</br>
 
+	<c:forEach items="${tags}" var="tag">
+		<input type="checkbox" class="checkbox checkbox-inline" value="${tag.id}">${tag.nome}<br>
+	</c:forEach>
+
+	</br>
+
 	<div class="form-group input-icon-left">
 		<i class="glyphicon glyphicon-envelope"></i>
 		<form:input id="descricao" path="descricao" cssClass="form-control" placeholder="Descrição da Noticia"/>

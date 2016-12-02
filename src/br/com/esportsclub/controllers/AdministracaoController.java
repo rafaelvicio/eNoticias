@@ -36,40 +36,15 @@ public class AdministracaoController{
 
 	@Autowired
 	private RepositorioJogo repositorioJogo;
+
+
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index() {
 		return "administracao.index.tiles";
 	}
 	
-	@RequestMapping(value = "noticias/cadastro", method = RequestMethod.GET)
-	private String adicionar(Model model) {
 
-        model.addAttribute("jogos", repositorioJogo.findAll());
-		model.addAttribute("noticia", new Noticia());
-
-		return "administracao.noticia.cadastro.tiles";
-	}
-	
-	@RequestMapping(value = "noticias/cadastro", method = RequestMethod.POST)
-	private String adicionar(@ModelAttribute("noticia") @Valid Noticia novaNoticia, BindingResult result, Model model){
-		if (result.hasErrors()) {
-			return "noticia.cadastro.tiles";
-		}
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		String nomeUsuario = auth.getName();
-		Usuario usuario = repositorioUsuario.findByUsername(nomeUsuario);
-
-		Date data = new Date();
-
-		novaNoticia.setData(data);
-		novaNoticia.setUsuario(usuario);
-
-
-
-		repositorioNoticia.save(novaNoticia);
-		return "redirect:/noticias/";
-	}
 
 	@RequestMapping(value = "/noticias", method = RequestMethod.GET)
 	public String listar(Model model){
