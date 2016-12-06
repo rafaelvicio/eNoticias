@@ -57,4 +57,14 @@ public class HomeController {
 		return "perfil.index.tiles";
 	}
 
+	@RequestMapping(value = "/404", method = RequestMethod.GET)
+	public String naoEncontrada() {
+		return "home.404.tiles";
+	}
+
+	@RequestMapping(value = "/403", method = RequestMethod.GET)
+	public String semPermissao() {
+		return "home.403.tiles";
+	}
+
 }

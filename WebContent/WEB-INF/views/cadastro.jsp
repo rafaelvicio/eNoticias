@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <c:url var="actionAdicionar" value="/cadastro"></c:url>
@@ -21,7 +21,7 @@
 							<form:form action="${actionAdicionar}" method="post" modelAttribute="usuario">
 								<div class="form-group input-icon-left">
 									<i class="fa fa-user"></i>
-									<form:input path="username" cssClass="form-control" placeholder="Usuário" />
+									<form:input path="username" cssClass="form-control" placeholder="UsuÃ¡rio" />
 								</div>
 
 							<div class="form-group input-icon-left">
@@ -50,7 +50,7 @@
 							</form:form>
 						</div>
 						<div class="panel-footer">
-							Ja tem uma conta? <a href="login.html">Faça login!</a>
+							Ja tem uma conta? <a href="login.html">FaÃ§a login!</a>
 						</div>
 					</div>
 				</div>

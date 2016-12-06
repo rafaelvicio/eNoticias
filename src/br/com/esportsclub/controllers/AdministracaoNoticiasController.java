@@ -60,11 +60,8 @@ public class AdministracaoNoticiasController {
 
         Date data = new Date();
 
-
         novaNoticia.setData(data);
         novaNoticia.setUsuario(usuario);
-
-
 
         repositorioNoticia.save(novaNoticia);
         return "redirect:/noticias/";

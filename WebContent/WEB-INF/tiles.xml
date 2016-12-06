@@ -62,6 +62,16 @@
 		<put-attribute name="title" value="eSports Club -  Bem-vindo a sua platafoma de eSports"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/index.jsp"></put-attribute>
 	</definition>
+
+	<definition name="home.404.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Pagina não encontrada | eSports Club -  Bem-vindo a sua platafoma de eSports"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/404.jsp"></put-attribute>
+	</definition>
+
+	<definition name="home.403.tiles" extends="layout.tiles">
+		<put-attribute name="title" value="Sem permissão | eSports Club -  Bem-vindo a sua platafoma de eSports"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/403.jsp"></put-attribute>
+	</definition>
 	
 	<!-- Administração -->
 	

@@ -78,9 +78,10 @@
 	<sec:http use-expressions="true" auto-config="true">		
 		
 		<sec:intercept-url pattern="/administracao/**" access="hasRole('ROLE_ADMIN')" />
+		<sec:access-denied-handler error-page="/403" />
 		
 		<!-- <sec:intercept-url pattern="/adim/**" access="hasAnyRole('ROLE_ADMIN', 'DEVELOPER', 'ETC')" /> -->
-		
+
 		<sec:intercept-url pattern="/**" access="isAuthenticated()" />
 		<sec:form-login login-page="/painel/login"
 			default-target-url="/painel/" authentication-failure-url="/painel/login"
