@@ -1,9 +1,8 @@
-<form action="/util/upload" method="post" enctype="multipart/form-data">
-    <p>
-        <label for="file">Arquivo para fazer upload</label>
-        <input
-                type="file" name="file" />
-        <input type="submit" name="submit"
-               value="Upload" />
-    </p>
+<form method="POST" action="uploadFile" enctype="multipart/form-data">
+    File to upload: <input type="file" name="file">
+
+    Name: <input type="text" name="name">
+
+
+    <input type="submit" value="Upload"> Press here to upload the file!
 </form>

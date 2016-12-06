@@ -5,6 +5,8 @@
 <sec:authorize access="isAuthenticated()">
 <sec:authentication property="principal" var="principal" />
 
+	<c:forEach var="usuario" items="${usuario}">
+
 <div id="wrapper">
 	<section class="hero cover hidden-xs" style="background-image: url(/resources/img/cover/cover-profile.jpg);">
 		<div class="hero-bg"></div>
@@ -49,7 +51,7 @@
 
 
 								<ul class="panel-list margin-top-25">
-									<li><i class="fa fa-clock-o"></i> Data de inscrição: </li>
+									<li><i class="fa fa-clock-o"></i> Data de inscrição: ${usuario.data}</li>
 									<li><i class="fa fa-map-marker"></i> Brasilia</li>
 									<li><i class="fa fa-chain-broken"></i> www.esportsclub.com.br</li>
 									<br>
@@ -107,7 +109,7 @@
 							<div class="tab-pane fade in active" id="tab1">
 								</br>
 								<div>
-									<h2 class="font-size-22 font-weight-300">  <span class="font-weight-500">"${principal.username}"</span>  </h2>
+									<h2 class="font-size-22 font-weight-300"> ${usuario.nome} <span class="font-weight-500">"${principal.username}"</span> ${usuario.sobrenome} </h2>
 								</div>
 								</br>
 								<div>
@@ -123,5 +125,7 @@
 		</div>
 	</section>
 </div>
+
+	</c:forEach>
 
 </sec:authorize>

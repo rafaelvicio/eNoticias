@@ -2,6 +2,7 @@ package br.com.esportsclub.controllers;
 
 import javax.validation.Valid;
 
+import br.com.esportsclub.dominios.Perfil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;

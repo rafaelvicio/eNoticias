@@ -1,6 +1,7 @@
 package br.com.esportsclub.controllers;
 
 import br.com.esportsclub.dominios.Noticia;
+import br.com.esportsclub.dominios.Tag;
 import br.com.esportsclub.dominios.Usuario;
 import br.com.esportsclub.repositorios.RepositorioJogo;
 import br.com.esportsclub.repositorios.RepositorioNoticia;
@@ -17,7 +18,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by rafae on 01/12/2016.
@@ -64,9 +67,18 @@ public class AdministracaoNoticiasController {
         novaNoticia.setData(data);
         novaNoticia.setUsuario(usuario);
 
+        Noticia noticiaSalva = repositorioNoticia.save(novaNoticia);
 
+        List<Noticia> noticias = new ArrayList<Noticia>();
 
-        repositorioNoticia.save(novaNoticia);
+        noticias.add(noticiaSalva);
+
+        for(Tag tag: novaNoticia.getTags()){
+            tag.setNoticias(noticias);
+
+            repositorioTag.save(tag);
+        }
+
         return "redirect:/noticias/";
     }
 }
