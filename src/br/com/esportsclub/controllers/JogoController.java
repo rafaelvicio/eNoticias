@@ -33,7 +33,10 @@ public class JogoController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String listar(Model model){
 		List<Jogo> jogos = repositorioJogo.findAll();
+		List<Noticia> noticias = repositorioNoticia.findAllByOrderByIdDesc();
+
 		model.addAttribute("jogos", jogos);
+		model.addAttribute("noticias", noticias);
 
 		return "jogo.listar.tiles";
 	}

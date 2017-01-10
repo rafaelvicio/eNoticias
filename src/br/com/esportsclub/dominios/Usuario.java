@@ -51,6 +51,11 @@ public class Usuario {
 	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER, cascade = CascadeType.MERGE, orphanRemoval = true)
 	private Set<Conta_Usuario> conta_usuario;
 
+	@OneToOne(fetch = FetchType.LAZY)
+	private Social social;
+
+    // Gets e Sets
+
 	public Long getId() {
 		return id;
 	}

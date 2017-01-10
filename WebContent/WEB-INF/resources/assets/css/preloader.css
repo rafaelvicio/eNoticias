@@ -1,0 +1,32 @@
+body {
+  display: none; }
+
+#jpreOverlay {
+  background-color: #1e2024; }
+
+#jpreLoader {
+  text-align: center;
+  width: 260px;
+  margin: 0 auto; }
+
+#jprePercentage {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #38a9ff;
+  text-align: center;
+  width: 260px;
+  margin: 0 auto; }
+  #jprePercentage::before {
+    content: "Loading...";
+    color: #fff; }
+  #jprePercentage::after {
+    content: "Alchemists Template";
+    display: block;
+    font-size: 8px;
+    line-height: 1.5em;
+    color: #fff;
+    letter-spacing: 0; }

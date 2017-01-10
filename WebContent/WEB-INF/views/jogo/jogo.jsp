@@ -4,257 +4,183 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 
-<div id="wrapper">
-    <section class="hero height-350 hero-game" style="background-image: url(img/cover/cover-game.jpg);">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="page-header">
-                <div class="page-title">${jogo.nome}</div>
-                <a href="http://www.youtube.com/watch?v=c0i88t0Kacs" class="btn btn-success text-initial" data-toggle="lightbox" data-width="1280">Assista o trailer do ${jogo.nome}</a>
+<!-- Page Heading
+================================================== -->
+<div class="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="page-heading__title">Jogo: <span class="highlight">${jogo.nome}</span></h1>
+                <ol class="page-heading__breadcrumb breadcrumb">
+                    <li><a href="_soccer_index.html">Home</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li class="active">${jogo.nome}</li>
+                </ol>
             </div>
         </div>
-    </section>
-
-    <section class="bg-white no-padding hidden-xs border-bottom-1 border-grey-300" style="height: 54px">
-        <div class="tab-select text-center sticky">
-            <div class="container">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#">${jogo.nome}</a></li>
-                    <li><a href="#"><i class="fa fa-star"></i> Review</a></li>
-                    <li><a href="#"><i class="fa fa-pencil"></i> News</a></li>
-                    <li><a href="#"><i class="fa fa-image"></i> Images</a></li>
-                    <li><a href="#"><i class="fa fa-video-camera"></i> Videos</a></li>
-                    <li><a href="#"><i class="fa fa-quote-left"></i> Forum</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="bg-grey-50 padding-top-30">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 padding-right-20">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="headline">
-                                <h4>Ultimas notícias</h4>
-                                <div class="btn-group pull-right">
-                                    <a href="#" class="btn btn-default"><i class="fa fa-th-large no-margin"></i></a>
-                                    <a href="#" class="btn btn-default"><i class="fa fa-bars no-margin"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <c:if test="${!empty noticias}">
-                    <c:forEach items="${noticias}" var="noticia">
-
-                    <div class="panel panel-default panel-post">
-                        <div class="panel-body">
-                            <div class="post">
-                                <div class="post-header post-author">
-                                    <a href="/noticias/${noticia.url} class="author" data-toggle="tooltip" title="YAKUZI"><img src="${noticia.banner}" alt=""></a>
-                                    <div class="post-title">
-                                        <h3><a href="#">${noticia.titulo}</a></h3>
-                                        <ul class="post-meta">
-                                            <li><a href="#"><i class="fa fa-user"></i> ${noticia.usuario.username}</a></li>
-                                            <li><i class="fa fa-calendar-o"></i> ${noticia.data}</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="embed-responsive embed-responsive-16by9 post-thumbnail">
-                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/vSteQ_wlB94?rel=0&amp;showinfo=0" allowfullscreen></iframe>
-                                </div>
-
-                                Etiam et sollicitudin elit. Sed ultrices aliquet dui, eu aliquet metus sodales sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis porttitor varius pulvinar. Vivamus efficitur vulputate imperdiet.
-                            </div>
-                        </div>
-                        <div class="panel-footer">
-                            <ul class="post-action">
-                                <li><a href="#"><i class="fa fa-heart"></i> like (5)</a></li>
-                                <li><a href="#"><i class="fa fa-comments"></i> Comments</a></li>
-                                <li><a href="#"><i class="fa fa-reply"></i> share</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    </c:forEach>
-                    </c:if>
-
-
-
-
-                    <div class="text-center"><a href="#" class="btn btn-primary btn-lg btn-shadow btn-rounded btn-icon-right">Ler mais</a></div>
-                </div>
-
-                <div class="col-md-4 padding-left-20">
-                    <div class="widget widget-game" style="background-image: url(img/game/game-widget.jpg);">
-                        <div class="overlay">
-                            <div class="title">${jogo.nome}</div>
-
-                            <div class="bold text-uppercase">Plataformas</div>
-                            <span class="label label-primary">PS4</span>
-                            <span class="label label-warning">PC</span>
-                            <span class="label label-success">Xbox</span>
-
-                            <div class="bold text-uppercase margin-top-40">Desenvolvedora</div>
-                            <span class="font-size-13">CD Projekt Red Studio</span>
-
-                            <div class="bold text-uppercase margin-top-35">Data de Lançamento</div>
-                            <span class="font-size-13">June 18, 2015</span>
-
-                            <div class="description">
-                                ${jogo.descricao}
-                                <a href="${jogo.site}" class="btn btn-block btn-primary margin-top-40">Jogue<i class="ion-ios-game-controller-b margin-left-10"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="widget widget-list">
-                        <div class="tab-select border-bottom-1 border-grey-300">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#tabs1" data-toggle="tab">Posts</a></li>
-                                <li><a href="#tabs2" data-toggle="tab">Forums</a></li>
-                                <li><a href="#" data-toggle="tab">Images</a></li>
-                            </ul>
-                        </div>
-                        <div class="tab-content">
-                            <ul class="tab-pane fade in active" id="tabs1">
-                                <li>
-                                    <a href="#" class="thumb"><img src="img/blog/xs/1.jpg" alt=""></a>
-                                    <div class="widget-list-meta">
-                                        <h4 class="widget-list-title"><a href="#">Overwatch Closed Beta</a></h4>
-                                        <p><i class="fa fa-clock-o"></i> September 15, 2015</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" class="thumb"><img src="img/blog/xs/2.jpg" alt=""></a>
-                                    <div class="widget-list-meta">
-                                        <h4 class="widget-list-title"><a href="#">Blood and Gore</a></h4>
-                                        <p><i class="fa fa-clock-o"></i> September 13, 2015</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" class="thumb"><img src="img/blog/xs/3.jpg" alt=""></a>
-                                    <div class="widget-list-meta">
-                                        <h4 class="widget-list-title"><a href="#">Warner Bros. Interactive</a></h4>
-                                        <p><i class="fa fa-clock-o"></i> September 12, 2015</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" class="thumb"><img src="img/blog/xs/4.jpg" alt=""></a>
-                                    <div class="widget-list-meta">
-                                        <h4 class="widget-list-title"><a href="#">Sharks Don't Sleep</a></h4>
-                                        <p><i class="fa fa-clock-o"></i> September 10, 2015</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" class="thumb"><img src="img/blog/xs/5.jpg" alt=""></a>
-                                    <div class="widget-list-meta">
-                                        <h4 class="widget-list-title"><a href="#">GTA 5 Reaches 5 Million</a></h4>
-                                        <p><i class="fa fa-clock-o"></i> September 10, 2015</p>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul class="tab-pane fade" id="tabs2">
-                                <li>
-                                    <a href="#" class="thumb"><img src="img/blog/xs/1.jpg" alt=""></a>
-                                    <div class="widget-list-meta">
-                                        <h4 class="widget-list-title"><a href="#">Overwatch Closed Beta</a></h4>
-                                        <p><i class="fa fa-clock-o"></i> September 15, 2015</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" class="thumb"><img src="img/blog/xs/2.jpg" alt=""></a>
-                                    <div class="widget-list-meta">
-                                        <h4 class="widget-list-title"><a href="#">Blood and Gore</a></h4>
-                                        <p><i class="fa fa-clock-o"></i> September 13, 2015</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" class="thumb"><img src="img/blog/xs/3.jpg" alt=""></a>
-                                    <div class="widget-list-meta">
-                                        <h4 class="widget-list-title"><a href="#">Warner Bros. Interactive</a></h4>
-                                        <p><i class="fa fa-clock-o"></i> September 12, 2015</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" class="thumb"><img src="img/blog/xs/4.jpg" alt=""></a>
-                                    <div class="widget-list-meta">
-                                        <h4 class="widget-list-title"><a href="#">Sharks Don't Sleep</a></h4>
-                                        <p><i class="fa fa-clock-o"></i> September 10, 2015</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="#" class="thumb"><img src="img/blog/xs/5.jpg" alt=""></a>
-                                    <div class="widget-list-meta">
-                                        <h4 class="widget-list-title"><a href="#">GTA 5 Reaches 5 Million</a></h4>
-                                        <p><i class="fa fa-clock-o"></i> September 10, 2015</p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="widget widget-card">
-                        <div class="title">Related Videos</div>
-                        <div class="card">
-                            <div class="card-img">
-                                <a href="videos-single.html"><img src="http://i1.ytimg.com/vi/tuPEam_Jt4I/mqdefault.jpg" alt=""></a>
-                                <div class="time">04:51</div>
-                            </div>
-                            <div class="caption">
-                                <h3 class="card-title"><a href="videos-single.html">The Witcher 3: Wild Hunt - Official Gameplay</a></h3>
-                                <ul>
-                                    <li><i class="fa fa-calendar-o"></i> April 13, 2016</li>
-                                    <li><i class="fa fa-eye"></i> 1500 views</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <a href="videos-single.html"><img src="http://i1.ytimg.com/vi/_UFT49qWopg/mqdefault.jpg" alt=""></a>
-                                <div class="time">02:04</div>
-                            </div>
-                            <div class="caption">
-                                <h3 class="card-title"><a href="videos-single.html">The Witcher 3: Wild Hunt - The Beginning</a></h3>
-                                <ul>
-                                    <li><i class="fa fa-calendar-o"></i> April 13, 2016</li>
-                                    <li><i class="fa fa-eye"></i> 1500 views</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <a href="videos-single.html"><img src="http://i1.ytimg.com/vi/xx8kQ4s5hCY/mqdefault.jpg" alt=""></a>
-                                <div class="time">06:33</div>
-                            </div>
-                            <div class="caption">
-                                <h3 class="card-title"><a href="videos-single.html">The Witcher 3: Wild Hunt</a></h3>
-                                <ul>
-                                    <li><i class="fa fa-calendar-o"></i> April 13, 2016</li>
-                                    <li><i class="fa fa-eye"></i> 1500 views</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img">
-                                <a href="videos-single.html"><img src="http://i1.ytimg.com/vi/c0i88t0Kacs/mqdefault.jpg" alt=""></a>
-                                <div class="time">11:06</div>
-                            </div>
-                            <div class="caption">
-                                <h3 class="card-title"><a href="videos-single.html">The Witcher 3: Wild Hunt - Killing Monsters Cinematic Trailer</a></h3>
-                                <ul>
-                                    <li><i class="fa fa-calendar-o"></i> April 13, 2016</li>
-                                    <li><i class="fa fa-eye"></i> 1500 views</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <a href="#" class="btn btn-inverse btn-block">More Videos</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 </div>
+
+<!-- Player Pages Filter -->
+<nav class="content-filter">
+    <div class="container">
+        <a href="#" class="content-filter__toggle"></a>
+        <ul class="content-filter__list">
+            <li class="content-filter__item content-filter__item--active"><a href="jogo-informacoes.html" class="content-filter__link"><small>Jogo</small> Informações</a></li>
+            <li class="content-filter__item "><a href="jogo-noticias.html" class="content-filter__link"><small>Jogo</small> Notícias</a></li>
+            <li class="content-filter__item "><a href="jogo-campeonatos.html" class="content-filter__link"><small>Jogo</small> Campeonatos</a></li>
+            <li class="content-filter__item "><a href="jogo-ranking.html" class="content-filter__link"><small>Jogo</small> Ranking</a></li>
+            <li class="content-filter__item "><a href="jogo-galeria.html" class="content-filter__link"><small>Jogo</small> Galeria</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Player Pages Filter / End -->
+
+<!-- Content
+================================================== -->
+<div class="site-content">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Content -->
+            <div class="content col-md-8">
+
+                <!-- Article -->
+                <article class="card card--lg post post--single">
+
+                    <figure class="post__thumbnail">
+                        <img src="assets/images/samples/single-player-img1.jpg" alt="">
+                    </figure>
+
+                    <div class="card__content">
+                        <header class="post__header">
+                            <h2 class="post__title">${jogo.nome}</h2>
+                        </header>
+
+                        <div class="post__content">
+                            <p>${jogo.descricao}</p>
+
+                            <div class="spacer"></div>
+
+                            <h4>Where it all Started</h4>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore.</p>
+
+                            <div class="spacer"></div>
+
+                            <blockquote class="blockquote blockquote--default">
+                                <p class="blockquote__content">I think that Soccer is not just a sport, but a way to live your life</p>
+                                <footer class="blockquote__footer">
+                                    <cite class="blockquote__cite">
+                                        <span class="blockquote__author-name">James Girobilie</span>
+                                        <span class="blockquote__author-info">Alchemists SG</span>
+                                    </cite>
+                                </footer>
+                            </blockquote>
+
+                            <h4>Always Playing for the Win</h4>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+                        </div>
+
+                    </div>
+                </article>
+                <!-- Article / End -->
+
+            </div>
+            <!-- Content / End -->
+
+            <!-- Player Sidebar -->
+            <div class="sidebar sidebar--player col-md-4">
+
+                <!-- Widget: Social Buttons -->
+                <aside class="widget widget--sidebar widget-social">
+                    <a href="#" class="btn-social-counter btn-social-counter--fb">
+                        <div class="btn-social-counter__icon">
+                            <i class="fa fa-facebook"></i>
+                        </div>
+                        <h6 class="btn-social-counter__title">Curta no Facebook</h6>
+                        <span class="btn-social-counter__count">83600 Curtidas</span>
+                        <span class="btn-social-counter__add-icon"></span>
+                    </a>
+                    <a href="#" class="btn-social-counter btn-social-counter--twitter">
+                        <div class="btn-social-counter__icon">
+                            <i class="fa fa-twitter"></i>
+                        </div>
+                        <h6 class="btn-social-counter__title">Siga no Twitter</h6>
+                        <span class="btn-social-counter__count">580 Seguidores</span>
+                        <span class="btn-social-counter__add-icon"></span>
+                    </a>
+                    <a href="#" class="btn-social-counter btn-social-counter--rss">
+                        <div class="btn-social-counter__icon">
+                            <i class="fa fa-rss"></i>
+                        </div>
+                        <h6 class="btn-social-counter__title">Inscreva-se no RSS</h6>
+                        <span class="btn-social-counter__count">840 Inscrições</span>
+                        <span class="btn-social-counter__add-icon"></span>
+                    </a>
+                </aside>
+                <!-- Widget: Social Buttons / End -->
+
+                <!-- Widget: Popular News -->
+                <aside class="widget widget--sidebar card widget-popular-posts">
+                    <div class="widget__title card__header">
+                        <h4>Notícias Relacionadas</h4>
+                    </div>
+                    <div class="widget__content card__content">
+                        <ul class="posts posts--simple-list">
+
+                            <c:if test="${!empty noticias}">
+                                <c:forEach items="${noticias}" var="noticia">
+
+                                    <li class="posts__item posts__item--category-2">
+                                        <figure class="posts__thumb">
+                                            <a href="#"><img src="/resources/assets/images/samples/post-img1-xs.jpg" alt=""></a>
+                                        </figure>
+                                        <div class="posts__inner">
+                                            <div class="posts__cat">
+                                                <span class="label posts__cat-label">Injuries</span>
+                                            </div>
+                                            <h6 class="posts__title"><a href="/noticias/${noticia.url}">${noticia.titulo}</a></h6>
+                                            <time datetime="2016-08-23" class="posts__date">${noticia.data}</time>
+                                        </div>
+                                    </li>
+
+                                </c:forEach>
+                            </c:if>
+
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Widget: Popular News / End -->
+
+
+                <!-- Widget: Newsletter -->
+                <aside class="widget widget--sidebar card widget-newsletter">
+                    <div class="widget__title card__header">
+                        <h4>Newsletter</h4>
+                    </div>
+                    <div class="widget__content card__content">
+                        <div class="widget-newsletter__desc">
+                            <p>Fique por dentro de todas as novidades da eSports Club se inscrevendo em nosso Newsletter.</p>
+                        </div>
+                        <form action="#" id="newsletter" class="inline-form">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Seu endereço de email...">
+                                <span class="input-group-btn">
+                          <button class="btn btn-lg btn-default" type="button">Inscrever</button>
+                        </span>
+                            </div>
+                        </form>
+                    </div>
+                </aside>
+                <!-- Widget: Newsletter / End -->
+
+
+            </div>
+            <!-- Player Sidebar / End -->
+        </div>
+
+    </div>
+</div>
+
+<!-- Content / End -->

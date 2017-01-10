@@ -4,80 +4,124 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 
-<div id="wrapper">
-
-	<section class="bg-grey-50 border-bottom-1 border-grey-300 padding-10">
-		<div class="container">
-			<ol class="breadcrumb">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="#">Notícias</a></li>
-				<li class="active">${noticia.titulo}</li>
-			</ol>
+<!-- Page Heading
+================================================== -->
+<div class="page-heading">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h1 class="page-heading__title">eSport Club <span class="highlight">${noticia.titulo}</span></h1>
+				<ol class="page-heading__breadcrumb breadcrumb">
+					<li><a href="_soccer_index.html">Home</a></li>
+					<li><a href="_soccer_blog-1.html">Notícias</a></li>
+					<li class="active">${noticia.titulo}</li>
+				</ol>
+			</div>
 		</div>
-	</section>
+	</div>
+</div>
 
-	<section class="padding-top-50 padding-bottom-50 padding-top-sm-30">
-		<div class="container">
-			<div class="row sidebar">
-				<div class="col-md-9 leftside">
-					<div class="post post-single">
-						<div class="post-header post-author">
-							<a href="#" class="author" data-toggle="tooltip" title="YAKUZI"><img src="/resources/img/user/avatar.jpg" alt="" /></a>
-							<div class="post-title">
-								<h2><a href="#">${noticia.titulo}</a></h2>
-								<ul class="post-meta">
-									<li><a href="#"><i class="fa fa-user"></i> ${noticia.usuario.username}</a></li>
-									<li><i class="fa fa-calendar-o"></i> ${noticia.data}</li>
-									<li><a href="#disqus_thread9"><i class="fa fa-comments"></i> 0 <span class="hidden-xs">Comments</span></a></li>
-								</ul>
-							</div>
+<!-- Content
+================================================== -->
+<div class="site-content">
+	<div class="container">
+
+		<div class="row">
+			<!-- Content -->
+			<div class="content col-md-8">
+
+				<!-- Article -->
+				<article class="card card--lg post post--single">
+
+					<figure class="post__thumbnail">
+						<img src="${noticia.banner}" alt="">
+					</figure>
+
+					<div class="card__content">
+						<div class="post__category">
+							<span class="label posts__cat-label">The Team</span>
+						</div>
+						<header class="post__header">
+							<h2 class="post__title">${noticia.titulo}</h2>
+							<ul class="post__meta meta">
+								<li class="meta__item meta__item--date"><time datetime="2017-08-23">${noticia.data}</time></li>
+								<li class="meta__item meta__item--views">2369</li>
+								<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
+								<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+							</ul>
+						</header>
+
+						<div class="post__content">
+							${noticia.conteudo}
 						</div>
 
-						<div class="post-thumbnail">
-							<a href="#"><img src="${noticia.banner}" alt=""></a>
-							<div class="post-caption">Descrição do banner</div>
+						<footer class="post__footer">
+							<div class="post__tags">
+								<a href="#" class="btn btn-primary btn-outline btn-xs">Playoffs</a>
+								<a href="#" class="btn btn-primary btn-outline btn-xs">Alchemists</a>
+								<a href="#" class="btn btn-primary btn-outline btn-xs">Injuries</a>
+								<a href="#" class="btn btn-primary btn-outline btn-xs">Team</a>
+								<a href="#" class="btn btn-primary btn-outline btn-xs">Uniforms</a>
+								<a href="#" class="btn btn-primary btn-outline btn-xs">Champions</a>
+							</div>
+						</footer>
+
+					</div>
+				</article>
+				<!-- Article / End -->
+
+				<!-- Post Sharing Buttons -->
+				<div class="post-sharing">
+					<div class="row">
+						<div class="col-md-4">
+							<a href="#" class="btn btn-default btn-facebook btn-icon btn-block"><i class="fa fa-facebook"></i> Compartilhar no Facebook</a>
 						</div>
-
-						<p>${noticia.conteudo}</p>
-
-						<div class="col-lg-7 col-md-7 col-sm-6 col-xs-12 margin-bottom-sm-30">
-							<div class="testimonial">
-								<p><em>" ${noticia.comentario}"</em></p>
-								<div class="thumbnail">
-									<img src="resources/img/user/avatar.jpg" alt="" />
-								</div>
-								<div class="testimonial-name">
-									<a href="#">${noticia.usuario.username}</a>
-									<span>Sobre o autor</span>
-								</div>
-							</div>
+						<div class="col-md-4">
+							<a href="#" class="btn btn-default btn-twitter btn-icon btn-block"><i class="fa fa-twitter"></i> Compartilhar no Twitter</a>
 						</div>
-
-						<div class="row margin-top-40">
-							<div class="col-md-8">
-								<div class="tags">
-									<a href="#">Playstation 4</a>
-									<a href="#">Xbox One</a>
-									<a href="#">Mirrors Edge</a>
-									<a href="#">Cod Black Ops 3</a>
-									<a href="#">Battlefront 3</a>
-								</div>
-							</div>
-							<div class="col-md-4 hidden-xs hidden-sm">
-								<ul class="share">
-									<li><a href="#" class="btn btn-sm btn-social-icon btn-facebook" data-toggle="tooltip" title="Share on facebook"><i class="fa fa-facebook"></i></a><span>312</span></li>
-									<li><a href="#" class="btn btn-sm btn-social-icon btn-twitter" data-toggle="tooltip" title="Share on twitter"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#" class="btn btn-sm btn-social-icon btn-google-plus" data-toggle="tooltip" title="Share on google"><i class="fa fa-google-plus"></i></a></li>
-								</ul>
-							</div>
+						<div class="col-md-4">
+							<a href="#" class="btn btn-default btn-gplus btn-icon btn-block"><i class="fa fa-google-plus"></i> Compartilhar no Google+</a>
 						</div>
 					</div>
+				</div>
+				<!-- Post Sharing Buttons / End -->
 
-					<div class="comments">
-						<h4 class="page-header"><i class="fa fa-comment-o"></i> Comentarios</h4>
+
+				<!-- Post Author -->
+				<div class="post-author card card--lg">
+					<div class="card__content">
+						<header class="post-author__header">
+							<figure class="post-author__avatar">
+								<img src="/resources/assets/images/samples/avatar-1.jpg" alt="Post Author Avatar">
+							</figure>
+							<div class="post-author__info">
+								<h4 class="post-author__name">${noticia.usuario.username}</h4>
+								<span class="post-author__slogan">The Alchemists Ninja</span>
+							</div>
+							<ul class="post-author__social-links social-links social-links--btn">
+								<li class="social-links__item">
+									<a href="#" class="social-links__link social-links__link--fb"><i class="fa fa-facebook"></i></a>
+								</li>
+								<li class="social-links__item">
+									<a href="#" class="social-links__link social-links__link--twitter"><i class="fa fa-twitter"></i></a>
+								</li>
+							</ul>
+						</header>
+						<div class="post-author__description">
+							${noticia.comentario}
+						</div>
+					</div>
+				</div>
+				<!-- Post Author / End -->
+
+				<!-- Post Comments -->
+				<div class="post-comments card card--lg">
+					<header class="post-commments__header card__header">
+						<h4>Comentários</h4>
+					</header>
+					<div class="post-comments__content card__content">
 						<div id="disqus_thread"></div>
 						<script>
-
 							/**
 							 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 							 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
@@ -96,29 +140,70 @@
 						</script>
 						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 						<script id="dsq-count-scr" src="//esports-club.disqus.com/count.js" async></script>
+
+
 					</div>
 				</div>
+				<!-- Post Comments / End -->
 
-				<div class="col-md-3 rightside">
-					<div class="widget margin-bottom-35">
-						<div class="btn-inline">
-							<input type="text" class="form-control padding-right-40"  placeholder="Procurar...">
-							<button type="submit" class="btn btn-link color-grey-700 padding-top-10"><i class="fa fa-search"></i></button>
+			</div>
+			<!-- Content / End -->
+
+			<!-- Sidebar -->
+			<div id="sidebar" class="sidebar col-md-4">
+
+				<!-- Widget: Social Buttons -->
+				<aside class="widget widget--sidebar widget-social">
+					<a href="#" class="btn-social-counter btn-social-counter--fb">
+						<div class="btn-social-counter__icon">
+							<i class="fa fa-facebook"></i>
 						</div>
-					</div>
+						<h6 class="btn-social-counter__title">Curta no Facebook</h6>
+						<span class="btn-social-counter__count">83600 Curtidas</span>
+						<span class="btn-social-counter__add-icon"></span>
+					</a>
+					<a href="#" class="btn-social-counter btn-social-counter--twitter">
+						<div class="btn-social-counter__icon">
+							<i class="fa fa-twitter"></i>
+						</div>
+						<h6 class="btn-social-counter__title">Siga no Twitter</h6>
+						<span class="btn-social-counter__count">580 Seguidores</span>
+						<span class="btn-social-counter__add-icon"></span>
+					</a>
+					<a href="#" class="btn-social-counter btn-social-counter--rss">
+						<div class="btn-social-counter__icon">
+							<i class="fa fa-rss"></i>
+						</div>
+						<h6 class="btn-social-counter__title">Inscreva-se no RSS</h6>
+						<span class="btn-social-counter__count">840 Inscrições</span>
+						<span class="btn-social-counter__add-icon"></span>
+					</a>
+				</aside>
+				<!-- Widget: Social Buttons / End -->
 
-					<div class="widget widget-list">
-						<div class="title">Últimas noticias</div>
-						<ul>
+				<!-- Widget: Popular News -->
+				<aside class="widget widget--sidebar card widget-popular-posts">
+					<div class="widget__title card__header">
+						<h4>Ultímas Notícias</h4>
+					</div>
+					<div class="widget__content card__content">
+						<ul class="posts posts--simple-list">
 
 							<c:if test="${!empty noticias}">
 								<c:forEach items="${noticias}" var="noticia">
 
-									<li>
-										<a href="/noticias/${noticia.url}" class="thumb"><img src="${noticia.banner}" alt=""></a>
-										<div class="widget-list-meta">
-											<h4 class="widget-list-title"><a href="#">${noticia.titulo}</a></h4>
-											<p><i class="fa fa-clock-o"></i> ${noticia.data}</p>
+									<li class="posts__item posts__item--category-2">
+										<figure class="posts__thumb">
+											<a href="/noticias/${noticia.url}"><img src="/resources/assets/images/samples/post-img1-xs.jpg" alt=""></a>
+										</figure>
+										<div class="posts__inner">
+											<div class="posts__cat">
+												<span class="label posts__cat-label">Injuries</span>
+											</div>
+											<h6 class="posts__title"><a href="#">${noticia.titulo}</a></h6>
+											<div class="posts__date">
+												<fmt:formatDate value="${noticia.data}" pattern="d/MMM/yyyy HH:mm"/>
+											</div>
 										</div>
 									</li>
 
@@ -127,73 +212,35 @@
 
 						</ul>
 					</div>
+				</aside>
+				<!-- Widget: Popular News / End -->
 
-					<div class="widget">
-						<a href="#"><img src="img/place.jpg" alt=""></a>
+				<!-- Widget: Newsletter -->
+				<aside class="widget widget--sidebar card widget-newsletter">
+					<div class="widget__title card__header">
+						<h4>Newsletter</h4>
 					</div>
-
-					<div class="widget widget-list">
-						<div class="title">Recent Comments</div>
-						<ul>
-							<li>
-								<a href="#" class="thumb"><img src="img/blog/xs/1.jpg" alt=""></a>
-								<div class="widget-list-meta">
-									<h4 class="widget-list-title"><a href="#">Overwatch Closed Beta</a></h4>
-									<p><i class="fa fa-clock-o"></i> September 15, 2015</p>
-								</div>
-							</li>
-							<li>
-								<a href="#" class="thumb"><img src="img/blog/xs/2.jpg" alt=""></a>
-								<div class="widget-list-meta">
-									<h4 class="widget-list-title"><a href="#">Blood and Gore</a></h4>
-									<p><i class="fa fa-clock-o"></i> September 13, 2015</p>
-								</div>
-							</li>
-							<li>
-								<a href="#" class="thumb"><img src="img/blog/xs/3.jpg" alt=""></a>
-								<div class="widget-list-meta">
-									<h4 class="widget-list-title"><a href="#">Warner Bros. Interactive</a></h4>
-									<p><i class="fa fa-clock-o"></i> September 12, 2015</p>
-								</div>
-							</li>
-							<li>
-								<a href="#" class="thumb"><img src="img/blog/xs/4.jpg" alt=""></a>
-								<div class="widget-list-meta">
-									<h4 class="widget-list-title"><a href="#">Sharks Don't Sleep</a></h4>
-									<p><i class="fa fa-clock-o"></i> September 10, 2015</p>
-								</div>
-							</li>
-							<li>
-								<a href="#" class="thumb"><img src="img/blog/xs/5.jpg" alt=""></a>
-								<div class="widget-list-meta">
-									<h4 class="widget-list-title"><a href="#">GTA 5 Reaches 5 Million</a></h4>
-									<p><i class="fa fa-clock-o"></i> September 10, 2015</p>
-								</div>
-							</li>
-						</ul>
-					</div>
-
-					<div class="widget">
-						<div class="title">Recent Tweets</div>
-						<div id="twitter" data-twitter="346548853320851456"></div>
-					</div>
-
-					<div class="widget">
-						<div class="title">Facebook</div>
-						<div class="widget-row">
-							<div id="fb-root"></div>
-							<script>(function(d, s, id) {
-								var js, fjs = d.getElementsByTagName(s)[0];
-								if (d.getElementById(id)) return;
-								js = d.createElement(s); js.id = id;
-								js.src = "http://connect.facebook.net/en-GB/sdk.js#xfbml=1&version=v2.5";
-								fjs.parentNode.insertBefore(js, fjs);
-							}(document, 'script', 'facebook-jssdk'));</script>
-							<div class="fb-page" data-href="https://www.facebook.com/yakuzi.eu" data-height="800" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/yakuzi.eu"><a href="https://www.facebook.com/yakuzi.eu">yakuzi.eu</a></blockquote></div></div>
+					<div class="widget__content card__content">
+						<div class="widget-newsletter__desc">
+							<p>Fique por dentro de todas as novidades da eSports Club se inscrevendo em nosso Newsletter.</p>
 						</div>
+						<form action="#" id="newsletter" class="inline-form">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Seu endereço de email...">
+								<span class="input-group-btn">
+                      <button class="btn btn-lg btn-default" type="button">Inscrever</button>
+                    </span>
+							</div>
+						</form>
 					</div>
-				</div>
+				</aside>
+				<!-- Widget: Newsletter / End -->
+
 			</div>
+			<!-- Sidebar / End -->
 		</div>
-	</section>
+
+	</div>
 </div>
+
+<!-- Content / End -->

@@ -1,0 +1,752 @@
+/*
+File Name: 		content.css
+Written by: 	Dan Fisher - (http://themeforest.net/user/dan_fisher)
+Description:  Styles for displaying content with some of the most commonly used HTML elements, including normalization, typography, images, tables, and more.
+*/
+/*
+// #Typography
+// --------------------------------------------------
+*/
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #31404b;
+  margin: 0 0 .75em 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 22px;
+  text-transform: none;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  line-height: 26px;
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: 1.5em;
+}
+
+/* Links */
+a {
+  color: #1892ed;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #38a9ff;
+  text-decoration: none;
+  outline: none;
+}
+
+/* Lists */
+ol.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1.5em;
+  counter-reset: counter;
+}
+
+ol.list li {
+  position: relative;
+  padding: 0 0 .5em 30px;
+}
+
+ol.list li::before {
+  display: inline-block;
+  /* block would also work */
+  position: absolute;
+  /* move this out of the way of the text */
+  left: 0;
+  /* move the counter label into the space from the padding */
+  content: counter(counter) ". ";
+  counter-increment: counter;
+  font-weight: bold;
+  width: 20px;
+  color: #31404b;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+}
+
+ul.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1.5em;
+}
+
+ul.list li {
+  position: relative;
+  padding: 0 0 .5em 30px;
+}
+
+ul.list li::before {
+  display: inline-block;
+  /* block would also work */
+  position: absolute;
+  /* move this out of the way of the text */
+  left: 0;
+  /* move the counter label into the space from the padding */
+  width: 20px;
+  color: #38a9ff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  content: "\f00c";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "FontAwesome";
+}
+
+/* Content Title */
+.content-title {
+  text-align: center;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .content-title {
+    padding: 25px 0;
+    margin-bottom: 35px;
+  }
+}
+
+.content-title__h {
+  line-height: 1.2em;
+  margin-bottom: .75em;
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
+  .content-title__h {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 992px) {
+  .content-title__h {
+    font-size: 32px;
+  }
+}
+
+/* Blockquotes */
+.blockquote--default {
+  text-align: center;
+  border: none;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 992px) {
+  .blockquote--default {
+    padding: 50px 20px 20px 20px;
+  }
+}
+
+.blockquote--default::before {
+  content: "\201C";
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -0.17em;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-family: "Montserrat", sans-serif;
+  color: #31404b;
+  opacity: .05;
+  font-size: 300px;
+  line-height: 1em;
+  pointer-events: none;
+}
+
+@media (min-width: 992px) {
+  .blockquote--default::before {
+    font-size: 600px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .blockquote--default::before {
+    font-size: 700px;
+  }
+}
+
+.blockquote--default .blockquote__content {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+  color: #5a6066;
+  margin-bottom: .75em;
+}
+
+@media (min-width: 992px) {
+  .blockquote--default .blockquote__content {
+    font-size: 24px;
+  }
+}
+
+.blockquote--default .blockquote__footer::before {
+  display: none !important;
+}
+
+.blockquote--default .blockquote__cite {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2em;
+  color: #9a9da2;
+  font-style: normal !important;
+}
+
+@media (min-width: 992px) {
+  .blockquote--default .blockquote__cite {
+    font-size: 14px;
+  }
+}
+
+.blockquote--default .blockquote__author-name {
+  display: block;
+}
+
+.blockquote--default .blockquote__author-info {
+  font-size: 9px;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .blockquote--default .blockquote__author-info {
+    font-size: 10px;
+  }
+}
+
+/* Images
+/* ------------------------- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.aligncenter {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.aligncenter figcaption {
+  padding: 14px;
+  font-size: 13px;
+}
+
+.df-icon {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #38a9ff;
+}
+
+.df-icon-stack {
+  position: relative;
+  width: 28px;
+  height: 28px;
+}
+
+.df-icon-stack .df-icon {
+  position: absolute;
+}
+
+.df-icon--basketball {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.6px;
+}
+
+.df-icon--jersey {
+  width: 22px;
+  height: 24px;
+  stroke-width: 1.8px;
+  fill-rule: evenodd;
+}
+
+.df-icon--points {
+  width: 37px;
+  height: 32px;
+  stroke-width: 1.6px;
+}
+
+.df-icon--bag {
+  width: 22px;
+  height: 24px;
+  stroke-width: 1.6px;
+}
+
+.df-icon--bag-handle {
+  width: 12px;
+  height: 11px;
+  stroke-width: 1.6px;
+}
+
+.df-icon-stack--bag .df-icon--bag {
+  left: 50% !important;
+  top: 5px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.df-icon-stack--bag .df-icon--bag-handle {
+  left: 50% !important;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.df-icon--ppg {
+  width: 37px;
+  height: 32px;
+  stroke-width: 1.6px;
+}
+
+.df-icon--apg {
+  width: 50px;
+  height: 28px;
+  stroke-width: 1.6px;
+}
+
+.df-icon--rpg {
+  width: 41px;
+  height: 33px;
+  stroke-width: 1.6px;
+}
+
+.df-icon-stack--3pts {
+  margin: 0 auto;
+  width: 33px;
+  height: 32px;
+  text-align: center;
+}
+
+.df-icon-stack--3pts .df-icon--basketball {
+  left: 0;
+  top: 4px;
+}
+
+.df-icon-stack--3pts .df-icon--txt {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1em;
+}
+
+/* Soccer Icons */
+.df-icon--whistle {
+  width: 30px;
+  height: 32px;
+  stroke-width: 1.8px;
+}
+
+.df-icon--soccer-ball {
+  width: 28px;
+  height: 28px;
+  stroke-width: 1.8px;
+}
+
+/* Tables
+/* ------------------------- */
+table {
+  background-color: transparent;
+}
+
+caption {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  text-align: left;
+}
+
+th {
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+}
+
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  padding: 6.5px;
+  vertical-align: top;
+  border-top: 1px solid #e4e7ed;
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+}
+
+@media (min-width: 992px) {
+  .table > thead > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > th,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > th,
+  .table > tfoot > tr > td {
+    padding: 13px 10px;
+    font-size: 11px;
+  }
+}
+
+.table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 1px solid #e4e7ed;
+  font-weight: 700;
+  color: #31404b;
+  text-transform: uppercase;
+}
+
+.table > tbody > tr > th {
+  color: #31404b;
+  font-weight: normal;
+}
+
+.table > caption + thead > tr:first-child > th,
+.table > caption + thead > tr:first-child > td,
+.table > colgroup + thead > tr:first-child > th,
+.table > colgroup + thead > tr:first-child > td,
+.table > thead:first-child > tr:first-child > th,
+.table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+
+.table > tbody + tbody {
+  border-top: 2px solid #e4e7ed;
+}
+
+.table--lg > thead > tr > th,
+.table--lg > thead > tr > td,
+.table--lg > tbody > tr > th,
+.table--lg > tbody > tr > td,
+.table--lg > tfoot > tr > th,
+.table--lg > tfoot > tr > td {
+  padding: 8.5px;
+}
+
+@media (min-width: 992px) {
+  .table--lg > thead > tr > th,
+  .table--lg > thead > tr > td,
+  .table--lg > tbody > tr > th,
+  .table--lg > tbody > tr > td,
+  .table--lg > tfoot > tr > th,
+  .table--lg > tfoot > tr > td {
+    padding: 17px 12px;
+  }
+}
+
+.table-thead-color > thead > tr > th {
+  background-color: #f5f7f9;
+}
+
+.table-hover > tbody > tr {
+  -webkit-transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: #f5f7f9;
+}
+
+.table-bordered {
+  border: 1px solid #e4e7ed;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td,
+.table-bordered > tbody > tr > th,
+.table-bordered > tbody > tr > td,
+.table-bordered > tfoot > tr > th,
+.table-bordered > tfoot > tr > td {
+  border: 1px solid #e4e7ed;
+}
+
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom-width: 1px;
+}
+
+.table-wrap-bordered {
+  border: 1px solid #e4e7ed;
+}
+
+@media (max-width: 767px) {
+  .table-responsive {
+    border: none;
+    margin-bottom: 0;
+  }
+}
+
+.table__cell-center {
+  text-align: center;
+}
+
+.table__cell-center > thead > tr > th {
+  text-align: center;
+}
+
+.table__cell-center > thead > tr > th:first-child {
+  text-align: left;
+}
+
+/* Error 404 */
+.error-404 {
+  text-align: center;
+  padding: 10px 15px 20px 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .error-404 {
+    padding: 20px 0 40px 0;
+  }
+}
+
+.error-404__figure {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+  max-width: 75%;
+}
+
+@media (min-width: 480px) {
+  .error-404__figure {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .error-404__figure {
+    margin-bottom: 55px;
+  }
+}
+
+.error-404__figure::before, .error-404__figure::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 120px;
+  height: 25px;
+  background-color: #38a9ff;
+  border-radius: 3px;
+}
+
+.error-404__figure::before {
+  -webkit-transform: translate(50px, -70px) rotate(45deg);
+          transform: translate(50px, -70px) rotate(45deg);
+}
+
+.error-404__figure::after {
+  -webkit-transform: translate(50px, -70px) rotate(-45deg);
+          transform: translate(50px, -70px) rotate(-45deg);
+}
+
+.error__header {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+  .error__header {
+    margin-bottom: 40px;
+  }
+}
+
+.error__title {
+  margin-bottom: 0.33em;
+  font-size: 24px;
+}
+
+@media (min-width: 992px) {
+  .error__title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .error__title {
+    font-size: 38px;
+  }
+}
+
+.error__subtitle {
+  font-size: 18px;
+}
+
+@media (min-width: 1200px) {
+  .error__subtitle {
+    font-size: 22px;
+  }
+}
+
+.error__description {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 1200px) {
+  .error__description {
+    margin-bottom: 60px;
+  }
+}
+
+@media (min-width: 992px) {
+  .error__cta .btn {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .error__cta .btn {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 5px 0;
+  }
+}
+
+/* Spacers */
+.spacer {
+  height: 30px;
+  overflow: hidden;
+}
+
+.spacer-sm {
+  height: 15px;
+  overflow: hidden;
+}
+
+.spacer-lg {
+  height: 45px;
+  overflow: hidden;
+}
+
+.spacer-xlg {
+  height: 60px;
+  overflow: hidden;
+}
+
+.spacer-xxlg {
+  height: 90px;
+  overflow: hidden;
+}
+
+/* Color Pallete */
+.df-color-pallete {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .df-color-pallete {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.df-color-pallete__item {
+  height: 120px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  line-height: 1.2em;
+  text-align: center;
+  line-height: 120px;
+}
+
+@media (max-width: 767px) {
+  .df-color-pallete__item {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+
+@media (max-width: 479px) {
+  .df-color-pallete__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+.df-color-pallete__item.color-dark {
+  background-color: #1e2024;
+}
+
+.df-color-pallete__item.color-dark-lighten {
+  background-color: #292c31;
+}
+
+.df-color-pallete__item.color-2 {
+  background-color: #31404b;
+}
+
+.df-color-pallete__item.color-3 {
+  background-color: #07e0c4;
+}
+
+.df-color-pallete__item.color-4 {
+  background-color: #c2ff1f;
+}
+
+.df-color-pallete__item.color-gray {
+  background-color: #9a9da2;
+}
+
+.df-color-pallete__item.color-primary {
+  background-color: #38a9ff;
+}
+
+.df-color-pallete__item.color-primary-darken {
+  background-color: #1892ed;
+}

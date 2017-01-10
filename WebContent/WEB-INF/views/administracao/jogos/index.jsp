@@ -2,45 +2,100 @@
          pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<div id="wrapper">
-    <section class="hero" style="background-image: url(resources/img/cover/cover-game.jpg);">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="page-header">
-                <div class="page-title">Not�cias</div>
+<!-- Page Heading
+================================================== -->
+<div class="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="page-heading__title">Painel <span class="highlight">de Administração</span></h1>
+                <ol class="page-heading__breadcrumb breadcrumb">
+                    <li><a href="_soccer_index.html">Home</a></li>
+                    <li><a href="_soccer_shop-list.html">Painel</a></li>
+                    <li class="active">Administração</li>
+                </ol>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
-    <section class="border-bottom-1 border-grey-300 padding-top-10 padding-bottom-10">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Administra��o</a></li>
-                        <li><a href="#">Jogos</a></li>
-                        <li class="active">Todas</li>
-                    </ol>
+<!-- Content
+================================================== -->
+<div class="site-content">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4">
+
+                <!-- Account Navigation -->
+                <div class="card">
+                    <header class="card__header card__header--has-filter">
+                        <h4>Painel de Administração</h4>
+                        <a href="/painel/" class="btn btn-default btn-outline btn-xs card-header__button">Painel </a>
+                    </header>
+                    <div class="card__content">
+                        <nav class="df-account-navigation">
+                            <ul>
+                                <li class="df-account-navigation--link">
+                                    <a href="/administracao/jogadores">Jogadores</a>
+                                </li>
+                                <li class="df-account-navigation--link">
+                                    <a href="/administracao/times">Times</a>
+                                </li>
+                                <li class="df-account-navigation--link">
+                                    <a href="/administracao/campeonatos">Campeonatos</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                <!-- Account Navigation / End -->
 
-    <section class="elements">
-        <div class="container">
-            <h3>Todas os Jogos</h3>
-            <p>Lista de todas os Jogos</p>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <table class="table table-striped">
+                <!-- Account Navigation -->
+                <div class="card">
+                    <div class="card__header">
+                        <h4>Painel de Notícias</h4>
+                    </div>
+                    <div class="card__content">
+                        <nav class="df-account-navigation">
+                            <ul>
+                                <li class="df-account-navigation--link">
+                                    <a href="/administracao/noticias">Notícias</a>
+                                </li>
+                                <li class="df-account-navigation--link">
+                                    <a href="/administracao/jogos">Jogos</a>
+                                </li>
+                                <li class="df-account-navigation--link">
+                                    <a href="/administracao/categorias">Categorias</a>
+                                </li>
+                                <li class="df-account-navigation--link">
+                                    <a href="/administracao/desenvolvedoras">Desenvolvedoras</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- Account Navigation / End -->
+            </div>
+
+            <div class="col-md-8">
+
+                <!-- Personal Information -->
+                <div class="card card--lg">
+                    <header class="card__header card__header--has-btn">
+                        <h4>Todas os Jogos</h4>
+                        <a href="/administracao/jogos/cadastro" class="btn btn-default btn-outline btn-xs card-header__button">Cadastrar Jogo</a>
+                    </header>
+                    <div class="card__content">
+                        <div class="table-responsive">
+                            <table class="table">
                                 <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th class="hidden-xs">Nome</th>
-                                    <th>A��es</th>
+                                    <th>Nome</th>
+                                    <th>Categoria</th>
+                                    <th>Desenvolvedora</th>
+                                    <th>Opções</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -49,24 +104,27 @@
                                     <c:forEach items="${jogos}" var="jogo">
 
                                         <tr>
-                                            <td>${jogo.id}</td>
-                                            <td class="hidden-xs">${jogo.nome}</td>
-                                            <td>
-                                                <button href="#" class="btn btn-primary btn-circle btn-sm" data-toggle="tooltip" title="Editar"><i class="fa fa-pencil"></i></button>
-                                                <a href="/administracao/jogos/excluir/${jogo.id}" class="btn btn-inverse btn-circle btn-sm" data-toggle="tooltip" title="Deletar"><i class="fa fa-trash"></i></a>
-                                            </td>
+                                            <td>${jogo.nome}</td>
+                                            <td>${jogo.plataforma}</td>
+                                            <td>Ubisoft</td>
+                                            <td><a href="#" class="btn btn-xs btn-default btn-outline btn-block">Alterar</a></td>
+                                            <td><a href="/administracao/jogos/excluir/${jogo.id}" class="btn btn-xs btn-default btn-outline btn-block">Excluir</a></td>
                                         </tr>
 
                                     </c:forEach>
                                 </c:if>
 
                                 </tbody>
+
                             </table>
                         </div>
+
                     </div>
                 </div>
+                <!-- Personal Information / End -->
             </div>
         </div>
-    </section>
-
+    </div>
 </div>
+
+<!-- Content / End -->

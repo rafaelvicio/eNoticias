@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <div id="wrapper">
-    <section class="hero" style="background-image: url(resources/img/cover/cover-game.jpg);">
+    <section class="hero" style="background-image: url(/resources/img/cover/cover-game.jpg);">
         <div class="hero-bg"></div>
         <div class="container">
             <div class="page-header">

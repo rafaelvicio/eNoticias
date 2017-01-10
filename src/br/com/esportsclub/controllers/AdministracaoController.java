@@ -40,7 +40,9 @@ public class AdministracaoController{
 
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String index() {
+	public String index(Model model) {
+		List<Usuario> admins = repositorioUsuario.findByRole("ROLE_ADMIN");
+		model.addAttribute("admins", admins);
 		return "administracao.index.tiles";
 	}
 	
