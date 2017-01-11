@@ -37,8 +37,6 @@
 					</ul>
 				</li>
 				<li class="nav-account__item nav-account__item--wishlist"><a href="shop-wishlist.html">Wishlist <span class="highlight">8</span></a></li>
-				<li class="nav-account__item"><a href="/painel/" data-toggle="modal" data-target="#modal-login-register-tabs">Sua conta</a></li>
-
 				<li class="nav-account__item"><a href="#">Idiomas: <span class="highlight">Portugues</span></a>
 					<ul class="main-nav__sub">
 						<li><a href="#">English</a></li>
@@ -47,6 +45,9 @@
 						<li><a href="#">German</a></li>
 					</ul>
 				</li>
+				<li class="nav-account__item"><a href="/painel/" data-toggle="modal" data-target="#modal-login-register-tabs">Sua conta</a></li>
+
+
 
 			</ul>
 			<!-- Account Navigation / End -->
@@ -213,7 +214,7 @@
 							<a href="#" class="social-links__link" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
 						</li>
 						<li class="social-links__item">
-							<a href="#" class="social-links__link" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
+							<a href="#" class="social-links__link" data-toggle="tooltip" data-placement="bottom" title="Twitch"><i class="fa fa-Twitch"></i></a>
 						</li>
 					</ul>
 					<!-- Social Links / End -->
