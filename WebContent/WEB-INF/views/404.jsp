@@ -1,25 +1,51 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<div id="wrapper">
-    <section class="error-404" style="background-image: url(img/content/404.jpg);">
-        <div class="container">
+<!-- Page Heading
+================================================== -->
+<div class="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h1 class="page-heading__title">Error <span class="highlight">404</span></h1>
+                <ol class="page-heading__breadcrumb breadcrumb">
+                    <li><a href="_soccer_index.html">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li class="active">Error</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content
+================================================== -->
+<div class="site-content">
+    <div class="container">
+
+        <!-- Error 404 -->
+        <div class="error-404">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <div class="title">
-                        <h4><i class="fa fa-bug"></i> 404 Page Not Found</h4>
+                <div class="col-md-8 col-md-offset-2">
+                    <figure class="error-404__figure">
+                        <img src="assets/images/icon-ghost.svg" alt="">
+                    </figure>
+                    <header class="error__header">
+                        <h2 class="error__title">OOOOPS! Page not Found</h2>
+                        <h3 class="error__subtitle">Seems that we have a problem!</h3>
+                    </header>
+                    <div class="error__description">
+                        The page you are looking for has been moved or doesn’t exist anymore, if you like you can return to our homepage. If the problem persists, please send us an email to <a href="mailto:info@alchemists.com">info@alchemists.com</a>
                     </div>
-                    <p>Apologies, but the page you requested could not be found.</p>
-                    <form>
-                        <div class="col-lg-8 pull-none display-inline-block">
-                            <div class="btn-inline">
-                                <input type="text" class="form-control input-lg padding-right-40"  placeholder="Search Page...">
-                                <button type="submit" class="btn btn-link color-grey-700 padding-top-10"><i class="fa fa-search"></i></button>
-                            </div>
-                        </div>
-                    </form>
-                    <a href="#" class="btn btn-primary btn-lg margin-top-20 btn-shadow btn-rounded">Back to home</a>
+                    <footer class="error__cta">
+                        <a href="_soccer_index.html" class="btn btn-primary">Return to Home</a>
+                        <a href="#" class="btn btn-primary-inverse">Keep Browsing</a>
+                    </footer>
                 </div>
             </div>
         </div>
-    </section>
+        <!-- Error 404 / End -->
+
+    </div>
 </div>
+
+<!-- Content / End -->
