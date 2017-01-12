@@ -35,7 +35,12 @@
 	</bean>
 	<bean id="validator"
 		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
+
 	<!-- ** Spring Data -->
+
+	<bean class="java.net.URI" id="dbUrl">
+		<constructor-arg value="#{systemEnvironment['DATABASE_URL']}"/>
+	</bean>
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
         <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
         <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
