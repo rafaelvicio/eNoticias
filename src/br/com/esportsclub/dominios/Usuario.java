@@ -44,7 +44,7 @@ public class Usuario {
 	@Column(name = "usr_data")
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data;
-	
+
 	@OneToMany(mappedBy = "usuario", fetch = FetchType.EAGER, cascade = CascadeType.MERGE, orphanRemoval = true)
 	private Set<Time_Usuario> time_usuario;
 
@@ -54,7 +54,7 @@ public class Usuario {
 	@OneToOne(fetch = FetchType.LAZY)
 	private Social social;
 
-    // Gets e Sets
+	// Gets e Sets
 
 	public Long getId() {
 		return id;

@@ -36,11 +36,11 @@
 	<bean id="validator"
 		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
 	<!-- ** Spring Data -->
-	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
-		<property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
-		<property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
-		<property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
-	</bean>
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+        <property name="url" value="#{ 'jdbc:postgresql://' + @dbUrl.getHost() + ':' + @dbUrl.getPort() + @dbUrl.getPath() }"/>
+        <property name="username" value="#{ @dbUrl.getUserInfo().split(':')[0] }"/>
+        <property name="password" value="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
+    </bean>
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
@@ -68,8 +68,6 @@
 	<sec:http pattern="/index" security="none"></sec:http>
 	<sec:http pattern="/cadastro" security="none"></sec:http>
 	<sec:http pattern="/painel/login" security="none"></sec:http>
-	<sec:http pattern="/jogador" security="none"></sec:http>
-	<sec:http pattern="/jogador/**" security="none"></sec:http>
 	<sec:http pattern="/noticias" security="none"></sec:http>
 	<sec:http pattern="/noticias/**" security="none"></sec:http>
 	<sec:http pattern="/jogos" security="none"></sec:http>
@@ -77,10 +75,9 @@
 	<sec:http use-expressions="true" auto-config="true">		
 		
 		<sec:intercept-url pattern="/administracao/**" access="hasRole('ROLE_ADMIN')" />
-		<sec:access-denied-handler error-page="/403" />
 		
 		<!-- <sec:intercept-url pattern="/adim/**" access="hasAnyRole('ROLE_ADMIN', 'DEVELOPER', 'ETC')" /> -->
-
+		
 		<sec:intercept-url pattern="/**" access="isAuthenticated()" />
 		<sec:form-login login-page="/painel/login"
 			default-target-url="/painel/" authentication-failure-url="/painel/login"

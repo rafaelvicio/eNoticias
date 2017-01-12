@@ -28,84 +28,84 @@ import java.util.List;
 @Controller
 @RequestMapping("/")
 public class HomeController {
-	
-	@Autowired
-	private RepositorioUsuario repositorioUsuario;
 
-	@Autowired
-	private RepositorioNoticia repositorioNoticia;
+    @Autowired
+    private RepositorioUsuario repositorioUsuario;
 
-	@Autowired
-	private RepositorioJogo repositorioJogo;
+    @Autowired
+    private RepositorioNoticia repositorioNoticia;
 
-	@Autowired
-	private RepositorioSocial repositorioSocial;
+    @Autowired
+    private RepositorioJogo repositorioJogo;
 
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String index(Model model) {
+    @Autowired
+    private RepositorioSocial repositorioSocial;
 
-		Page<Noticia> noticiasDestaques = repositorioNoticia.findAllByOrderByIdDesc(new PageRequest(0, 4));
-		List<Noticia> noticias = noticiasDestaques.getContent();
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String index(Model model) {
 
-		Page<Jogo> jogosDestaques = repositorioJogo.findAll(new PageRequest(0, 4));
-		List<Jogo> jogos = jogosDestaques.getContent();
+        Page<Noticia> noticiasDestaques = repositorioNoticia.findAllByOrderByIdDesc(new PageRequest(0, 4));
+        List<Noticia> noticias = noticiasDestaques.getContent();
 
-		model.addAttribute("jogos", jogos);
-		model.addAttribute("noticias", noticias);
+        Page<Jogo> jogosDestaques = repositorioJogo.findAll(new PageRequest(0, 4));
+        List<Jogo> jogos = jogosDestaques.getContent();
 
-		return "home.index.tiles";
-	}
+        model.addAttribute("jogos", jogos);
+        model.addAttribute("noticias", noticias);
 
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
-	public String home(Model model) {
-		List<Jogo> jogos = repositorioJogo.findAll();
-		List<Noticia> noticias = repositorioNoticia.findAllByOrderByIdDesc();
+        return "home.index.tiles";
+    }
 
-		model.addAttribute("jogos", jogos);
-		model.addAttribute("noticias", noticias);
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String home(Model model) {
+        List<Jogo> jogos = repositorioJogo.findAll();
+        List<Noticia> noticias = repositorioNoticia.findAllByOrderByIdDesc();
 
-		return "home.home.tiles";
-	}
-	
-	@RequestMapping(value = "/cadastro", method = RequestMethod.GET)
-	public String adicionar(Model model) {
-		model.addAttribute("usuario", new Usuario());
-		return "home.cadastro.tiles";
-	}
+        model.addAttribute("jogos", jogos);
+        model.addAttribute("noticias", noticias);
 
-	@RequestMapping(value = "/cadastro", method = RequestMethod.POST)
-	public String adicionar(@ModelAttribute("usuario") @Valid Usuario usuario, BindingResult result) {
-		if (result.hasErrors()) {
-			return "usuario.adicionar.tiles";
-		}
+        return "home.home.tiles";
+    }
 
-		Date data = new Date();
-		usuario.setData(data);
+    @RequestMapping(value = "/cadastro", method = RequestMethod.GET)
+    public String adicionar(Model model) {
+        model.addAttribute("usuario", new Usuario());
+        return "home.cadastro.tiles";
+    }
+
+    @RequestMapping(value = "/cadastro", method = RequestMethod.POST)
+    public String adicionar(@ModelAttribute("usuario") @Valid Usuario usuario, BindingResult result) {
+        if (result.hasErrors()) {
+            return "usuario.adicionar.tiles";
+        }
+
+        Date data = new Date();
+        usuario.setData(data);
 
 
 
-		usuario.setRole("ROLE_MEMBER");
+        usuario.setRole("ROLE_MEMBER");
 
-		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
-		usuario.setPassword(encoder.encode(usuario.getPassword()));
-		repositorioUsuario.save(usuario);
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        usuario.setPassword(encoder.encode(usuario.getPassword()));
+        repositorioUsuario.save(usuario);
 
-		return "redirect:/painel/login";
-	}
-	
-	@RequestMapping(value = "/perfil", method = RequestMethod.GET)
-	public String perfil() {
-		return "perfil.index.tiles";
-	}
+        return "redirect:/painel/login";
+    }
 
-	@RequestMapping(value = "/404", method = RequestMethod.GET)
-	public String naoEncontrada() {
-		return "home.404.tiles";
-	}
+    @RequestMapping(value = "/perfil", method = RequestMethod.GET)
+    public String perfil() {
+        return "perfil.index.tiles";
+    }
 
-	@RequestMapping(value = "/403", method = RequestMethod.GET)
-	public String semPermissao() {
-		return "home.403.tiles";
-	}
+    @RequestMapping(value = "/404", method = RequestMethod.GET)
+    public String naoEncontrada() {
+        return "home.404.tiles";
+    }
+
+    @RequestMapping(value = "/403", method = RequestMethod.GET)
+    public String semPermissao() {
+        return "home.403.tiles";
+    }
 
 }
