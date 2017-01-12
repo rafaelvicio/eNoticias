@@ -198,7 +198,7 @@
 				<!-- Main Navigation -->
 				<nav class="main-nav clearfix">
 					<ul class="main-nav__list">
-						<li class=""><a href=/">Home</a></li>
+						<li class=""><a href="/">Home</a></li>
 						<li class=""><a href="/noticias/">Notícias</a></li>
 						<li class=""><a href="/jogos/">Jogos</a></li>
 						<li class=""><a href=/campeonatos/">Campeonatos</a></li>

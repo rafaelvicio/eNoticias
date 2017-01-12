@@ -182,7 +182,7 @@
 							<li class="footer-nav__item"><a href="/jogos/">Jogos</a></li>
 							<li class="footer-nav__item"><a href="/campeonatos/">Campeonatos</a></li>
 							<li class="footer-nav__item"><a href="/loja/">Loja</a></li>
-							<li class="footer-nav__item"><a href="/contato">Contato</a></li>
+							<li class="footer-nav__item"><a href="/contato/">Contato</a></li>
 						</ul>
 					</div>
 				</div>

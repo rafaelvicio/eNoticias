@@ -39,15 +39,16 @@
 
 					<div class="card__content">
 						<div class="post__category">
-							<span class="label posts__cat-label">The Team</span>
+							<span class="label posts__cat-label">${noticia.jogo.nome}</span>
 						</div>
 						<header class="post__header">
 							<h2 class="post__title">${noticia.titulo}</h2>
 							<ul class="post__meta meta">
-								<li class="meta__item meta__item--date"><time datetime="2017-08-23">${noticia.data}</time></li>
-								<li class="meta__item meta__item--views">2369</li>
-								<li class="meta__item meta__item--likes"><a href="#"><i class="meta-like icon-heart"></i> 530</a></li>
-								<li class="meta__item meta__item--comments"><a href="#">18</a></li>
+								<li class="meta__item meta__item--date">
+									<div class="posts__date">
+										<fmt:formatDate value="${noticia.data}" pattern="d/MMM/yyyy HH:mm"/>
+									</div>
+								</li>
 							</ul>
 						</header>
 
