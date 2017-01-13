@@ -26,6 +26,9 @@ public class Jogo {
 	@Column(name = "jog_url")
 	private String url;
 
+	@Column(name = "jog_banner")
+	private String banner;
+
 	@Column(name = "jog_site")
 	private String site;
 
@@ -81,5 +84,13 @@ public class Jogo {
 
 	public void setUrl(String url) {
 		this.url = url;
+	}
+
+	public String getBanner() {
+		return banner;
+	}
+
+	public void setBanner(String banner) {
+		this.banner = banner;
 	}
 }

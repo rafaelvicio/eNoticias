@@ -322,7 +322,7 @@
                                         <div class="posts__cat">
                                             <span class="label posts__cat-label">${noticia.jogo.nome}</span>
                                         </div>
-                                        <a href="#"><img src="${noticia.banner}" alt=""></a>
+                                        <a href="/noticias/${noticia.url}"><img src="${noticia.banner}" alt="${noticia.titulo}"></a>
                                     </figure>
                                     <div class="posts__inner card__content">
                                         <a href="#" class="posts__cta"></a>
@@ -385,7 +385,7 @@
                                                 <div class="posts__cat">
                                                     <span class="label posts__cat-label">${jogo.plataforma}</span>
                                                 </div>
-                                                <a href="#"><img src="/resources/assets/images/samples/post-img5.jpg" alt=""></a>
+                                                <a href="/jogos/${jogo.url}"><img src="${jogo.banner}" alt="${jogo.nome}"></a>
                                             </figure>
                                             <div class="posts__inner card__content">
                                                 <a href="#" class="posts__cta"></a>

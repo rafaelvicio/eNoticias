@@ -105,9 +105,8 @@
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<label for="nome">URL</label>
-										<form:input path="url" cssClass="form-control"/>
-										<form:errors path="url" cssStyle="color: red;"></form:errors>
+										<label for="url">Banner da Jogo</label>
+										<form:input id="banner" path="banner" cssClass="form-control" placeholder="Link Banner"/>
 									</div>
 								</div>
 							</div>
