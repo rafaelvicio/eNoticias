@@ -144,24 +144,9 @@
                         <!-- Post Meta - Top -->
                         <div class="post__meta-block post__meta-block--top">
 
-                            <!-- Post Category -->
-                            <div class="post__category">
-                                <span class="label posts__cat-label">The Team</span>
-                            </div>
-                            <!-- Post Category / End -->
-
                             <!-- Post Title -->
-                            <h1 class="page-heading__title"><a href="_soccer_blog-post-1.html">The Alchemists <span class="highlight">won the last game</span> 2-0 against Clovers</a></h1>
+                            <h1 class="page-heading__title"><a href="_soccer_blog-post-1.html">Seja bem-vindo a <span class="highlight">eSports Club</span> seu clube de esporte eletrônico</a></h1>
                             <!-- Post Title / End -->
-
-                            <!-- Post Meta Info -->
-                            <ul class="post__meta meta">
-                                <li class="meta__item meta__item--date"><time datetime="2017-08-23">August 23rd, 2017</time></li>
-                                <li class="meta__item meta__item--views">2369</li>
-                                <li class="meta__item meta__item--likes"><a href="#"><i class="meta-like meta-like--active icon-heart"></i> 530</a></li>
-                                <li class="meta__item meta__item--comments"><a href="#">18</a></li>
-                            </ul>
-                            <!-- Post Meta Info / End -->
 
                         </div>
                         <!-- Post Meta - Top / End -->
@@ -188,17 +173,8 @@
                             <!-- Post Category / End -->
 
                             <!-- Post Title -->
-                            <h1 class="page-heading__title"><a href="_soccer_blog-post-1.html">Franklin Stevens has <span class="highlight">a knee fracture</span> and is gona be out</a></h1>
+                            <h1 class="page-heading__title"><a href="_soccer_blog-post-1.html">Mantenha-se atalizado com as <span class="highlight">principais noticias</span> do esporte eletrônico</a></h1>
                             <!-- Post Title / End -->
-
-                            <!-- Post Meta Info -->
-                            <ul class="post__meta meta">
-                                <li class="meta__item meta__item--date"><time datetime="2017-08-23">August 23rd, 2017</time></li>
-                                <li class="meta__item meta__item--views">2369</li>
-                                <li class="meta__item meta__item--likes"><a href="#"><i class="meta-like meta-like--active icon-heart"></i> 530</a></li>
-                                <li class="meta__item meta__item--comments"><a href="#">18</a></li>
-                            </ul>
-                            <!-- Post Meta Info / End -->
 
                         </div>
                         <!-- Post Meta - Top / End -->
@@ -218,24 +194,9 @@
                         <!-- Post Meta - Top -->
                         <div class="post__meta-block post__meta-block--top">
 
-                            <!-- Post Category -->
-                            <div class="post__category">
-                                <span class="label posts__cat-label">The Team</span>
-                            </div>
-                            <!-- Post Category / End -->
-
                             <!-- Post Title -->
-                            <h1 class="page-heading__title"><a href="_soccer_blog-post-1.html">The New <span class="highlight">Eco Friendly Stadium</span> won a leafy award in 2016</a></h1>
+                            <h1 class="page-heading__title"><a href="_soccer_blog-post-1.html">Acompanhe a <span class="highlight">cobertura dos principais campeonatos</span> do cenario competitivo</a></h1>
                             <!-- Post Title / End -->
-
-                            <!-- Post Meta Info -->
-                            <ul class="post__meta meta">
-                                <li class="meta__item meta__item--date"><time datetime="2017-08-23">August 23rd, 2017</time></li>
-                                <li class="meta__item meta__item--views">2369</li>
-                                <li class="meta__item meta__item--likes"><a href="#"><i class="meta-like meta-like--active icon-heart"></i> 530</a></li>
-                                <li class="meta__item meta__item--comments"><a href="#">18</a></li>
-                            </ul>
-                            <!-- Post Meta Info / End -->
 
                         </div>
                         <!-- Post Meta - Top / End -->
@@ -253,33 +214,24 @@
                 <div class="hero-slider-thumbs__item">
                     <div class="posts__item posts__item--category-1">
                         <div class="posts__inner">
-                            <div class="posts__cat">
-                                <span class="label posts__cat-label">The Team</span>
-                            </div>
-                            <h6 class="posts__title">The Alchemists won the last game 2-0 against Clovers</h6>
-                            <time datetime="2017-12-12" class="posts__date">December 12th, 2016</time>
+                            <h6 class="posts__title">Seja bem-vindo</h6>
+                            <p>A eSports Club é o seu clube de esporte eletrônico, crie seu time ou junte-se a um e participe de competições</p>
                         </div>
                     </div>
                 </div>
                 <div class="hero-slider-thumbs__item">
                     <div class="posts__item posts__item--category-2">
                         <div class="posts__inner">
-                            <div class="posts__cat">
-                                <span class="label posts__cat-label">Injuries</span>
-                            </div>
-                            <h6 class="posts__title">Franklin Stevens has a knee fracture and is gona be out</h6>
-                            <time datetime="2017-11-14" class="posts__date">November 14th, 2016</time>
+                            <h6 class="posts__title">Notícias sobre eSports</h6>
+                            <p>Mantenha-se informado sobre o mundo do esporte eletrônico atravez da nossa cobertura de notícias</p>
                         </div>
                     </div>
                 </div>
                 <div class="hero-slider-thumbs__item">
                     <div class="posts__item posts__item--category-1">
                         <div class="posts__inner">
-                            <div class="posts__cat">
-                                <span class="label posts__cat-label">The Team</span>
-                            </div>
-                            <h6 class="posts__title">The New Eco Friendly Stadium won a leafy award in 2016</h6>
-                            <time datetime="2017-12-13" class="posts__date">December 13th, 2016</time>
+                            <h6 class="posts__title">Cobertura de campeonatos</h6>
+                            <p>Fique por dentro de todas as informações sobre os principais campeonatos de eSports do mundo</p>
                         </div>
                     </div>
                 </div>

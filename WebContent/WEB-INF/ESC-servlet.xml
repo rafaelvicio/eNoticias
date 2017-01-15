@@ -103,4 +103,8 @@
 		<property name="maxUploadSize" value="1000000" />
 	</bean>
 
+	<bean id="fileSaver" class="br.com.esportsclub.infra.FileSaver">
+
+	</bean>
+
 </beans>

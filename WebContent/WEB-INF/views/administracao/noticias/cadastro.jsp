@@ -63,16 +63,16 @@
 						<nav class="df-account-navigation">
 							<ul>
 								<li class="df-account-navigation--link">
-									<a href="/administracao/noticias">Notícias</a>
+									<a href="/administracao/noticias/">Notícias</a>
 								</li>
 								<li class="df-account-navigation--link">
-									<a href="/administracao/jogos">Jogos</a>
+									<a href="/administracao/jogos/">Jogos</a>
 								</li>
 								<li class="df-account-navigation--link">
-									<a href="/administracao/categorias">Categorias</a>
+									<a href="/administracao/categorias/">Categorias</a>
 								</li>
 								<li class="df-account-navigation--link">
-									<a href="/administracao/desenvolvedoras">Desenvolvedoras</a>
+									<a href="/administracao/desenvolvedoras/">Desenvolvedoras</a>
 								</li>
 							</ul>
 						</nav>
@@ -89,7 +89,7 @@
 						<h4>Cadastrar Notícia</h4>
 					</div>
 					<div class="card__content">
-						<form:form action="${actionAdicionar}" method="post" modelAttribute="noticia" cssClass="df-personal-info">
+						<form:form action="${actionAdicionar}" method="post" modelAttribute="noticia" cssClass="df-personal-info" enctype="multipart/form-data">
 
 							<div class="row">
 								<div class="col-md-6">

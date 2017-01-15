@@ -63,16 +63,16 @@
 						<nav class="df-account-navigation">
 							<ul>
 								<li class="df-account-navigation--link">
-									<a href="/administracao/noticias">Notícias</a>
+									<a href="/administracao/noticias/">Notícias</a>
 								</li>
 								<li class="df-account-navigation--link">
-									<a href="/administracao/jogos">Jogos</a>
+									<a href="/administracao/jogos/">Jogos</a>
 								</li>
 								<li class="df-account-navigation--link">
-									<a href="/administracao/categorias">Categorias</a>
+									<a href="/administracao/categorias/">Categorias</a>
 								</li>
 								<li class="df-account-navigation--link">
-									<a href="/administracao/desenvolvedoras">Desenvolvedoras</a>
+									<a href="/administracao/desenvolvedoras/">Desenvolvedoras</a>
 								</li>
 							</ul>
 						</nav>
@@ -117,6 +117,15 @@
 										<label for="nome">Site do Jogo</label>
 										<form:input path="site" cssClass="form-control"/>
 										<form:errors path="site" cssStyle="color: red;"></form:errors>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="nome">URL do Jogo</label>
+											<form:input path="url" cssClass="form-control"/>
+											<form:errors path="url" cssStyle="color: red;"></form:errors>
+										</div>
 									</div>
 								</div>
 							</div>

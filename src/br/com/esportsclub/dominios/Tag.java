@@ -21,7 +21,7 @@ public class Tag {
     @Column(name = "tag_url")
     private String url;
 
-    @ManyToMany(mappedBy="tags", fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    @ManyToMany(mappedBy="tags")
     private List<Noticia> noticias;
 
     public Long getId() {

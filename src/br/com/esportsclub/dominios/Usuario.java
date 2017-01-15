@@ -35,6 +35,9 @@ public class Usuario {
 	@Column(name = "usr_estado")
 	private String estado;
 
+	@Column(name = "usr_foto")
+	private String foto;
+
 	@Column(name = "usr_password", length = 150, nullable = false)
 	private String password;
 
@@ -144,7 +147,11 @@ public class Usuario {
 		this.estado = estado;
 	}
 
+	public String getFoto() {
+		return foto;
+	}
 
-
-
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
 }

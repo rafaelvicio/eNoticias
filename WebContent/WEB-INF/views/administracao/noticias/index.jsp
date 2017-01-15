@@ -61,16 +61,16 @@
                         <nav class="df-account-navigation">
                             <ul>
                                 <li class="df-account-navigation--link">
-                                    <a href="/administracao/noticias">Notícias</a>
+                                    <a href="/administracao/noticias/">Notícias</a>
                                 </li>
                                 <li class="df-account-navigation--link">
-                                    <a href="/administracao/jogos">Jogos</a>
+                                    <a href="/administracao/jogos/">Jogos</a>
                                 </li>
                                 <li class="df-account-navigation--link">
-                                    <a href="/administracao/categorias">Categorias</a>
+                                    <a href="/administracao/categorias/">Categorias</a>
                                 </li>
                                 <li class="df-account-navigation--link">
-                                    <a href="/administracao/desenvolvedoras">Desenvolvedoras</a>
+                                    <a href="/administracao/desenvolvedoras/">Desenvolvedoras</a>
                                 </li>
                             </ul>
                         </nav>
@@ -107,7 +107,7 @@
                                             <td>${noticia.titulo}</td>
                                             <td>${noticia.usuario.username}</td>
                                             <td>${noticia.jogo.nome}</td>
-                                            <td><a href="#" class="btn btn-xs btn-default btn-outline btn-block">Alterar</a></td>
+                                            <td><a href="/administracao/noticias/alterar/${noticia.id}" class="btn btn-xs btn-default btn-outline btn-block">Alterar</a></td>
                                             <td><a href="/administracao/noticias/excluir/${noticia.id}" class="btn btn-xs btn-default btn-outline btn-block">Excluir</a></td>
                                         </tr>
 

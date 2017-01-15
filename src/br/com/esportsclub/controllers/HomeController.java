@@ -5,6 +5,7 @@ import javax.validation.Valid;
 import br.com.esportsclub.dominios.Jogo;
 import br.com.esportsclub.dominios.Noticia;
 import br.com.esportsclub.dominios.Social;
+import br.com.esportsclub.infra.FileSaver;
 import br.com.esportsclub.repositorios.RepositorioJogo;
 import br.com.esportsclub.repositorios.RepositorioNoticia;
 import br.com.esportsclub.repositorios.RepositorioSocial;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.com.esportsclub.dominios.Usuario;
 import br.com.esportsclub.repositorios.RepositorioUsuario;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 import java.util.List;
@@ -40,6 +42,9 @@ public class HomeController {
 
     @Autowired
     private RepositorioSocial repositorioSocial;
+
+    @Autowired
+    private FileSaver fileSaver;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model) {
@@ -74,7 +79,7 @@ public class HomeController {
     }
 
     @RequestMapping(value = "/cadastro", method = RequestMethod.POST)
-    public String adicionar(@ModelAttribute("usuario") @Valid Usuario usuario, BindingResult result) {
+    public String adicionar(@ModelAttribute("usuario") @Valid Usuario usuario, BindingResult result, MultipartFile imagem) {
         if (result.hasErrors()) {
             return "usuario.adicionar.tiles";
         }
@@ -82,7 +87,12 @@ public class HomeController {
         Date data = new Date();
         usuario.setData(data);
 
-
+        if(imagem == null){
+            usuario.setFoto("imagens/jogador/default.jpg");
+        }else{
+            String path = fileSaver.write("imagens/jogador/", imagem);
+            usuario.setFoto(path);
+        }
 
         usuario.setRole("ROLE_MEMBER");
 
