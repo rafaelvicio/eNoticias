@@ -45,6 +45,12 @@
                                 <li class="df-account-navigation--link">
                                     <a href="/administracao/campeonatos">Campeonatos</a>
                                 </li>
+                                <li class="df-account-navigation--link">
+                                    <a href="/administracao/jogos/">Jogos</a>
+                                </li>
+                                <li class="df-account-navigation--link">
+                                    <a href="/administracao/desenvolvedoras/">Desenvolvedoras</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -63,13 +69,10 @@
                                     <a href="/administracao/noticias/">Notícias</a>
                                 </li>
                                 <li class="df-account-navigation--link">
-                                    <a href="/administracao/jogos/">Jogos</a>
-                                </li>
-                                <li class="df-account-navigation--link">
                                     <a href="/administracao/categorias/">Categorias</a>
                                 </li>
                                 <li class="df-account-navigation--link">
-                                    <a href="/administracao/desenvolvedoras/">Desenvolvedoras</a>
+                                    <a href="/administracao/tags/">Tags</a>
                                 </li>
                             </ul>
                         </nav>

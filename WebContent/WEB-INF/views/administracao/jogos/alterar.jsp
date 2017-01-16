@@ -130,32 +130,6 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="account-city">Categoria</label>
-                                    <select name="account-city" id="account-city" class="form-control">
-                                        <option value="0">Escolha a categoria...</option>
-                                        <option value="1">MOBA</option>
-                                        <option value="1">FPS</option>
-                                        <option value="1">RTS</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="account-city">Desenvolvedora</label>
-                                        <select name="account-city" id="account-city" class="form-control">
-                                            <option value="0">Escolha a desenvolvedora...</option>
-                                            <option value="1">Valve</option>
-                                            <option value="2">Riot Games</option>
-                                            <option value="3">Ubisoft</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">

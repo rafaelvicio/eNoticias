@@ -64,7 +64,7 @@ public class AdministracaoJogosController {
             return "administracao.jogo.alterar.tiles";
         }
         repositorioJogo.save(jogo);
-        return "redirect:/administracao/noticias/";
+        return "redirect:/administracao/jogos/";
     }
 
     @RequestMapping(value = "/excluir/{id}", method = RequestMethod.GET)
