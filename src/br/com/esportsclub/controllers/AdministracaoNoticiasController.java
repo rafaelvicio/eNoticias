@@ -90,8 +90,12 @@ public class AdministracaoNoticiasController {
 
     @RequestMapping(value = "/alterar/{id}", method = RequestMethod.GET)
     public String alterar(@PathVariable("id") Long id, Model model) {
+
         Noticia noticiaASerAlterada = repositorioNoticia.findOne(id);
         model.addAttribute("noticia", noticiaASerAlterada);
+
+        model.addAttribute("jogos", repositorioJogo.findAll());
+        model.addAttribute("tags", repositorioTag.findAll());
 
         return "administracao.noticia.alterar.tiles";
     }
@@ -99,10 +103,10 @@ public class AdministracaoNoticiasController {
     @RequestMapping(value = "/alterar", method = RequestMethod.POST)
     public String alterar(@ModelAttribute("noticia") @Valid Noticia noticia, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            model.addAttribute("noticia", repositorioNoticia.findAll());
-            return "administracao.noticia.alterar.tiles";
+            model.addAttribute("noticias", repositorioNoticia.findAll());
+            return "administracao.noticia.index.tiles";
         }
-        repositorioNoticia.save(noticia);
+       repositorioNoticia.save(noticia);
         return "redirect:/administracao/noticias/";
     }
 

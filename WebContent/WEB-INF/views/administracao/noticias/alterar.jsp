@@ -2,7 +2,7 @@
          pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<c:url var="actionAdicionar" value="/administracao/noticias/alterar"></c:url>
+<c:url var="actionAlterar" value="/administracao/noticias/alterar"></c:url>
 
 <!-- Page Heading
 ================================================== -->
@@ -89,7 +89,7 @@
                         <h4>Cadastrar Notícia</h4>
                     </div>
                     <div class="card__content">
-                        <form:form action="${actionAdicionar}" method="post" modelAttribute="noticia" cssClass="df-personal-info">
+                        <form:form action="${actionAlterar}" method="post" modelAttribute="noticia" cssClass="df-personal-info">
 
                         <div class="row">
                             <div class="col-md-6">

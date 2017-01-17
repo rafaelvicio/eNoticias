@@ -1,9 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+		 pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<c:url var="actionAlterar" value="/painel/alterar"></c:url>
 
 <sec:authorize access="isAuthenticated()">
-	<sec:authentication property="principal" var="principal" />
+	<sec:authentication property="principal" var="principal">
+
 
 	<!-- Page Heading
 	================================================== -->
@@ -73,93 +76,10 @@
 					<div class="card card--lg">
 						<div class="card__header">
 							<h4>Informações Pessoais</h4>
+							<a href="/painel/editar" class="btn btn-default btn-outline btn-xs card-header__button">Alterar</a>
 						</div>
 						<div class="card__content">
-								<form:form action="${actionAdicionar}" method="post" modelAttribute="usuario" cssClass="df-personal-info">
-
-								<div class="form-group form-group--upload">
-									<div class="form-group__avatar">
-										<img src="assets/images/samples/avatar-empty.png" alt="">
-										<div class="form-group__label">
-											<h6>Foto de Perfil</h6>
-											<span>Tamanho Minimo 60x60px</span>
-										</div>
-									</div>
-									<div class="form-group__upload">
-										<label class="btn btn-default btn-xs btn-file">
-											Upload Imagem... <input type="file" style="display: none;">
-										</label>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="email">Email</label>
-											<form:input id="email" path="email" cssClass="form-control" />
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="usuario">Usuário</label>
-											<form:input id="usuario" path="username" cssClass="form-control"/>
-										</div>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="nome">Nome</label>
-											<form:input id="nome" path="nome" cssClass="form-control"/>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="sobrenome">Sobrenome</label>
-											<form:input id="sobrenome" path="sobrenome" cssClass="form-control"/>
-										</div>
-									</div>
-								</div>
-
-								<div class="form-group form-group--sm">
-									<label for="account-address-1">Endereço Completo</label>
-									<input type="text" class="form-control" value="" name="account-address-1" id="account-address-1" placeholder="Quadra 4 Rua 4 Lote 62">
-								</div>
-								<div class="form-group">
-									<input type="text" class="form-control" value="" name="account-address-2" id="account-address-2" placeholder="Parque Nova Friburgo A">
-								</div>
-
-								<div class="form-group">
-									<label for="account-country">Estado</label>
-									<select name="account-country" id="account-country" class="form-control">
-										<option value="0">Escolha seu estado...</option>
-										<option value="Canada">Brasília</option>
-										<option value="Italy">Goiais</option>
-									</select>
-								</div>
-
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="account-city">Cidade</label>
-											<select name="account-city" id="account-city" class="form-control">
-												<option value="0">Escolha sua Cidade...</option>
-												<option value="1">Brasilia</option>
-											</select>
-										</div>
-									</div>
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="account-postcode">Código Postal</label>
-											<input type="text" name="account-postcode" id="account-postcode" class="form-control" placeholder="7288-7003">
-										</div>
-									</div>
-								</div>
-
-								<div class="form-group--submit">
-									<button type="submit" class="btn btn-default btn-lg btn-block">Atualizar informações</button>
-								</div>
-								</form:form>
+							Bem-vindo, ${principal.username}
 						</div>
 					</div>
 					<!-- Personal Information / End -->

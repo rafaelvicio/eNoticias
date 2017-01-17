@@ -31,12 +31,6 @@ public class PainelController {
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Model model) {
 
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-		String nomeUsuario = auth.getName();
-
-		Usuario ususarioASerAlterado = repositorioUsuario.findByUsername(nomeUsuario);
-		model.addAttribute("usuario", ususarioASerAlterado);
-
 		return "painel.index.tiles";
 	}
 	
