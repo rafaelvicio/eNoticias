@@ -672,9 +672,7 @@
                         <h4>Twitter</h4>
                     </div>
                     <div class="widget__content card__content">
-                        <ul class="twitter-feed">
-                            <li>Please wait...</li>
-                        </ul>
+                        <a class="twitter-timeline" data-lang="pt" href="https://twitter.com/esclub_brasil">Tweets by esclub_brasil</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                     </div>
                 </aside>
                 <!-- Widget: Twitter / End -->
