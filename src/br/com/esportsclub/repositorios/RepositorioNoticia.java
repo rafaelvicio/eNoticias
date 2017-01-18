@@ -13,6 +13,8 @@ public interface RepositorioNoticia extends JpaRepository<Noticia, Long>{
 	
 	Noticia findByUrl(String url);
 
+    Noticia findById(Long id);
+
 	public List<Noticia> findByJogo(Jogo jogo);
 
     // Buscar as noticias mais recentes
@@ -20,5 +22,7 @@ public interface RepositorioNoticia extends JpaRepository<Noticia, Long>{
 
     // Buscar as noticias mais recentes com paginação
     public Page<Noticia> findAllByOrderByIdDesc(Pageable pageable);
+
+
 
 }

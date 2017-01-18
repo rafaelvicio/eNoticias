@@ -21,10 +21,10 @@ body {
   width: 260px;
   margin: 0 auto; }
   #jprePercentage::before {
-    content: "Loading...";
+    content: "Carregando...";
     color: #fff; }
   #jprePercentage::after {
-    content: "Alchemists Template";
+    content: "eSports Club";
     display: block;
     font-size: 8px;
     line-height: 1.5em;

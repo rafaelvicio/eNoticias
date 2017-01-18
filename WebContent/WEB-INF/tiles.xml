@@ -59,60 +59,55 @@
 	<!-- Home -->
 	
 	<definition name="home.index.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="eSports Club -  Bem-vindo a sua platafoma de eSports"></put-attribute>
+		<put-attribute name="title" value="Seja bem-vindo a eSports Club | O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/index.jsp"></put-attribute>
-	</definition>
-
-	<definition name="home.home.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="eSports Club -  Bem-vindo a sua platafoma de eSports"></put-attribute>
-		<put-attribute name="body" value="/WEB-INF/views/home.jsp"></put-attribute>
 	</definition>
 
 	<!-- Pagina de Erros -->
 
 	<definition name="home.404.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="Pagina não encontrada | eSports Club -  Bem-vindo a sua platafoma de eSports"></put-attribute>
+		<put-attribute name="title" value="Pagina não encontrada | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/404.jsp"></put-attribute>
 	</definition>
 
 	<definition name="home.403.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="Sem permissão | eSports Club -  Bem-vindo a sua platafoma de eSports"></put-attribute>
+		<put-attribute name="title" value="Sem permissão | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/403.jsp"></put-attribute>
 	</definition>
 	
 	<!-- Administração -->
 	
 	<definition name="administracao.index.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="title" value="Painel de Administração | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/index.jsp"></put-attribute>
 	</definition>
 	
 	<!-- Cadastro -->
 	
 	<definition name="home.cadastro.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="title" value="Cadastro | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/cadastro.jsp"></put-attribute>
 	</definition>
 	
 	<!-- Painel -->
 	
 	<definition name="painel.login.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="title" value="Login | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/painel/login.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="painel.index.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="title" value="Painel de Controle | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/painel/index.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="painel.perfil.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="title" value="Painel de Controle | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/painel/perfil.jsp"></put-attribute>
 	</definition>
 
 	<definition name="painel.editar.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="ESC: Bem-vindo!"></put-attribute>
+		<put-attribute name="title" value="Painel de Controle | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/painel/editar.jsp"></put-attribute>
 	</definition>
 	
@@ -127,7 +122,7 @@
 
 	<definition name="jogador.ler.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="Jogador | ESC - eSports Club"></put-attribute>
+					   value="Jogador | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/jogador/jogador.jsp"></put-attribute>
 	</definition>
 	
@@ -156,12 +151,12 @@
 	<!-- Noticias -->
 	
 	<definition name="noticia.listar.tiles" extends="layout.tiles">
-		<put-attribute name="title" value="Notícias | ESC - eSports Club"></put-attribute>
+		<put-attribute name="title" value="Notícias | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/noticias/index.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="noticia.ler.tiles" extends="layout.tiles">
-		<put-attribute name="title" value=" ${noticia.titulo} | ESC - eSports Club"></put-attribute>
+		<put-attribute name="title" value=" ${noticia.titulo} | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/noticias/noticia.jsp"></put-attribute>
 	</definition>
 
@@ -169,12 +164,12 @@
 
 	<definition name="jogo.listar.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="Jogos | ESC - eSports Club"></put-attribute>
+					   value="Jogos | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/jogo/index.jsp"></put-attribute>
 	</definition>
 
 	<definition name="jogo.ler.tiles" extends="layout.tiles">
-		<put-attribute name="title" value=" ${jogo.nome} | ESC - eSports Club"></put-attribute>
+		<put-attribute name="title" value=" ${jogo.nome} | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/jogo/jogo.jsp"></put-attribute>
 	</definition>
 	
@@ -182,59 +177,59 @@
 
 	<definition name="administracao.noticia.index.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="Painel de Administração: Lista de Notícias | ESC - eSports Club"></put-attribute>
+					   value="Painel de Administração: Lista de Notícias | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/noticias/index.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="administracao.noticia.cadastro.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-			value="Painel de Administração: Cadastro de nova Notícia | ESC - eSports Club"></put-attribute>
+			value="Painel de Administração: Cadastro de nova Notícia | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/noticias/cadastro.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="administracao.noticia.alterar.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-			value="Painel de Administração: Alterar Notícia | ESC - eSports Club"></put-attribute>
+			value="Painel de Administração: Alterar Notícia | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/noticias/alterar.jsp"></put-attribute>
 	</definition>
 
-	<!-- Administração - Tag -->
+	<!-- Administração - Categorias -->
 
-	<definition name="administracao.tag.index.tiles" extends="layout.tiles">
+	<definition name="administracao.categorias.index.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="Painel de Administração: Lista de Tags | ESC - eSports Club"></put-attribute>
-		<put-attribute name="body" value="/WEB-INF/views/administracao/tags/index.jsp"></put-attribute>
+					   value="Painel de Administração: Lista de Categoria | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/categorias/index.jsp"></put-attribute>
 	</definition>
 
-	<definition name="administracao.tag.cadastro.tiles" extends="layout.tiles">
+	<definition name="administracao.categorias.cadastro.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="Painel de Administração: cadastro de Tag | ESC - eSports Club"></put-attribute>
-		<put-attribute name="body" value="/WEB-INF/views/administracao/tags/cadastro.jsp"></put-attribute>
+					   value="Painel de Administração: Cadastro de Categoria | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/categorias/cadastro.jsp"></put-attribute>
 	</definition>
 
-	<definition name="administracao.tag.alterar.tiles" extends="layout.tiles">
+	<definition name="administracao.categorias.alterar.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="Painel de Administração: alteração de Tag | ESC - eSports Club"></put-attribute>
-		<put-attribute name="body" value="/WEB-INF/views/administracao/tags/alterar.jsp"></put-attribute>
+					   value="Painel de Administração: Alteração de Categoria | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/administracao/categorias/alterar.jsp"></put-attribute>
 	</definition>
 	
 	<!-- Administração - Jogo -->
 	
 	<definition name="administracao.jogo.index.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-			value="Painel de Administração: Lista de Jogos | ESC - eSports Club"></put-attribute>
+			value="Painel de Administração: Lista de Jogos | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/index.jsp"></put-attribute>
 	</definition>
 	
 	<definition name="administracao.jogo.cadastro.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-			value="Painel de Administração: Cadastro de novo Jogo | ESC - eSports Club"></put-attribute>
+			value="Painel de Administração: Cadastro de novo Jogo | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/cadastro.jsp"></put-attribute>
 	</definition>
 
 	<definition name="administracao.jogo.alterar.tiles" extends="layout.tiles">
 		<put-attribute name="title"
-					   value="Painel de Administração: Alteração de Jogo | ESC - eSports Club"></put-attribute>
+					   value="Painel de Administração: Alteração de Jogo | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/administracao/jogos/alterar.jsp"></put-attribute>
 	</definition>
 

@@ -5,7 +5,7 @@ import br.com.esportsclub.dominios.Usuario;
 import br.com.esportsclub.infra.FileSaver;
 import br.com.esportsclub.repositorios.RepositorioJogo;
 import br.com.esportsclub.repositorios.RepositorioNoticia;
-import br.com.esportsclub.repositorios.RepositorioTag;
+import br.com.esportsclub.repositorios.RepositorioCategorias;
 import br.com.esportsclub.repositorios.RepositorioUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -42,7 +41,7 @@ public class AdministracaoNoticiasController {
     private RepositorioJogo repositorioJogo;
 
     @Autowired
-    private RepositorioTag repositorioTag;
+    private RepositorioCategorias repositorioCategoria;
 
     @Autowired
     private FileSaver fileSaver;
@@ -60,7 +59,7 @@ public class AdministracaoNoticiasController {
 
         model.addAttribute("jogos", repositorioJogo.findAll());
         model.addAttribute("noticia", new Noticia());
-        model.addAttribute("tags", repositorioTag.findAll());
+        model.addAttribute("categorias", repositorioCategoria.findAll());
 
         return "administracao.noticia.cadastro.tiles";
     }
@@ -84,7 +83,6 @@ public class AdministracaoNoticiasController {
 
         repositorioNoticia.save(novaNoticia);
 
-
         return "redirect:/noticias/";
     }
 
@@ -95,7 +93,7 @@ public class AdministracaoNoticiasController {
         model.addAttribute("noticia", noticiaASerAlterada);
 
         model.addAttribute("jogos", repositorioJogo.findAll());
-        model.addAttribute("tags", repositorioTag.findAll());
+        model.addAttribute("categorias", repositorioCategoria.findAll());
 
         return "administracao.noticia.alterar.tiles";
     }
@@ -103,10 +101,10 @@ public class AdministracaoNoticiasController {
     @RequestMapping(value = "/alterar", method = RequestMethod.POST)
     public String alterar(@ModelAttribute("noticia") @Valid Noticia noticia, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            model.addAttribute("noticias", repositorioNoticia.findAll());
-            return "administracao.noticia.index.tiles";
+            return "redirect:/administracao/noticias/";
         }
-       repositorioNoticia.save(noticia);
+        Noticia not = repositorioNoticia.findById(noticia.getId());
+       repositorioNoticia.save(not);
         return "redirect:/administracao/noticias/";
     }
 

@@ -7,22 +7,19 @@ import java.util.List;
  * Created by rafae on 29/11/2016.
  */
 @Entity
-@Table(name = "tag_tag")
-public class Tag {
+@Table(name = "cat_cat")
+public class Categoria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "tag_id")
+    @Column(name = "cat_id")
     private Long id;
 
-    @Column(name = "tag_nome")
+    @Column(name = "cat_nome")
     private String nome;
 
-    @Column(name = "tag_url")
+    @Column(name = "cat_url")
     private String url;
-
-    @ManyToMany(mappedBy="tags")
-    private List<Noticia> noticias;
 
     public Long getId() {
         return id;
@@ -46,13 +43,5 @@ public class Tag {
 
     public void setUrl(String url) {
         this.url = url;
-    }
-
-    public List<Noticia> getNoticias() {
-        return noticias;
-    }
-
-    public void setNoticias(List<Noticia> noticias) {
-        this.noticias = noticias;
     }
 }

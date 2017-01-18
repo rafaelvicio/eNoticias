@@ -116,36 +116,51 @@
 							</div>
 
 							<div class="row">
+
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Categoria:</label>
+										<form:select path="categoria.id" cssClass="form-control">
+											<form:options items="${categorias}" itemLabel="nome" itemValue="id" />
+										</form:select>
+									</div>
+								</div>
+
+								<div class="col-md-6">
 								<div class="form-group">
 									<label>Jogo:</label>
 									<form:select path="jogo.id" cssClass="form-control">
 										<form:options items="${jogos}" itemLabel="nome" itemValue="id" />
 									</form:select>
 								</div>
-
-								<div class="form-group">
-									<label>Tags:</label>
-								<c:forEach items="${tags}" var="tag">
-									<input type="checkbox" class="checkbox checkbox-inline" value="${tag.id}">${tag.nome}<br>
-								</c:forEach>
 								</div>
+
 							</div>
 
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="url">Descrição da Notícia</label>
-										<form:input id="descricao" path="descricao" cssClass="form-control" placeholder="Descrição da Noticia"/>
+										<form:input id="descricao" path="descricao" cssClass="form-control" placeholder="Pequena descrição da notícia"/>
 									</div>
 								</div>
 
 								<div class="col-md-6">
 									<div class="form-group">
-										<label for="url">Conteudo da Notícia</label>
-										<form:input id="conteudo" path="conteudo" cssClass="form-control" placeholder="Link Banner"/>
+										<label for="url">Comentario</label>
+										<form:input id="comentario" path="comentario" cssClass="form-control" placeholder="Seu pequeno comentario sobre a notícia"/>
 									</div>
 								</div>
-							</div
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label for="url">Conteudo da Notícia</label>
+
+										<form:textarea id="conteudo" path="conteudo" cssClass="form-control" placeholder="Conteudo HTML da notícia"/>
+									</div>
+								</div>
+							</div>
 
 					</div>
 

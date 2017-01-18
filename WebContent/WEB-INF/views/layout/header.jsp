@@ -28,26 +28,7 @@
 			<!-- Account Navigation -->
 			<ul class="nav-account">
 
-				<li class="nav-account__item nav-account__item--logout"><a href="/logout">Sair</a></li>
-				<li class="nav-account__item"><a href="#">Currency: <span class="highlight">USD</span></a>
-					<ul class="main-nav__sub">
-						<li><a href="#">USD</a></li>
-						<li><a href="#">EUR</a></li>
-						<li><a href="#">GBP</a></li>
-					</ul>
-				</li>
-				<li class="nav-account__item nav-account__item--wishlist"><a href="shop-wishlist.html">Wishlist <span class="highlight">8</span></a></li>
-				<li class="nav-account__item"><a href="#">Idiomas: <span class="highlight">Portugues</span></a>
-					<ul class="main-nav__sub">
-						<li><a href="#">English</a></li>
-						<li><a href="#">Spanish</a></li>
-						<li><a href="#">French</a></li>
-						<li><a href="#">German</a></li>
-					</ul>
-				</li>
-				<li class="nav-account__item"><a href="/painel/" data-toggle="modal" data-target="#modal-login-register-tabs">Sua conta</a></li>
-
-
+				<li class="nav-account__item">Seja bem-vindo a <a href="/painel/">eSports Club</a> O seu Clube de Esporte Eletrônico!</li>
 
 			</ul>
 			<!-- Account Navigation / End -->

@@ -1,5 +1,5 @@
 package br.com.esportsclub.enumeradores;
 
 public enum Categoria {
-	eSports, Novidades, Geral
+	MOBA, Tiro, RTS, Esporte, Cartas, MMORPG, Estratégia, Sobrevivencia
 }

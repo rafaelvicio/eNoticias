@@ -1,7 +1,6 @@
 package br.com.esportsclub.dominios;
 
 import java.util.Date;
-import java.util.List;
 import javax.persistence.*;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -46,9 +45,9 @@ public class Noticia {
 	@DateTimeFormat(pattern = "dd/MM/yyyy kk:mm")
 	private Date data;
 
-	@ManyToMany
-	@JoinTable(name = "not_tag", joinColumns = @JoinColumn(name = "not_id"), inverseJoinColumns = @JoinColumn(name = "tag_id"))
-	private List<Tag> tags;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "cat_id")
+	private Categoria categoria;
 
 	public Long getId() {
 		return id;
@@ -130,11 +129,11 @@ public class Noticia {
 		this.jogo = jogo;
 	}
 
-	public List<Tag> getTags() {
-		return tags;
+	public Categoria getCategoria() {
+		return categoria;
 	}
 
-	public void setTags(List<Tag> tags) {
-		this.tags = tags;
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 }
