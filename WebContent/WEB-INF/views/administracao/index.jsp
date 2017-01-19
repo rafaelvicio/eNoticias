@@ -71,9 +71,6 @@
                                 <li class="df-account-navigation--link">
                                     <a href="/administracao/categorias/">Categorias</a>
                                 </li>
-                                <li class="df-account-navigation--link">
-                                    <a href="/administracao/tags/">Tags</a>
-                                </li>
                             </ul>
                         </nav>
                     </div>

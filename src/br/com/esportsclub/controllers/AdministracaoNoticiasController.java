@@ -78,8 +78,8 @@ public class AdministracaoNoticiasController {
         novaNoticia.setData(data);
         novaNoticia.setUsuario(usuario);
 
-        //String path = fileSaver.write("imagens/noticia/", imagem);
-        //usuario.setFoto(path);
+        String path = fileSaver.write("/WEB-INF/resources/imagens", imagem);
+        novaNoticia.setBanner(path);
 
         repositorioNoticia.save(novaNoticia);
 
@@ -101,10 +101,10 @@ public class AdministracaoNoticiasController {
     @RequestMapping(value = "/alterar", method = RequestMethod.POST)
     public String alterar(@ModelAttribute("noticia") @Valid Noticia noticia, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            return "redirect:/administracao/noticias/";
+            model.addAttribute("noticias", repositorioNoticia.findAll());
+            return "administracao.noticia.index.tiles";
         }
-        Noticia not = repositorioNoticia.findById(noticia.getId());
-       repositorioNoticia.save(not);
+        repositorioNoticia.save(noticia);
         return "redirect:/administracao/noticias/";
     }
 

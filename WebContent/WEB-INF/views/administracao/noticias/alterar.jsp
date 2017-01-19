@@ -89,19 +89,34 @@
                         <h4>Cadastrar Notícia</h4>
                     </div>
                     <div class="card__content">
+
                         <form:form action="${actionAlterar}" method="post" modelAttribute="noticia" cssClass="df-personal-info">
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="titulo">Título</label>
-                                        <form:input id="titulo" path="titulo" cssClass="form-control" placeholder="Titulo da Noticia"/>
+                                        <label>ID</label>
+                                        <form:input path="id" cssClass="form-control" readonly="true" />
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="url">Endereço da Notícia</label>
-                                        <form:input id="url" path="url" cssClass="form-control" placeholder="URL da Noticia"/>
+                                        <label>Redator</label>
+                                        <form:input path="usuario" cssClass="form-control" readonly="true" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Título</label>
+                                        <form:input path="titulo" cssClass="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Endereço da Notícia</label>
+                                        <form:input path="url" cssClass="form-control"/>
                                     </div>
                                 </div>
                             </div>
@@ -109,8 +124,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="url">Banner da Notícia</label>
-                                        <form:input id="banner" path="banner" cssClass="form-control" placeholder="Link Banner"/>
+                                        <label>Banner da Notícia</label>
+                                        <form:input path="banner" cssClass="form-control"/>
                                     </div>
                                 </div>
                             </div>
@@ -140,24 +155,23 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="url">Descrição da Notícia</label>
-                                        <form:input id="descricao" path="descricao" cssClass="form-control" placeholder="Pequena descrição da notícia"/>
+                                        <label>Descrição da Notícia</label>
+                                        <form:input path="descricao" cssClass="form-control"/>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="url">Comentario</label>
-                                        <form:input id="comentario" path="comentario" cssClass="form-control" placeholder="Seu pequeno comentario sobre a notícia"/>
+                                        <label>Comentario</label>
+                                        <form:input path="comentario" cssClass="form-control"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <label for="url">Conteudo da Notícia</label>
-
-                                        <form:textarea id="conteudo" path="conteudo" cssClass="form-control" placeholder="Conteudo HTML da notícia"/>
+                                        <label>Conteudo da Notícia</label>
+                                        <form:textarea path="conteudo" cssClass="form-control"/>
                                     </div>
                                 </div>
                             </div>

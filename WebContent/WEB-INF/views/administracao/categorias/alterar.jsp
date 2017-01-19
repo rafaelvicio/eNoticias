@@ -94,14 +94,23 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="nome">Nome</label>
-                                        <form:input id="nome" path="nome" cssClass="form-control" placeholder="Nome da Tag"/>
+                                        <label>ID</label>
+                                        <form:input path="id" cssClass="form-control" readonly="true" />
+                                    </div>
+                                </div>
+                            </div>/
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Nome</label>
+                                        <form:input path="nome" cssClass="form-control"/>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="url">URL da Tag</label>
-                                        <form:input id="url" path="url" cssClass="form-control" placeholder="URL da Tag"/>
+                                        <label>URL da Categoria</label>
+                                        <form:input path="url" cssClass="form-control"/>
                                     </div>
                                 </div>
                             </div>

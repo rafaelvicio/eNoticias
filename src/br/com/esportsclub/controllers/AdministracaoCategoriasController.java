@@ -52,7 +52,7 @@ public class AdministracaoCategoriasController {
     @RequestMapping(value = "/alterar/{id}", method = RequestMethod.GET)
     public String alterar(@PathVariable("id") Long id, Model model) {
         Categoria CategoriaASerAlterada = repositorioCategorias.findOne(id);
-        model.addAttribute("categorias", CategoriaASerAlterada);
+        model.addAttribute("categoria", CategoriaASerAlterada);
 
         return "administracao.categorias.alterar.tiles";
     }

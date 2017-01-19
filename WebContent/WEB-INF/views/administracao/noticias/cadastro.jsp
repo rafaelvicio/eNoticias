@@ -110,7 +110,7 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="url">Banner da Notícia</label>
-										<form:input id="banner" path="banner" cssClass="form-control" placeholder="Link Banner"/>
+										<input name="imagem" type="file">
 									</div>
 								</div>
 							</div>
