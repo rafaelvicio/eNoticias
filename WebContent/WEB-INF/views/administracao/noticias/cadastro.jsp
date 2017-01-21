@@ -110,7 +110,12 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="url">Banner da Notícia</label>
-										<input name="imagem" type="file">
+										<span>Tamanho Recomendado 760x428px</span>
+										<div class="form-group__upload">
+											<label class="btn btn-default btn-xs btn-file">
+												Upload Imagem... <input name="imagem" type="file" style="display: none;">
+											</label>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -157,7 +162,8 @@
 									<div class="form-group">
 										<label for="url">Conteudo da Notícia</label>
 
-										<form:textarea id="conteudo" path="conteudo" cssClass="form-control" placeholder="Conteudo HTML da notícia"/>
+											<form:textarea id="conteudo" path="conteudo" cssClass="form-control"/>
+
 									</div>
 								</div>
 							</div>
@@ -165,6 +171,9 @@
 					</div>
 
 					<div class="text-center"> <input type="submit" value="Cadastrar!" class="btn btn-lg btn-block btn-rounded btn-shadow btn-primary" /> </div>
+
+
+
 					</form:form>
 					</div>
 				</div>
@@ -175,3 +184,4 @@
 </div>
 
 <!-- Content / End -->
+

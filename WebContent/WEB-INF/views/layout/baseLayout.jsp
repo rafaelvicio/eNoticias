@@ -53,6 +53,8 @@
 
 	<title><tiles:insertAttribute name="title" ignore="true"></tiles:insertAttribute></title>
 
+	<script>tinymce.init({ selector:'textarea' });</script>
+
 </head>
 
 <body class="template-soccer">
@@ -72,23 +74,22 @@
 
 </div>
 
-	<!-- Core JS -->
 	<spring:url value="/resources/assets/vendor/jquery/jquery.min.js" var="jqueryJS"></spring:url>
 	<spring:url value="/resources/assets/js/core-min.js" var="coreminJS"></spring:url>
 
-	<!-- Vendor JS -->
 	<spring:url value="/resources/assets/vendor/twitter/jquery.twitter.js" var="jquerytwitterJS"></spring:url>
 
-	<!-- Template JS -->
 	<spring:url value="/resources/assets/js/init.js" var="initJS"></spring:url>
 	<spring:url value="/resources/assets/js/custom.js" var="customJS"></spring:url>
 
-	<!-- PLUGINS -->
+	<spring:url value="/resources/tinymce/tinymce.min.js" var="tinymceJS"></spring:url>
+
 	<script type="text/javascript" src="${jqueryJS}"></script>
 	<script type="text/javascript" src="${coreminJS}"></script>
 	<script type="text/javascript" src="${jquerytwitterJS}"></script>
 	<script type="text/javascript" src="${initJS}"></script>
 	<script type="text/javascript" src="${customJS}"></script>
+	<script type="text/javascript" src="${tinymceJS}"></script>
 
 </body>
 </html>

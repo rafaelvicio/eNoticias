@@ -125,7 +125,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Banner da Notícia</label>
-                                        <form:input path="banner" cssClass="form-control"/>
+
                                     </div>
                                 </div>
                             </div>

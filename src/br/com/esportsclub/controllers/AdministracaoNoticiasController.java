@@ -99,11 +99,17 @@ public class AdministracaoNoticiasController {
     }
 
     @RequestMapping(value = "/alterar", method = RequestMethod.POST)
-    public String alterar(@ModelAttribute("noticia") @Valid Noticia noticia, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            model.addAttribute("noticias", repositorioNoticia.findAll());
-            return "administracao.noticia.index.tiles";
-        }
+    public String alterar(@ModelAttribute("noticia") Noticia noticia, BindingResult result, Model model) {
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String nomeUsuario = auth.getName();
+        Usuario usuario = repositorioUsuario.findByUsername(nomeUsuario);
+
+        Date data = new Date();
+
+        noticia.setData(data);
+        noticia.setUsuario(usuario);
+
         repositorioNoticia.save(noticia);
         return "redirect:/administracao/noticias/";
     }
