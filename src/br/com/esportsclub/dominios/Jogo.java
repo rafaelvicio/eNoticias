@@ -34,7 +34,7 @@ public class Jogo {
 
 	@Column(name = "jog_descricao")
 	private String descricao;
-	
+
 	@Enumerated(EnumType.STRING)
 	private Plataforma plataforma;
 

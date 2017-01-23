@@ -56,17 +56,6 @@
 							${noticia.conteudo}
 						</div>
 
-						<footer class="post__footer">
-							<div class="post__tags">
-								<a href="#" class="btn btn-primary btn-outline btn-xs">Playoffs</a>
-								<a href="#" class="btn btn-primary btn-outline btn-xs">Alchemists</a>
-								<a href="#" class="btn btn-primary btn-outline btn-xs">Injuries</a>
-								<a href="#" class="btn btn-primary btn-outline btn-xs">Team</a>
-								<a href="#" class="btn btn-primary btn-outline btn-xs">Uniforms</a>
-								<a href="#" class="btn btn-primary btn-outline btn-xs">Champions</a>
-							</div>
-						</footer>
-
 					</div>
 				</article>
 				<!-- Article / End -->
@@ -97,7 +86,7 @@
 							</figure>
 							<div class="post-author__info">
 								<h4 class="post-author__name">${noticia.usuario.username}</h4>
-								<span class="post-author__slogan">The Alchemists Ninja</span>
+								<span class="post-author__slogan">${noticia.usuario.biografia}</span>
 							</div>
 							<ul class="post-author__social-links social-links social-links--btn">
 								<li class="social-links__item">
@@ -199,7 +188,7 @@
 										</figure>
 										<div class="posts__inner">
 											<div class="posts__cat">
-												<span class="label posts__cat-label">Injuries</span>
+												<span class="label posts__cat-label">${noticia.jogo}</span>
 											</div>
 											<h6 class="posts__title"><a href="#">${noticia.titulo}</a></h6>
 											<div class="posts__date">

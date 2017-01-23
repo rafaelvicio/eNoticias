@@ -124,8 +124,18 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Banner da Notícia</label>
+                                        <label for="url">Imagen da Notícia</label>
+                                        <form:input id="banner" path="banner" cssClass="form-control" placeholder="Banner da noticia"/>
+                                    </div>
+                                </div>
 
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="url">Upload Imagen</label>
+                                        <ul>
+                                            <li>Faça o Upload da imagen no <a href="#">filestack</a></li>
+                                            <li>Tamanho recomendado 735x532px</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>

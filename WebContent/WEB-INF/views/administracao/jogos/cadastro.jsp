@@ -97,7 +97,6 @@
 									<div class="form-group">
 										<label for="nome">Nome</label>
 										<form:input path="nome" cssClass="form-control"/>
-										<form:errors path="nome" cssStyle="color: red;"></form:errors>
 									</div>
 								</div>
 							</div>
@@ -106,62 +105,41 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="url">Banner da Jogo</label>
-										<form:input id="banner" path="banner" cssClass="form-control" placeholder="Link Banner"/>
+										<form:input id="banner" path="banner" cssClass="form-control"/>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="url">Upload Imagen</label>
+										<ul>
+											<li>Faça o Upload da imagen no <a href="#">filestack</a></li>
+											<li>Tamanho recomendado 645x300px</li>
+										</ul>
 									</div>
 								</div>
 							</div>
 
 							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="nome">URL do Jogo</label>
+										<form:input path="url" cssClass="form-control"/>
+										<form:errors path="url" cssStyle="color: red;"></form:errors>
+									</div>
+								</div>
 								<div class="col-md-6">
 									<div class="form-group">
 										<label for="nome">Site do Jogo</label>
 										<form:input path="site" cssClass="form-control"/>
-										<form:errors path="site" cssStyle="color: red;"></form:errors>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="nome">URL do Jogo</label>
-											<form:input path="url" cssClass="form-control"/>
-											<form:errors path="url" cssStyle="color: red;"></form:errors>
-										</div>
 									</div>
 								</div>
 							</div>
 
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<label for="account-city">Categoria</label>
-										<select name="account-city" id="account-city" class="form-control">
-											<option value="0">Escolha a categoria...</option>
-											<option value="1">MOBA</option>
-											<option value="1">FPS</option>
-											<option value="1">RTS</option>
-										</select>
-									</div>
-								</div>
 								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="account-city">Desenvolvedora</label>
-											<select name="account-city" id="account-city" class="form-control">
-												<option value="0">Escolha a desenvolvedora...</option>
-												<option value="1">Valve</option>
-												<option value="2">Riot Games</option>
-												<option value="3">Ubisoft</option>
-											</select>
-										</div>
-									</div>
-								</div>
-
-								<div class="row">
-									<div class="col-md-6">
+									<div class="col-md-12">
 										<div class="form-group">
 											<label for="nome">Descrição do Jogo</label>
-											<form:input path="descricao" cssClass="form-control"/>
-											<form:errors path="descricao" cssStyle="color: red;"></form:errors>
+											<form:textarea path="descricao" cssClass="form-control"/>
 										</div>
 									</div>
 								</div>

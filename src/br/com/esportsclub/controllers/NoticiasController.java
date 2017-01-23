@@ -8,6 +8,8 @@ import br.com.esportsclub.dominios.Time;
 import br.com.esportsclub.dominios.Usuario;
 import br.com.esportsclub.repositorios.RepositorioUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
@@ -33,7 +35,10 @@ public class NoticiasController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String listar(Model model){
-		List<Noticia> noticias = repositorioNoticia.findAllByOrderByIdDesc();
+
+		Page<Noticia> ultimasNoticias = repositorioNoticia.findAllByOrderByIdDesc(new PageRequest(0, 10));
+		List<Noticia> noticias = ultimasNoticias.getContent();
+
 		model.addAttribute("noticias", noticias);
 		
 		return "noticia.listar.tiles";
@@ -41,8 +46,11 @@ public class NoticiasController {
 	
 	@RequestMapping(value = "/{url}", method = RequestMethod.GET)
 	public String ler(@PathVariable("url") String url, Model model) {
+
 		Noticia noticia = repositorioNoticia.findByUrl(url);
-		List<Noticia> noticias = repositorioNoticia.findAllByOrderByIdDesc();
+
+		Page<Noticia> ultimasNoticias = repositorioNoticia.findAllByOrderByIdDesc(new PageRequest(0, 10));
+		List<Noticia> noticias = ultimasNoticias.getContent();
 
 		model.addAttribute("noticia", noticia);
 		model.addAttribute("noticias", noticias);

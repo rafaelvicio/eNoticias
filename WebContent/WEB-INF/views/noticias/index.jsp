@@ -158,58 +158,32 @@
                 <!-- Widget: Popular News -->
                 <aside class="widget widget--sidebar card widget-popular-posts">
                     <div class="widget__title card__header">
-                        <h4>Notícias Populares</h4>
+                        <h4>Ultímas Notícias</h4>
                     </div>
                     <div class="widget__content card__content">
                         <ul class="posts posts--simple-list">
-                            <li class="posts__item posts__item--category-2">
-                                <figure class="posts__thumb">
-                                    <a href="#"><img src="assets/images/samples/post-img1-xs.jpg" alt=""></a>
-                                </figure>
-                                <div class="posts__inner">
-                                    <div class="posts__cat">
-                                        <span class="label posts__cat-label">Injuries</span>
-                                    </div>
-                                    <h6 class="posts__title"><a href="#">Mark Johnson has a Tibia Fracture and is gonna be out</a></h6>
-                                    <time datetime="2016-08-23" class="posts__date">August 23rd, 2016</time>
-                                </div>
-                            </li>
-                            <li class="posts__item posts__item--category-1">
-                                <figure class="posts__thumb">
-                                    <a href="#"><img src="assets/images/samples/post-img2-xs.jpg" alt=""></a>
-                                </figure>
-                                <div class="posts__inner">
-                                    <div class="posts__cat">
-                                        <span class="label posts__cat-label">The Team</span>
-                                    </div>
-                                    <h6 class="posts__title"><a href="#">Jay Rorks is only 24 points away from breaking the record</a></h6>
-                                    <time datetime="2016-08-22" class="posts__date">August 22nd, 2016</time>
-                                </div>
-                            </li>
-                            <li class="posts__item posts__item--category-1">
-                                <figure class="posts__thumb">
-                                    <a href="#"><img src="assets/images/samples/post-img3-xs.jpg" alt=""></a>
-                                </figure>
-                                <div class="posts__inner">
-                                    <div class="posts__cat">
-                                        <span class="label posts__cat-label">The Team</span>
-                                    </div>
-                                    <h6 class="posts__title"><a href="#">The new eco friendly stadium won a Leafy Award in 2016</a></h6>
-                                    <time datetime="2016-08-21" class="posts__date">August 21st, 2016</time>
-                                </div>
-                            </li>
-                            <li class="posts__item posts__item--category-1">
-                                <figure class="posts__thumb">
-                                    <a href="#"><img src="assets/images/samples/post-img4-xs.jpg" alt=""></a>
-                                </figure>
-                                <div class="posts__inner">
-                                    <div class="posts__cat">
-                                        <span class="label posts__cat-label">The Team</span>
-                                    </div>
-                                    <h6 class="posts__title"><a href="#">The team is starting a new power breakfast regimen</a></h6>
-                                    <time datetime="2016-08-21" class="posts__date">August 21st, 2016</time>
-                                </div>
-                            </li>
+
+                            <c:if test="${!empty noticias}">
+                                <c:forEach items="${noticias}" var="noticia">
+
+                                    <li class="posts__item posts__item--category-2">
+                                        <figure class="posts__thumb">
+                                            <a href="/noticias/${noticia.url}"><img src="/resources/assets/images/samples/post-img1-xs.jpg" alt=""></a>
+                                        </figure>
+                                        <div class="posts__inner">
+                                            <div class="posts__cat">
+                                                <span class="label posts__cat-label">${noticia.jogo}</span>
+                                            </div>
+                                            <h6 class="posts__title"><a href="#">${noticia.titulo}</a></h6>
+                                            <div class="posts__date">
+                                                <fmt:formatDate value="${noticia.data}" pattern="d/MMM/yyyy HH:mm"/>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </c:forEach>
+                            </c:if>
+
                         </ul>
                     </div>
                 </aside>

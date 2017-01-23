@@ -55,7 +55,7 @@
 						<use xlink:href="/resources/assets/images/icons-soccer.svg#whistle"/>
 					</svg>
 					<h6 class="info-block__heading">Entre na eSports Club</h6>
-					<a class="info-block__link" href="/painel/login">Login ou Cadastre-se</a>
+					<a class="info-block__link" href="/painel/">Login ou Cadastre-se</a>
 				</li>
 				<li class="info-block__item info-block__item--contact-secondary">
 					<svg role="img" class="df-icon df-icon--soccer-ball">

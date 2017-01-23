@@ -65,7 +65,7 @@ public class AdministracaoNoticiasController {
     }
 
     @RequestMapping(value = "/cadastro", method = RequestMethod.POST)
-    private String adicionar(@ModelAttribute("noticia") @Valid Noticia novaNoticia, BindingResult result, Model model, MultipartFile imagem){
+    private String adicionar(@ModelAttribute("noticia") @Valid Noticia novaNoticia, BindingResult result, Model model){
         if (result.hasErrors()) {
             return "noticia.cadastro.tiles";
         }
@@ -77,9 +77,6 @@ public class AdministracaoNoticiasController {
 
         novaNoticia.setData(data);
         novaNoticia.setUsuario(usuario);
-
-        String path = fileSaver.write("/WEB-INF/resources/imagens", imagem);
-        novaNoticia.setBanner(path);
 
         repositorioNoticia.save(novaNoticia);
 
@@ -99,7 +96,11 @@ public class AdministracaoNoticiasController {
     }
 
     @RequestMapping(value = "/alterar", method = RequestMethod.POST)
-    public String alterar(@ModelAttribute("noticia") Noticia noticia, BindingResult result, Model model) {
+    public String alterar(@ModelAttribute("noticia") @Valid Noticia noticia, BindingResult result, Model model) {
+
+        if (result.hasErrors()) {
+            return "administracao.noticia.index.tiles";
+        }
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         String nomeUsuario = auth.getName();

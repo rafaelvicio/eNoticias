@@ -101,55 +101,54 @@
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Nome</label>
-                                    <form:input path="nome" cssClass="form-control"/>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Categoria</label>
-                                    <form:select path="categoria.id" cssClass="form-control">
-                                        <form:options items="${categorias}" itemLabel="nome" itemValue="id" />
-                                    </form:select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Banner da Jogo</label>
-                                    <form:input path="banner" cssClass="form-control"/>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>Site do Jogo</label>
-                                    <form:input path="site" cssClass="form-control"/>
-                                </div>
-                            </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>URL do Jogo</label>
-                                        <form:input path="url" cssClass="form-control"/>
+                                        <label for="nome">Nome</label>
+                                        <form:input path="nome" cssClass="form-control"/>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>Descrição do Jogo</label>
-                                        <form:input path="descricao" cssClass="form-control"/>
+                                        <label for="url">Banner da Jogo</label>
+                                        <form:input id="banner" path="banner" cssClass="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="url">Upload Imagen</label>
+                                        <ul>
+                                            <li>Faça o Upload da imagen no <a href="#">filestack</a></li>
+                                            <li>Tamanho recomendado 645x300px</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nome">URL do Jogo</label>
+                                        <form:input path="url" cssClass="form-control"/>
+                                        <form:errors path="url" cssStyle="color: red;"></form:errors>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="nome">Site do Jogo</label>
+                                        <form:input path="site" cssClass="form-control"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="nome">Descrição do Jogo</label>
+                                        <form:textarea path="descricao" cssClass="form-control"/>
                                     </div>
                                 </div>
                             </div>
