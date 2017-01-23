@@ -172,7 +172,7 @@
                                         </figure>
                                         <div class="posts__inner">
                                             <div class="posts__cat">
-                                                <span class="label posts__cat-label">${noticia.jogo}</span>
+                                                <span class="label posts__cat-label">${noticia.jogo.nome}</span>
                                             </div>
                                             <h6 class="posts__title"><a href="#">${noticia.titulo}</a></h6>
                                             <div class="posts__date">

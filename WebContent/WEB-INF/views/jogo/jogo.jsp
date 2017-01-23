@@ -2,7 +2,7 @@
          pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
 <!-- Page Heading
 ================================================== -->
@@ -134,14 +134,16 @@
 
                                     <li class="posts__item posts__item--category-2">
                                         <figure class="posts__thumb">
-                                            <a href="#"><img src="/resources/assets/images/samples/post-img1-xs.jpg" alt=""></a>
+                                            <a href="/noticias/${noticia.url}"><img src="/resources/assets/images/samples/post-img1-xs.jpg" alt=""></a>
                                         </figure>
                                         <div class="posts__inner">
                                             <div class="posts__cat">
-                                                <span class="label posts__cat-label">Injuries</span>
+                                                <span class="label posts__cat-label">${noticia.jogo.nome}</span>
                                             </div>
-                                            <h6 class="posts__title"><a href="/noticias/${noticia.url}">${noticia.titulo}</a></h6>
-                                            <time datetime="2016-08-23" class="posts__date">${noticia.data}</time>
+                                            <h6 class="posts__title"><a href="#">${noticia.titulo}</a></h6>
+                                            <div class="posts__date">
+                                                <fmt:formatDate value="${noticia.data}" pattern="d/MMM/yyyy HH:mm"/>
+                                            </div>
                                         </div>
                                     </li>
 
