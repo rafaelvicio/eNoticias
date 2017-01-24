@@ -53,4 +53,29 @@ public class JogoController {
 		return "jogo.ler.tiles";
 	}
 
+	@RequestMapping(value = "/{url}/noticias/", method = RequestMethod.GET)
+	public String noticias(@PathVariable("url") String url, Model model) {
+		Jogo jogo = repositorioJogo.findByUrl(url);
+
+		List<Noticia> noticias = repositorioNoticia.findByJogo(jogo);
+
+		model.addAttribute("noticias", noticias);
+
+		model.addAttribute("jogo", jogo);
+		return "jogo.noticias.tiles";
+	}
+
+	@RequestMapping(value = "/{url}/noticias/", method = RequestMethod.GET)
+	public String campeonatos(@PathVariable("url") String url, Model model) {
+		Jogo jogo = repositorioJogo.findByUrl(url);
+
+		List<Noticia> noticias = repositorioNoticia.findByJogo(jogo);
+
+		model.addAttribute("noticias", noticias);
+
+		model.addAttribute("jogo", jogo);
+		return "jogo.campeoantos.tiles";
+	}
+
+
 }

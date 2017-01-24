@@ -166,12 +166,6 @@
                         <!-- Post Meta - Top -->
                         <div class="post__meta-block post__meta-block--top">
 
-                            <!-- Post Category -->
-                            <div class="post__category">
-                                <span class="label posts__cat-label">The Team</span>
-                            </div>
-                            <!-- Post Category / End -->
-
                             <!-- Post Title -->
                             <h1 class="page-heading__title"><a href="_soccer_blog-post-1.html">Mantenha-se atalizado com as <span class="highlight">principais noticias</span> do esporte eletrônico</a></h1>
                             <!-- Post Title / End -->

@@ -172,6 +172,16 @@
 		<put-attribute name="title" value=" ${jogo.nome} | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
 		<put-attribute name="body" value="/WEB-INF/views/jogo/jogo.jsp"></put-attribute>
 	</definition>
+
+	<definition name="jogo.noticias.tiles" extends="layout.tiles">
+		<put-attribute name="title" value=" ${jogo.nome} | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/jogo/noticias.jsp"></put-attribute>
+	</definition>
+
+	<definition name="jogo.campeonatos.tiles" extends="layout.tiles">
+		<put-attribute name="title" value=" ${jogo.nome} | eSports Club - O seu clube de esporte eletrônico"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/views/jogo/campeonatos.jsp"></put-attribute>
+	</definition>
 	
 	<!-- Administração - Noticias -->
 

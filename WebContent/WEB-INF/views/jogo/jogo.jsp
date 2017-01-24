@@ -26,8 +26,8 @@
     <div class="container">
         <a href="#" class="content-filter__toggle"></a>
         <ul class="content-filter__list">
-            <li class="content-filter__item content-filter__item--active"><a href="jogo-informacoes.html" class="content-filter__link"><small>Jogo</small> Informações</a></li>
-            <li class="content-filter__item "><a href="jogo-noticias.html" class="content-filter__link"><small>Jogo</small> Notícias</a></li>
+            <li class="content-filter__item content-filter__item--active"><a href="/jogos/${jogo.url}" class="content-filter__link"><small>Jogo</small> Informações</a></li>
+            <li class="content-filter__item "><a href="/jogos/${jogo.url}/noticias/" class="content-filter__link"><small>Jogo</small> Notícias</a></li>
             <li class="content-filter__item "><a href="jogo-campeonatos.html" class="content-filter__link"><small>Jogo</small> Campeonatos</a></li>
             <li class="content-filter__item "><a href="jogo-ranking.html" class="content-filter__link"><small>Jogo</small> Ranking</a></li>
             <li class="content-filter__item "><a href="jogo-galeria.html" class="content-filter__link"><small>Jogo</small> Galeria</a></li>
