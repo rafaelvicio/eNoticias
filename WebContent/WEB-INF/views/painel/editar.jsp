@@ -109,6 +109,7 @@
                                             <form:errors path="nome" cssStyle="color: red;"></form:errors>
                                         </div>
                                     </div>
+
                                 </div>
 
                                 <div class="row">
