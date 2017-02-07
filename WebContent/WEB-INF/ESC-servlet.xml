@@ -70,6 +70,7 @@
 	<bean id="userDetailsService"
 		class="br.com.esportsclub.security.ESCUserDetailsService"></bean>
 	<sec:http pattern="/resources/**" security="none"></sec:http>
+	<sec:http pattern="/webservice/**" security="none"></sec:http>
 	<sec:http pattern="/" security="none"></sec:http>
 	<sec:http pattern="/index" security="none"></sec:http>
 	<sec:http pattern="/cadastro" security="none"></sec:http>
