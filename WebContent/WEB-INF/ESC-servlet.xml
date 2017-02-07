@@ -19,7 +19,7 @@
 	   	http://www.springframework.org/schema/security/spring-security-4.1.xsd">
 	<mvc:annotation-driven />
 	<mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"></mvc:resources>
-	<context:component-scan base-package="br.com.esportsclub.controllers" />
+	<context:component-scan base-package="br.com.esportsclub.controllers, br.com.esportsclub.api" />
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
 		<property name="viewClass"
@@ -108,6 +108,16 @@
 
 	<bean id="fileSaver" class="br.com.esportsclub.infra.FileSaver">
 
+	</bean>
+
+	<bean id="contentNegotiationManager" class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+		<property name="defaultContentType" value="application/json" />
+		<property name="mediaTypes">
+			<value>
+				json=application/json
+				xml=application/xml
+			</value>
+		</property>
 	</bean>
 
 </beans>
